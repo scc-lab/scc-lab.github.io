@@ -461,9 +461,3 @@ function expandSection(element,slack) {
 		element.style.paddingBottom = null;
 	});
 }
-function upgradeImage(element) {
-	parentDiv = element.parentElement;
-	lowResImageElement = parentDiv.querySelector("img:not([hidden])");
-	element.classList.remove("hidden");
-	lowResImageElement.classList.add("hidden");
-}

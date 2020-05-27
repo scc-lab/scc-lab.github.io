@@ -1,6 +1,5 @@
 var request = new XMLHttpRequest();
-//request.open("GET", "https://dl.dropboxusercontent.com/s/owttz55huamc3kw/scc.html", true);
-request.open("GET", "https://www.googleapis.com/drive/v3/files/1Otz89kKdP21u72zUFjOLUqc36rBba8Pj?alt=media&key=AIzaSyD_bwt1fI-1AOy0KjYgxNMne06VWNskUQ4", true);
+request.open("GET", "https://scc-lab.github.io/scc.html", true);
 request.onload = function() {
 	if (this.status >= 200 && this.status < 400) {
 	// Success!
