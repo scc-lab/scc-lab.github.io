@@ -27,7 +27,6 @@ request.send();
 // List of headings corresponding to BibTeX entry types
 var entryTypes = ["Book","Article","InCollection","InProceedings","PhdThesis","MastersThesis","TechReport"];
 var entryTypeNames = ["Books","Peer-reviewed journal papers","Book chapters","Peer-reviewed conference papers","Ph.D. dissertations","M.S. thesis","Technical reports"];
-
 function initPage() {
 	// check for data table
 	if (!document.getElementById("my-refs")) { return; }
@@ -52,18 +51,14 @@ function initPage() {
 				if (nodeTitleElement) { //Specific to okstate.edu
 					nodeTitleElement.textContent=nodeTitlePrevious;
 				}
-				var topicElements=document.querySelectorAll(".fullScreen");
-				for (let i = 0; i < topicElements.length; i++) {
-					if (i == 0) {
-						var topicKeyword=topicElements[i].classList[1];
-						expandAllLists(topicKeyword);
-					}
-					topicElements[i].classList.remove("fullScreen");
-				}
+				expandAllLists(topicKeywordGlobal);
+				var topicDetailsElement = document.querySelector(".topicDetails." + topicKeywordGlobal + "");
+				var aspectRatioOneElement = document.querySelector(".aspectRatioOne." + topicKeywordGlobal + "");
+				aspectRatioOneElement.appendChild(topicDetailsElement);
+				topicDetailsElement.classList.remove("fullScreen");
 				history.back();
 				var hiddenPage = document.querySelector(".researchContainer");
-				hiddenPage.style.height = "";
-				hiddenPage.style.overflow = "";
+				hiddenPage.classList.remove("hidden");
 				return;
 			}
 		}
@@ -104,29 +99,14 @@ function initPage() {
 				expandAllLists(topicKeyword);
 			}
 		}
-//		if (event.target.getElementsByTagName("button")[0]!=null) {
-//			if (event.target.getElementsByTagName("button")[0].matches(".toggleType") && event.target.matches("span") ) {
-//				toggleList(event.target.getElementsByTagName("button")[0].id);
-//			}
-//		}
-//		if (event.target.matches(":not(.showText)")) {
-//			var titleElement=document.querySelector(".topicCardFlex.showText");
-//			if (titleElement) {
-//				titleElement.classList.remove("showText");
-//			}
-//		}
-//		if (event.target.matches(".topicCardFlex")) {
-//			event.target.classList.add("showText");
-//			return;
-//		}
 		if (event.target.matches(".hiddenText")) {
 			history.back();
 			return;
 		}
 		if (event.target.matches(".hiddenFullScreenText") || event.target.matches(".topicCardFlex")){
+			topicKeywordGlobal = event.target.classList[1];
 			var topicElements=document.querySelectorAll("." + event.target.classList[1] + "");
-			var titleElement=document.querySelector(".topicTitle." + event.target.classList[1] + "");
-			var titleText=titleElement.textContent;
+			var titleText=document.querySelector(".topicTitle." + event.target.classList[1] + "").textContent;
 			//------------------Specific to okstate.edu-------------------
 			var nodeTitleElement=document.querySelector(".node-title");
 			var pageTitleElement=document.querySelector(".page-title");
@@ -143,20 +123,17 @@ function initPage() {
 			closePublications.ID = "closePublications"
 			history.pushState({closePublications}, '', '');
 			history.pushState({closePublications}, '', '');
-			window.scrollTo(0,0); 
-			for (let i = 0; i < topicElements.length; i++) {
-				topicElements[i].classList.add("fullScreen");
-			}
+			window.scrollTo(0,0);
 			var hiddenPage = document.querySelector(".researchContainer");
-			var topicTextElement=document.querySelector(".topicText." + event.target.classList[1] + "");
-			var topicPublicationsElement=document.querySelector(".topicPublications." + event.target.classList[1] + "");
-			hiddenPage.style.height = +topicTextElement.offsetHeight + +topicPublicationsElement.offsetHeight + 60 + "px";
-			hiddenPage.style.overflow = "hidden";
+			hiddenPage.classList.add("hidden");
+			var topicDetailsElement = document.querySelector(".topicDetails." + event.target.classList[1] + "")
+			topicDetailsElement.classList.add("fullScreen");
+			var visiblePageElement = document.querySelector(".researchWrapper");
+			visiblePageElement.appendChild(topicDetailsElement);
 			return;
 		}
 	}, false);
 }
-
 function groupBy(targetDiv,groupChoice,keywordName) {
 	if (typeof keywordName === 'undefined') { keywordName = "" };
 	oldData=document.getElementById("my-refs");
@@ -288,7 +265,6 @@ function groupBy(targetDiv,groupChoice,keywordName) {
 		}
 	});
 };
-
 function hideEmptyGroupHeadings() {
 	groups.forEach(function(group,index) { 
 		var groupDiv = document.querySelector("div[class*=\"" + group.ID + "\"]");
@@ -309,7 +285,6 @@ function hideEmptyGroupHeadings() {
 		}
 	});
 };
-
 function toggleList(clicked_id){
 	if (typeof clicked_id !== "string") {clicked_id = clicked_id.toString};
 	var togglebutton = document.getElementById(clicked_id);
@@ -333,9 +308,8 @@ function toggleList(clicked_id){
 		toggleicon.title = "Show List";
 	}
 }
-
 function expandAllLists(topicKeyword) {
-	var containerElement=document.querySelector(".topicCardFlex." + topicKeyword + "");
+	var containerElement=document.querySelector(".topicDetails." + topicKeyword + "");
 	var buttonElements=containerElement.querySelectorAll(".toggleType");
 	for (let i = 0; i < buttonElements.length; i++) {
 		var olElement=containerElement.querySelector("ol[class*=\"" + buttonElements[i].id + "\"]");
@@ -348,9 +322,8 @@ function expandAllLists(topicKeyword) {
 		}
 	}
 }
-
 function collapseAllLists(topicKeyword) {
-	var containerElement=document.querySelector(".topicCardFlex." + topicKeyword + "");
+	var containerElement=document.querySelector(".topicDetails." + topicKeyword + "");
 	var buttonElements=containerElement.querySelectorAll(".toggleType");
 	for (let i = 0; i < buttonElements.length; i++) {
 		var olElement=containerElement.querySelector("ol[class*=\"" + buttonElements[i].id + "\"]");
@@ -366,7 +339,6 @@ function collapseAllLists(topicKeyword) {
 		}
 	}
 }
-
 function toggleElement(toggleButton,element,slack){
 	if (!slack) {slack=0}
 	var iconElement=toggleButton.querySelector("i");
@@ -390,7 +362,6 @@ function toggleElement(toggleButton,element,slack){
 		iconElement.classList.replace("fa-angle-up","fa-angle-down");
 	}
 }
-
 function collapseSection(element,slack) {
 	if (!slack) {slack=0}
 	// get the height of the element's inner content, regardless of its actual size
@@ -406,15 +377,9 @@ function collapseSection(element,slack) {
 	var topicDetailsElement=element.closest(".topicDetails");
 	if (topicDetailsElement) {
 		if (topicDetailsElement.classList.contains("fullScreen")) {
-			var hiddenPage = document.querySelector(".researchContainer");
 			var topicTextElement=topicDetailsElement.querySelector(".topicText");
 			var topicPublicationsElement=topicDetailsElement.querySelector(".topicPublications");
-			var hiddenPageHeight=parseInt(hiddenPage.style.height, 10);
-			//hiddenPage.style.transition="height 0.4s";
 		}
-	}
-	if (topicDetailsElement) {
-				hiddenPage.style.height = hiddenPageHeight - sectionHeight - slack + "px";
 	}
 	requestAnimationFrame(function() {
 		element.style.height = sectionHeight + 'px';
@@ -431,7 +396,6 @@ function collapseSection(element,slack) {
 		});
 	});		
 }
-
 function expandSection(element,slack) {
 	if (!slack) {slack=0}
 	// get the height of the element's inner content, regardless of its actual size
@@ -442,12 +406,8 @@ function expandSection(element,slack) {
 	var topicDetailsElement=element.closest(".topicDetails");
 	if (topicDetailsElement) {
 		if (topicDetailsElement.classList.contains("fullScreen")) {
-			var hiddenPage = document.querySelector(".researchContainer");
-			//hiddenPage.style.transition="height 0.1s";
 			var topicTextElement=topicDetailsElement.querySelector(".topicText");
 			var topicPublicationsElement=topicDetailsElement.querySelector(".topicPublications");
-			var hiddenPageHeight=parseInt(hiddenPage.style.height, 10);
-			hiddenPage.style.height = hiddenPageHeight + element.scrollHeight + slack + "px";
 		}
 	}
 	// when the next css transition finishes (which should be the one we just triggered)
