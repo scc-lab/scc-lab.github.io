@@ -1,0 +1,59 @@
+<script type="text/javascript">
+function upgradeImage(element) {
+	parentDiv = element.parentElement;
+	lowResImageElement = parentDiv.querySelector("img:not([hidden])");
+	element.classList.remove("hidden");
+	lowResImageElement.classList.add("hidden");
+}
+</script>
+<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" rel="stylesheet" />
+<link href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css" rel="stylesheet" />
+<link href="Resources/css/scc.css" rel="stylesheet">
+<div class="hidden" id="includedContent">
+	&nbsp;</div>
+<link href="Resources/css/sidebar.css" rel="stylesheet">
+<div class="topContainer">
+	<div class="top">
+		<div class="toplogo"> <img class="toplogo" src="Resources/img/logo.svg"> </div>
+		<div class="toptext">Systems, Cognition, and Control Laboratory</div>
+	</div>
+</div>
+<div class="sidebar">
+	<a href="index.html">Home</a>
+	<a class="active" href="Research.html">Research</a>
+	<a href="Publications.html">Publications</a>
+	<a href="People.html">People</a>
+	<a href="Courses.html">Courses</a>
+</div>
+<div class="ResearchWrapper">
+	<div class="researchContainer">
+		<div class="topicCardFlex research-projects">
+			<a href="ResearchProjects.html"> 
+				<div class="aspectRatioOne research-projects">
+					<div class="topicCard research-projects">
+						<div class="topicImg research-projects">
+							<img class="coverImage research-projects" src="Resources/img/small_research-projects.png" />
+							<img class="coverImage research-projects hidden" src="Resources/img/research-projects.png" onload="upgradeImage(this)">
+						</div>
+						<div class="topicTitle research-projects">
+							Research Projects</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="topicCardFlex research-areas">
+			<a href="ResearchAreas.html">
+				<div class="aspectRatioOne research-areas">
+					<div class="topicCard research-areas">
+						<div class="topicImg research-areas">
+							<img class="coverImage research-areas" src="Resources/img/small_research-areas.png" />
+							<img class="coverImage research-areas hidden" src="Resources/img/research-areas.png" onload="upgradeImage(this)">
+						</div>
+						<div class="topicTitle research-areas">
+							Research Areas</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
