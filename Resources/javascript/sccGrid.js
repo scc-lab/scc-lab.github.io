@@ -109,7 +109,7 @@ function initPage() {
 			history.back();
 			return;
 		}
-		if ((event.target.matches(".itemText") && event.target.matches(":not(.fullScreen)")) || event.target.matches(".fullScreenLink")) {
+		if ((event.target.matches(".itemText") && event.target.parentElement.matches(":not(.fullScreen)")) || event.target.matches(".fullScreenLink")) {
 			topicKeywordGlobal = event.target.classList[1];
 			var topicElements=document.querySelectorAll("." + event.target.classList[1] + "");
 			var titleText=document.querySelector(".itemTitle." + event.target.classList[1] + "").textContent;
