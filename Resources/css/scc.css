@@ -435,7 +435,7 @@ img.itemImg {
 .itemDetailsContainer.fullScreen .itemFullScreenImg {
 	display:block;
 	max-width: 500px !important;
-	max-height: 400px !important; 
+	width:65%;
 	margin-left: auto;
 	margin-right: auto;
 	pointer-events:auto;
