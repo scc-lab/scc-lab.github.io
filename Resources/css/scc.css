@@ -348,6 +348,7 @@ div.gridItemContainer::before {
 img.itemImg {
 	width: 100% !important;
 	height: 100% !important;
+	max-width: none !important;
 	display: block;
 	-o-object-fit: cover;
 	   object-fit: cover;
