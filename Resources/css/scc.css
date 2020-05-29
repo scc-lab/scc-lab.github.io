@@ -443,9 +443,10 @@ img.itemImg {
 	margin-right: auto;
 	pointer-events:auto;
 	cursor:auto;
-}
-.itemText .itemFullScreenImg {
-	display:none;
+	-webkit-box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
+			box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
+	border-radius: 1em;
+	overflow: hidden;
 }
 .itemDetailsContainer.fullScreen {
 	display: block;
@@ -463,10 +464,6 @@ img.itemImg {
 .itemDetailsContainer.fullScreen .itemImgContainer {
 	width: auto;
 	height: auto;
-	-webkit-box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
-			box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
-	border-radius: 1em;
-	overflow: hidden;
 }
 .itemDetailsContainer.fullScreen .itemText {
 	position: static;
