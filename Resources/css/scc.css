@@ -336,6 +336,7 @@ div.gridItemContainer::before {
 	position: relative;
 	top: 0;
 	left: 0;
+	width: 100%;
 	background-color: black;
 	pointer-events: none;
 	overflow:hidden;
