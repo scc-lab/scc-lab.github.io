@@ -360,6 +360,10 @@ img.itemImg {
 	pointer-events: none;
 	opacity:0;
 }
+.itemImgContainer {
+	width:100%;
+	height:100%;
+}
 /* when topic card is clicked */
 .gridItemContainer.showText {
 	pointer-events: none;
@@ -452,6 +456,10 @@ img.itemImg {
 }
 .itemDetailsContainer.fullScreen .itemPublications {
 	display: block;
+}
+.itemDetailsContainer.fullScreen .itemImgContainer {
+	width: auto;
+	height: auto;
 }
 .itemDetailsContainer.fullScreen .itemText {
 	position: static;
