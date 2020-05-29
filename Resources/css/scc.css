@@ -341,13 +341,15 @@ div.gridItemContainer::before {
 	pointer-events: none;
 	overflow:hidden;
 }
+.itemImgContainer {
+	width:100%;
+}
 img.itemImg {
 	width: 100% !important;
 	height: 100% !important;
-	max-width:auto !important;
 	display: block;
-	-o-object-fit: cover !important;
-	   object-fit: cover !important;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	opacity: 0.4;
 	pointer-events: none;
 }
