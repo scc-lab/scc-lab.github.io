@@ -293,58 +293,31 @@ input:checked + .slider:before {
 }
 
 /* CSS for research area pages */
-.researchContainer {
+.gridContainer {
+	display: -ms-grid;
+	display: grid;
+	grid-gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+div.gridItemContainer {
+	-webkit-box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
+			box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
+	border-radius: 1em;
+	overflow: hidden;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-		-ms-flex-flow: row wrap;
-			flex-flow: row wrap;
-	-webkit-box-pack: space-evenly;
-		-ms-flex-pack: space-evenly;
-			justify-content: space-evenly;
-	/*These make subsequent fixed positions relative to .researchContainer instead of the viewport*/
-	/* position:relative; */
-	-webkit-transform: rotate(0deg);
-	-ms-transform: rotate(0deg);
-	transform: rotate(0deg);
-	overflow:hidden;
-	-webkit-transition:height 0.35s;
-	-o-transition:height 0.35s;
-	transition:height 0.35s;
-}
-.topicCardFlex {
-	-webkit-box-flex: 1;
-		-ms-flex: 1 1 33%;
-			flex: 1 1 33%;
-	max-width: 33%;
-	padding: 1em;
-	pointer-events: auto;
 	cursor: pointer;
-}
-@media (max-width: 1000px) {
-	.topicCardFlex {
-		-webkit-box-flex: 1;
-			-ms-flex: 1 1 50%;
-				flex: 1 1 50%;
-		max-width: 50%;
-	}
-	@media (max-width:600px) {
-		.topicCardFlex {
-			-webkit-box-flex: 1;
-				-ms-flex: 1 1 100%;
-					flex: 1 1 100%;
-			max-width: 100%;
-		}
-	}
-}
-.aspectRatioOne {
-	padding-top: 100%;
 	position: relative;
-	pointer-events: none;
 }
-.topicTitle {
+div.gridItemContainer::before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	padding-bottom: 100%;
+}
+.itemTitle {
 	position: absolute;
 	font-size: 2em;
 	font-variant: small-caps;
@@ -355,48 +328,44 @@ input:checked + .slider:before {
 	-ms-transform: translate(-50%, -50%);
 	text-align: center;
 	padding: 0em;
-	border-radius: 1em;
 	width: 85%;
-	-webkit-transition: .5s ease;
-	-o-transition: .5s ease;
-	transition: .5s ease;
 	color: white;
 	pointer-events: none;
 }
-.topicImg {
-	position: absolute;
+.itemTileContainer {
+	position: relative;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
-	border-radius: 1em;
-	-webkit-transition: .5s ease;
-	-o-transition: .5s ease;
-	transition: .5s ease;
 	background-color: black;
 	pointer-events: none;
 }
-img.coverImage {
-	width: 100% !important;
-	height: 100% !important;
-	-o-object-fit: cover !important;
-	   object-fit: cover !important;
+img.itemImg {
+	width: 100%;
+	height: 100%;
 	display: block;
-	margin: auto;
-	border-radius: 1em;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	opacity: 0.4;
-	-webkit-transition: .5s ease;
-	-o-transition: .5s ease;
-	transition: .5s ease;
 	pointer-events: none;
+}
+.itemDetailsContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom:0;
+	pointer-events: none;
+	opacity:0;
 }
 /* when topic card is clicked */
-.topicCardFlex.showText {
+.gridItemContainer.showText {
 	pointer-events: none;
 }
-.topicCardFlex.showText .topicTitle {
+.gridItemContainer.showText .itemImg {
+	opacity:0.05;
+}
+.gridItemContainer.showText .itemTitle {
 	font-size: 1.25em;
-	font-variant: none;
 	top: 0%;
 	left: 50%;
 	-webkit-transform: translate(-50%, 0%);
@@ -413,26 +382,30 @@ img.coverImage {
 	pointer-events: none;
 	font-weight: bold;
 	margin-bottom: 1em;
+	
+	z-index:99999;
 }
-.topicCardFlex.showText .topicText {
+.gridItemContainer.showText .itemText {
 	pointer-events: auto;
 	opacity: 1;
 }
-.topicCardFlex.showText .topicImg {
-	opacity: 0.1;
+.gridItemContainer.showText .itemTileContainer {
+	background-color: white;
 }
-.topicDetails {
+.gridItemContainer.showText .itemDetailsContainer {
 	pointer-events: none;
 	overflow:hidden;
+	display: block;
+	opacity: 1;
 }
-.topicText {
+.itemText {
+	position: absolute;
 	width: 95%;
 	max-height: 80%;
 	overflow: auto;
 	padding-right: 0.25em;
 	padding-left: 0.25em;
 	font-size: 1em;
-	position: absolute;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -40%);
@@ -445,38 +418,37 @@ img.coverImage {
 	pointer-events: none;
 	cursor:text;
 }
-.topicPublications {
+.itemPublications {
 	background-color: white;
 	display: none;
 	margin-top: 1em;
 }
+
 /* when publications screen is opened*/
-.topicDetails.fullScreen .fullTextImage {
+.itemDetailsContainer.fullScreen .itemFullScreenImg {
 	display:block;
-	width: 100%;
 	max-width: 500px !important;
+	max-height: 400px;
 	margin-left: auto;
 	margin-right: auto;
 	pointer-events:auto;
 	cursor:auto;
 }
-.topicText .fullTextImage {
+.itemText .itemFullScreenImg {
 	display:none;
 }
-.topicDetails.fullScreen {
-	/* position:fixed; */
-	top:0;
-	left:0;
-	z-index:99999;
-	background-color:white;
-	max-width:100%;
+.itemDetailsContainer.fullScreen {
+	display: block;
+	max-width: 100%;
 	overflow: hidden;
 	pointer-events: auto;
+	position: static;
+	opacity: 1;
 }
-.topicDetails.fullScreen .topicPublications {
+.itemDetailsContainer.fullScreen .itemPublications {
 	display: block;
 }
-.topicDetails.fullScreen .topicText {
+.itemDetailsContainer.fullScreen .itemText {
 	position: static;
 	-webkit-transform: none;
 			transform: none;
@@ -499,37 +471,37 @@ img.coverImage {
 	cursor:text;
 }
 /* click to publish... text blocks*/
-.hiddenText, .hiddenFullScreenText {
+.backToGridLink, .fullScreenLink {
 	cursor:pointer;
 }
-.topicText .hiddenText, .topicDetails.fullScreen .hiddenFullScreenText {
+.itemText .backToGridLink, .itemDetailsContainer.fullScreen .fullScreenLink {
 	display:none;
 }
-.topicDetails.fullScreen .hiddenText {
+.itemDetailsContainer.fullScreen .backToGridLink {
 	display:block;
 	text-align:center;
 	color:#7f7f7f;
 	cursor:pointer;
 	pointer-events:auto;
 }
-.topicText .hiddenFullScreenText {
+.itemText .fullScreenLink {
 	display:block;
 	text-align:center;
 	color:#7f7f7f;
 	margin:0.5em;
 }
 /* scrollbars */
-.topicText::-webkit-scrollbar {
+.itemText::-webkit-scrollbar {
 	width: 5px;
 }
  
 /* Track */
-.topicText::-webkit-scrollbar-track {
+.itemText::-webkit-scrollbar-track {
 	border-radius: 5px;
 }
  
 /* Handle */
-.topicText::-webkit-scrollbar-thumb {
+.itemText::-webkit-scrollbar-thumb {
 	opacity:0.1;
 	border-radius: 5px;
 	background: rgba(0,0,0,0.1); 

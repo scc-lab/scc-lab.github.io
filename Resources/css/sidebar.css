@@ -31,7 +31,7 @@
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.ResearchWrapper {
+div.contentWrapper {
 	position:static;
 	margin-left:200px;
 	right:0;
@@ -75,7 +75,7 @@ img.toplogo {
 		position: relative;
 	}
 	.sidebar a {float: left;}
-	div.ResearchWrapper {margin-left: 0;}
+	div.contentWrapper {margin-left: 0;}
 	div.topContainer {margin-left:0;}
 }
 

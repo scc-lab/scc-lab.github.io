@@ -35,14 +35,14 @@ function initPage() {
 	allRows = content.querySelectorAll("li"); // global variable
 	numEntries = allRows.length; // global variable
 	// group entries by BibTeX entry types
-	var piblicationDivs = document.querySelectorAll("[class*=topicPublications]");
+	var piblicationDivs = document.querySelectorAll("[class*=itemPublications]");
 	for (let i = 0; i < piblicationDivs.length; i++) {
 		groupBy(piblicationDivs[i],"entryType",piblicationDivs[i].classList[1]);
 	}
 	// Listen for the back button/click to go back event
 	window.addEventListener("popstate", function(event) {
 		if (event.state) {
-			if (event.state.closePublications) {// Event is to close publications page
+			if (event.state.closePublications) { // Event is to close publications page
 				var nodeTitleElement=document.querySelector(".node-title");//Specific to okstate.edu
 				var pageTitleElement=document.querySelector(".page-title");//Specific to okstate.edu
 				if (pageTitleElement) { //Specific to okstate.edu
@@ -52,13 +52,19 @@ function initPage() {
 					nodeTitleElement.textContent=nodeTitlePrevious;
 				}
 				expandAllLists(topicKeywordGlobal);
-				var topicDetailsElement = document.querySelector(".topicDetails." + topicKeywordGlobal + "");
-				var aspectRatioOneElement = document.querySelector(".aspectRatioOne." + topicKeywordGlobal + "");
-				aspectRatioOneElement.appendChild(topicDetailsElement);
-				topicDetailsElement.classList.remove("fullScreen");
+				var gridItemContainerElement = document.querySelector(".gridItemContainer." + topicKeywordGlobal + "");
+				var itemTileContainerElement = document.querySelector(".itemTileContainer." + topicKeywordGlobal + "");
+				var itemDetailsContainerElement = document.querySelector(".itemDetailsContainer." + topicKeywordGlobal + "");
+				var itemImgContainerElement = document.querySelector(".itemImgContainer." + topicKeywordGlobal + "");
+				var itemImgElements = itemImgContainerElement.querySelectorAll("img");
+				gridItemContainerElement.appendChild(itemDetailsContainerElement);
+				itemTileContainerElement.insertBefore(itemImgContainerElement,itemTileContainerElement.firstChild);
+				for (let i = 0; i < itemImgElements.length; i++) {
+					itemImgElements[i].classList.replace("itemFullScreenImg","itemImg");
+				}
+				itemDetailsContainerElement.classList.remove("fullScreen");
+				document.querySelector(".gridContainer").classList.remove("hidden");
 				history.back();
-				var hiddenPage = document.querySelector(".researchContainer");
-				hiddenPage.classList.remove("hidden");
 				return;
 			}
 		}
@@ -82,8 +88,8 @@ function initPage() {
 			}
 		}
 		if (event.target.matches(".collapseAllType")||event.target.parentElement.matches(".collapseAllType")) {
-			var topicDetailsElement=event.target.closest(".topicDetails");
-			var topicKeyword=topicDetailsElement.classList[1];
+			var itemDetailsContainerElement=event.target.closest(".itemDetailsContainer");
+			var topicKeyword=itemDetailsContainerElement.classList[1];
 			if (event.target.matches(".collapseAllType")) {
 				collapseAllLists(topicKeyword);
 			} else {
@@ -91,58 +97,64 @@ function initPage() {
 			}
 		}
 		if (event.target.matches(".expandAllType")||event.target.parentElement.matches(".expandAllType")) {
-			var topicDetailsElement=event.target.closest(".topicDetails");
-			var topicKeyword=topicDetailsElement.classList[1];
+			var itemDetailsContainerElement=event.target.closest(".itemDetailsContainer");
+			var topicKeyword=itemDetailsContainerElement.classList[1];
 			if (event.target.matches(".expandAllType")) {
 				expandAllLists(topicKeyword);
 			} else {
 				expandAllLists(topicKeyword);
 			}
 		}
+		if (event.target.matches(".backToGridLink")) {
+			history.back();
+			return;
+		}
+		if ((event.target.matches(".itemText") && event.target.matches(":not(.fullScreen)")) || event.target.matches(".fullScreenLink")) {
+			topicKeywordGlobal = event.target.classList[1];
+			var topicElements=document.querySelectorAll("." + event.target.classList[1] + "");
+			var titleText=document.querySelector(".itemTitle." + event.target.classList[1] + "").textContent;
+			//------------------Specific to okstate.edu-------------------
+			var nodeTitleElement=document.querySelector(".node-title");
+			var pageTitleElement=document.querySelector(".page-title");
+			if (pageTitleElement) {
+				pageTitlePrevious = pageTitleElement.textContent; // Global Variable
+				pageTitleElement.textContent=titleText; 
+			}
+			if (nodeTitleElement) {
+				nodeTitlePrevious = nodeTitleElement.textContent; // Global Variable
+				nodeTitleElement.textContent=titleText;
+			}
+			//------------------------------------------------------------
+			var closePublications = new Object();
+			closePublications.ID = "closePublications"
+			history.pushState({closePublications}, '', '');
+			history.pushState({closePublications}, '', '');
+			window.scrollTo(0,0);
+			var hiddenPage = document.querySelector(".gridContainer");
+			hiddenPage.classList.add("hidden");
+			var itemDetailsContainerElement = document.querySelector(".itemDetailsContainer." + event.target.classList[1] + "");
+			var itemImgContainerElement = document.querySelector(".itemImgContainer." + event.target.classList[1] + "");
+			var itemImgElements = itemImgContainerElement.querySelectorAll("img");
+			itemDetailsContainerElement.classList.add("fullScreen");
+			for (let i = 0; i < itemImgElements.length; i++) {
+				itemImgElements[i].classList.replace("itemImg","itemFullScreenImg");
+			}
+			itemImgContainerElement.classList.replace("hidden","fullScreen");
+			var visiblePageElement = document.querySelector(".contentWrapper");
+			itemDetailsContainerElement.insertBefore(itemImgContainerElement,itemDetailsContainerElement.firstChild);
+			visiblePageElement.appendChild(itemDetailsContainerElement);
+			document.querySelector(".gridItemContainer." + event.target.classList[1] + "").classList.remove("showText")
+			return;
+		}
 		if (event.target.matches(":not(.showText)")) {
-			var titleElement=document.querySelector(".topicCardFlex.showText");
+			var titleElement=document.querySelector(".gridItemContainer.showText");
 			if (titleElement) {
 				titleElement.classList.remove("showText");
 			}
 		}
-		if (event.target.matches(".topicCardFlex")) {
+		if (event.target.matches(".gridItemContainer")) {
 			event.target.classList.add("showText");
 			return;
-		}
-		if (event.target.matches(".hiddenText")) {
-			history.back();
-			return;
-		}
-		if (event.target.matches(".topicText") || event.target.matches(".hiddenFullScreenText")) {
-			if (event.target.parentElement.matches(":not(.fullScreen)")){
-				topicKeywordGlobal = event.target.classList[1];
-				var topicElements=document.querySelectorAll("." + event.target.classList[1] + "");
-				var titleText=document.querySelector(".topicTitle." + event.target.classList[1] + "").textContent;
-				//------------------Specific to okstate.edu-------------------
-				var nodeTitleElement=document.querySelector(".node-title");
-				var pageTitleElement=document.querySelector(".page-title");
-				if (pageTitleElement) {
-					pageTitlePrevious = pageTitleElement.textContent; // Global Variable
-					pageTitleElement.textContent=titleText;
-				}
-				if (nodeTitleElement) {
-					nodeTitlePrevious = nodeTitleElement.textContent; // Global Variable
-					nodeTitleElement.textContent=titleText;
-				}
-				//------------------------------------------------------------
-				var closePublications = new Object();
-				closePublications.ID = "closePublications"
-				history.pushState({closePublications}, '', '');
-				history.pushState({closePublications}, '', '');
-				window.scrollTo(0,0);
-				var hiddenPage = document.querySelector(".researchContainer");
-				hiddenPage.classList.add("hidden");
-				var topicDetailsElement = document.querySelector(".topicDetails." + event.target.classList[1] + "");
-				topicDetailsElement.classList.add("fullScreen");
-				var visiblePageElement = document.querySelector(".researchWrapper");
-				visiblePageElement.appendChild(topicDetailsElement);
-				return;
-			}
 		}
 	}, false);
 }
@@ -321,7 +333,7 @@ function toggleList(clicked_id){
 	}
 }
 function expandAllLists(topicKeyword) {
-	var containerElement=document.querySelector(".topicDetails." + topicKeyword + "");
+	var containerElement=document.querySelector(".itemDetailsContainer." + topicKeyword + "");
 	var buttonElements=containerElement.querySelectorAll(".toggleType");
 	for (let i = 0; i < buttonElements.length; i++) {
 		var olElement=containerElement.querySelector("ol[class*=\"" + buttonElements[i].id + "\"]");
@@ -335,7 +347,7 @@ function expandAllLists(topicKeyword) {
 	}
 }
 function collapseAllLists(topicKeyword) {
-	var containerElement=document.querySelector(".topicDetails." + topicKeyword + "");
+	var containerElement=document.querySelector(".itemDetailsContainer." + topicKeyword + "");
 	var buttonElements=containerElement.querySelectorAll(".toggleType");
 	for (let i = 0; i < buttonElements.length; i++) {
 		var olElement=containerElement.querySelector("ol[class*=\"" + buttonElements[i].id + "\"]");
@@ -386,11 +398,11 @@ function collapseSection(element,slack) {
 	// on the next frame (as soon as the previous style change has taken effect),
 	// explicitly set the element's height to its current pixel height, so we 
 	// aren't transitioning out of 'auto'
-	var topicDetailsElement=element.closest(".topicDetails");
-	if (topicDetailsElement) {
-		if (topicDetailsElement.classList.contains("fullScreen")) {
-			var topicTextElement=topicDetailsElement.querySelector(".topicText");
-			var topicPublicationsElement=topicDetailsElement.querySelector(".topicPublications");
+	var itemDetailsContainerElement=element.closest(".itemDetailsContainer");
+	if (itemDetailsContainerElement) {
+		if (itemDetailsContainerElement.classList.contains("fullScreen")) {
+			var itemTextElement=itemDetailsContainerElement.querySelector(".itemText");
+			var itemPublicationsElement=itemDetailsContainerElement.querySelector(".itemPublications");
 		}
 	}
 	requestAnimationFrame(function() {
@@ -415,11 +427,11 @@ function expandSection(element,slack) {
 	//element.style.paddingBottom = 0 + "px";
 	// have the element transition to the height of its inner content
 	element.style.height = sectionHeight + 'px';
-	var topicDetailsElement=element.closest(".topicDetails");
-	if (topicDetailsElement) {
-		if (topicDetailsElement.classList.contains("fullScreen")) {
-			var topicTextElement=topicDetailsElement.querySelector(".topicText");
-			var topicPublicationsElement=topicDetailsElement.querySelector(".topicPublications");
+	var itemDetailsContainerElement=element.closest(".itemDetailsContainer");
+	if (itemDetailsContainerElement) {
+		if (itemDetailsContainerElement.classList.contains("fullScreen")) {
+			var itemTextElement=itemDetailsContainerElement.querySelector(".itemText");
+			var itemPublicationsElement=itemDetailsContainerElement.querySelector(".itemPublications");
 		}
 	}
 	// when the next css transition finishes (which should be the one we just triggered)
