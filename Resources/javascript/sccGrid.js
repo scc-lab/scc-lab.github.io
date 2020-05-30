@@ -26,7 +26,7 @@ request.send();
 
 // List of headings corresponding to BibTeX entry types
 var entryTypes = ["Book","Article","InCollection","InProceedings","PhdThesis","MastersThesis","TechReport"];
-var entryTypeNames = ["Books","Peer-reviewed journal papers","Book chapters","Peer-reviewed conference papers","Ph.D. dissertations","M.S. thesis","Technical reports"];
+var entryTypeNames = ["Books","Journal articles","Book chapters","Conference papers","Ph.D. dissertations","M.S. thesis","Technical reports"];
 function initPage() {
 	// check for data table
 	if (!document.getElementById("my-refs")) { return; }
