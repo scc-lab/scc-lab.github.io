@@ -299,7 +299,7 @@ input:checked + .slider:before {
 .gridContainer {
 	display: -ms-grid;
 	display: grid;
-	grid-gap: 1em;
+	grid-gap: 1rem;
 	grid-template-columns: repeat(auto-fit, minmax(min(300px,100%), 1fr));
 	justify-content: center;
 	align-items:center;
@@ -307,7 +307,7 @@ input:checked + .slider:before {
 div.gridItemContainer {
 	-webkit-box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
 			box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
-	border-radius: 1em;
+	border-radius: 1rem;
 	overflow: hidden;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -352,7 +352,7 @@ img.itemImg {
 }
 .itemTitle {
 	position: absolute;
-	font-size: 2em;
+	font-size: 2rem;
 	font-variant: small-caps;
 	top: 50%;
 	left: 50%;
@@ -385,7 +385,7 @@ img.itemImg {
 	opacity:0.05;
 }
 .gridItemContainer.showText .itemTitle {
-	font-size: 1.25em;
+	font-size: 1.25rem;
 	top: 0%;
 	left: 50%;
 	-webkit-transform: translate(-50%, 0%);
@@ -420,7 +420,7 @@ img.itemImg {
 	overflow: auto;
 	padding-right: 0.25em;
 	padding-left: 0.25em;
-	font-size: 1em;
+	font-size: 1rem;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -40%);
