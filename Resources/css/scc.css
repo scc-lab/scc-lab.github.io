@@ -463,7 +463,7 @@ img.itemImg {
 			box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
 	border-radius: 1em;
 	overflow: hidden;
-	padding-top: 0.5em;
+	margin-top: 0.5em;
 }
 .itemDetailsContainer.fullScreen .itemText {
 	position: static;
