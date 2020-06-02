@@ -101,7 +101,7 @@ span.journalTitle, span.bookTitle {
 	border: none;
 }
 i.fas.fa-external-link-alt, i.fas.fa-external-link-square-alt, i.far, i.fab {
-	color: #cc4c00;
+	color: #FE5C00;
 	margin-left: 0.75em;
 	height: 1.25em;
 	width: 1.25em;
@@ -109,7 +109,7 @@ i.fas.fa-external-link-alt, i.fas.fa-external-link-square-alt, i.far, i.fab {
 	overflow:hidden;
 }
 i.ai {
-	color: #cc4c00;
+	color: #FE5C00;
 	height: 1.25em;
 	width: 1.25em;
 }
