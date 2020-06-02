@@ -45,6 +45,12 @@ div.bioCard + div.bioCard {
 	padding-right: 2em;
 	margin:0;
 }
+div.bioImage > img {
+	border-radius: 1em;
+	max-width:200px;
+	height:auto;
+	width:100%;
+}
 @media (max-aspect-ratio: 7/8) {
 	.bioImage {
 		display:flex;
@@ -55,12 +61,6 @@ div.bioCard + div.bioCard {
 	div.bioImage > img {
 		max-width:max(30%,200px);
 	}
-}
-div.bioImage > img {
-	border-radius: 1em;
-	max-width:200px;
-	height:auto;
-	width:100%;
 }
 </style>
 <link href="Resources/css/sidebar.css" rel="stylesheet">
