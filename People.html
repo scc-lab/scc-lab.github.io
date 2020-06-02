@@ -26,39 +26,40 @@ div.bioCard {
 	min-height: 250px;
 	box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
 	border-radius: 1em;
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: space-around;
-	align-content: center;
+	display: block;
 	overflow: hidden;
 	margin:1em;
+	padding: 1em;
 }
 div.bioCard + div.bioCard {
 	margin-top: 3em;
 }
-@media (min-aspect-ratio: 3/4) {
-	div.bioCard {
-		flex-flow: row;
-	}
-}
 .bioText {
-	display: inline-block;
-	flex: 1 1 70%;
-	margin: 0;
-	padding: 1em;
+	display: inline;
 	overflow: auto;
 }
 .bioImage {
-	display: inline-block;
-	margin-right: 2em;
-	flex: 1 1 30%;
-	white-space: nowrap;
-	text-align: center;
-	margin: 0;
+	display: inline;
+	float: left;
 	padding: 1em;
+	padding-right: 2em;
+	margin:0;
 }
-img {
+@media (max-aspect-ratio: 1/1) {
+	.bioImage {
+		display:flex;
+		justify-content:center;
+		float:none;
+		padding:1em;
+	}
+}
+div.bioImage > img {
 	border-radius: 1em;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:200px;
+	height:auto;
+	width:100%;
 }
 </style>
 <link href="Resources/css/sidebar.css" rel="stylesheet">
@@ -79,8 +80,8 @@ img {
 	<h3>Lab Director</h3>
 	<div class="bioCard">
 		<div class="bioImage">
-			<img alt="" src="Resources/img/People/medium_rushikesh_kamalapurkar.jpg" style="width: 250px; height: 250px;"/>
-			<img class="hidden" alt="" src="Resources/img/People/rushikesh_kamalapurkar.jpg" style="width: 250px; height: 250px;" onload="upgradeImage(this)" />
+			<img alt="" src="Resources/img/People/medium_rushikesh_kamalapurkar.jpg"/>
+			<img class="hidden" alt="" src="Resources/img/People/rushikesh_kamalapurkar.jpg" onload="upgradeImage(this)" />
 		</div>
 		<div class="bioText">
 			<strong>Rushikesh Kamalapurkar&nbsp;</strong>received his M.S. and his Ph.D. degree in 2011 and 2014, respectively, from the Mechanical and Aerospace Engineering Department at the University of Florida. After working for a year as a postdoctoral research fellow with Dr. Warren E. Dixon, he was selected as the 2015-16 MAE postdoctoral teaching fellow. In 2016 he joined the School of Mechanical and Aerospace Engineering at the Oklahoma State University as an Assistant professor. His primary research interest has been intelligent, learning-based control of uncertain nonlinear dynamic systems. He has published several book chapters, over 25 archival journal articles, and over 30 peer-reviewed conference papers. His work has been recognized by the 2015 University of Florida Department of Mechanical and Aerospace Engineering Best Dissertation Award, and the 2014 University of Florida Department of Mechanical and Aerospace Engineering Outstanding Graduate Research Award.
@@ -95,8 +96,8 @@ img {
 	<h3>Ph.D. Students</h3>
 	<div class="bioCard">
 		<div class="bioImage" >
-			<img alt="" src="Resources/img/People/medium_ryan_self.jpg" style="width: 200px; height: 267px;" />
-			<img class="hidden" alt="" src="Resources/img/People/ryan_self.jpg" style="width: 200px; height: 267px;" onload="upgradeImage(this)" />
+			<img alt="" src="Resources/img/People/medium_ryan_self.jpg"/>
+			<img class="hidden" alt="" src="Resources/img/People/ryan_self.jpg"onload="upgradeImage(this)" />
 		</div>
 		<div class="bioText">
 			<strong>Ryan Self</strong> is a Doctoral student working in the Systems, Cognition, and Control Laboratory at Oklahoma State University. He received his B.S. and M.S. degrees in 2014 and 2016, respectively, from Mechanical and Aerospace Engineering Department at Oklahoma State University. His research interests include robotics and autonomous systems, with a focus on machine learning. During the time completing his master&rsquo;s work, he worked as a research assistant focusing on drilling optimization. His worked involved incorporating a Particle Swarm Optimization (PSO) algorithm to a Rate of Penetration (ROP) model to optimize a drilled section of an oil well. He has published two peer-reviewed conference papers based on his work he did during his master&rsquo;s program. In 2014 and 2015, he received the Samson Energy Student Graduate Fellowship in Petroleum Engineering, and in 2017 received the John Brammer Graduate Research Fellowship for his PhD studies at Oklahoma State University.
@@ -104,8 +105,8 @@ img {
 	</div>
 	<div class="bioCard">
 		<div class="bioImage" >
-			<img alt="" src="Resources/img/People/medium_moad_abudia.jpg" style="width: 200px; height: 267px;" />
-			<img class="hidden" alt="" src="Resources/img/People/moad_abudia.jpg" style="width: 200px; height: 267px;" onload="upgradeImage(this)" />
+			<img alt="" src="Resources/img/People/medium_moad_abudia.jpg"/>
+			<img class="hidden" alt="" src="Resources/img/People/moad_abudia.jpg"onload="upgradeImage(this)" />
 		</div>
 		<div class="bioText">
 			<strong>Moad Abudia</strong> is a doctoral is a Doctoral student working in the Systems, Cognition, and Control Laboratory at Oklahoma State University. He received his B.S. and M.S. degrees in 2016 and 2019, respectively, from Mechanical and Aerospace Engineering Department at Oklahoma State University. His research interests include automation, optimization and AI. During his master’s program, he worked as a research assistant for the Web Handling Research Center, where he developed mathematical models for a web line and utilized system ID algorithms and GA metaheuristics for optimizing the controller along a number of dimensions.
@@ -114,8 +115,8 @@ img {
 	<h3>M.S. Students</h3>
 	<div class="bioCard">
 		<div class="bioImage" >
-			<img alt="" src="Resources/img/People/medium_nahid_mahmud.jpg" style="width: 200px; height: 250px;" />
-			<img class="hidden" alt="" src="Resources/img/People/nahid_mahmud.jpg" style="width: 200px; height: 250px;" onload="upgradeImage(this)" />
+			<img alt="" src="Resources/img/People/medium_nahid_mahmud.jpg"/>
+			<img class="hidden" alt="" src="Resources/img/People/nahid_mahmud.jpg"onload="upgradeImage(this)" />
 		</div>
 		<div class="bioText">
 			<strong>S M Nahid Mahmud</strong>&nbsp;is a Master&rsquo;s student in Mechanical Engineering at Oklahoma State University. He received his Bachelor&rsquo;s Degree in Mechanical Engineering at Islamic University of Technology, Bangladesh. During his senior year, he served as the Head of publications in Mecceleration (Bangladesh&rsquo;s biggest mechanical engineering competition) and he also worked as the Editor-in-chief for the yearly published magazine named CORE.  After his graduation, he served as an adjunct faculty at Sonargaon University, Bangladesh for one and a half years. Currently, he is working under Dr. Kamalapurkar in the Systems, Cognition, and Control Laboratory with research focuses on path planning, trajectory generation and trajectory tracking for the UAVs using nonlinear Optimal Control.
@@ -123,8 +124,8 @@ img {
 	</div>
 	<div class="bioCard">
 		<div class="bioImage" >
-			<img alt="" src="Resources/img/People/medium_katrine_hareland.jpg" style="width: 200px; height: 250px;" />
-			<img class="hidden" alt="" src="Resources/img/People/katrine_hareland.jpg" style="width: 200px; height: 250px;" onload="upgradeImage(this)" />
+			<img alt="" src="Resources/img/People/medium_katrine_hareland.jpg"/>
+			<img class="hidden" alt="" src="Resources/img/People/katrine_hareland.jpg"onload="upgradeImage(this)" />
 		</div>
 		<div class="bioText">
 			<strong>Katrine Hareland</strong>&nbsp;is a Master&rsquo;s student in Mechanical Engineering at Oklahoma State University. She received her Bachelor&rsquo;s Degree in Mechanical Engineering at Oklahoma State University in 2019. During her undergraduate study at Oklahoma State University she developed research interests in robotics, controls and biomechanics. She is currently working on her MS thesis with Dr. Rushikesh Kamalapurkar in the Systems, Cognition, and Control Laboratory along with Dr. Jerome Hausselle in the Biomechanical Analysis & Musculoskeletal Modeling (BAMM) Lab.
@@ -134,8 +135,8 @@ img {
 	<h3>M.S. Students</h3>
 	<div class="bioCard">
 		<div class="bioImage" >
-			<img alt="" src="Resources/img/People/medium_michael_harlan.jpg" style="width: 200px; height: 250px;" />
-			<img class="hidden" alt="" src="Resources/img/People/michael_harlan.jpg" style="width: 200px; height: 250px;" onload="upgradeImage(this)" />
+			<img alt="" src="Resources/img/People/medium_michael_harlan.jpg"/>
+			<img class="hidden" alt="" src="Resources/img/People/michael_harlan.jpg"onload="upgradeImage(this)" />
 		</div>
 		<div class="bioText">
 			<strong>Michael Harlan</strong>&nbsp;is a Master&rsquo;s student in Mechanical Engineering at Oklahoma State University. He received his Bachelor&rsquo;s Degree in Mechanical Engineering at Oklahoma Christian University in 2017. He is currently working under Dr. Kamalapurkar in the Systems, Cognition, and Control Laboratory with a research focus on Nonlinear Hybrid Optimal Control.
@@ -143,8 +144,8 @@ img {
 	</div>
 	<div class="bioCard">
 		<div class="bioImage" >
-			<img alt="" src="Resources/img/People/medium_ketan_sachidanand.jpg" style="width: 200px; height: 200px;" />
-			<img class="hidden" alt="" src="Resources/img/People/ketan_sachidanand.jpg" style="width: 200px; height: 200px;" onload="upgradeImage(this)" />
+			<img alt="" src="Resources/img/People/medium_ketan_sachidanand.jpg"/>
+			<img class="hidden" alt="" src="Resources/img/People/ketan_sachidanand.jpg"onload="upgradeImage(this)" />
 		</div>
 		<div class="bioText">
 			<strong>Ketan Rachamalla Sachidanand</strong> received his Master&rsquo;s degree in Mechanical &amp; Aerospace Engineering at Oklahoma State University. He received his Bachelor&rsquo;s degree in Mechanical Engineering and also has Master&rsquo;s degree in Advanced Manufacturing Systems. He is currently working under Dr. Rushikesh Kamalapurkar with his research focus on Optimization of trajectories for manipulators. He is currently working on Optimal Trajectory Planning of a Baxter Robot using Multi-Objective Optimization (NSGA-II). He has worked on covert path planning for mobile robots in dynamic environments and Hardware in the loop Simulation for an autonomous Golf Cart.
@@ -153,8 +154,8 @@ img {
 	<h3>UG Students</h3>
 	<div class="bioCard">
 		<div class="bioImage" >
-			<img alt="" src="Resources/img/People/medium_vivek_malik.jpg" style="width: 200px; height: 267px;" />
-			<img class="hidden" alt="" src="Resources/img/People/vivek_malik.jpg" style="width: 200px; height: 267px;" onload="upgradeImage(this)" />
+			<img alt="" src="Resources/img/People/medium_vivek_malik.jpg"/>
+			<img class="hidden" alt="" src="Resources/img/People/vivek_malik.jpg"onload="upgradeImage(this)" />
 		</div>
 		<div class="bioText">
 			<strong>Vivek Malik</strong>&nbsp;is a fourth-year undergraduate student currently enrolled in Mechanical Engineering in Indian Institute of Technology, Kharagpur. His research&nbsp;interests include robotics and autonomous systems, especially in the domain of path planning and controls. He worked under Dr Rushikesh Kamalapurkar during May-July 2018 on the implementation and testing of path planning algorithms&nbsp;on the electric golf cart. He also contributed to the development of the low-level controller for cart and sensor integration.
