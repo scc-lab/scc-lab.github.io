@@ -54,7 +54,7 @@ div.top {
 	border-bottom-style: solid;
 }
 div.toplogo {
-	min(30%,100px);
+	width:min(30%,100px);
 }
 img.toplogo {
 	width:100%;
