@@ -1,17 +1,21 @@
-<script type="text/javascript">
-	function upgradeImage(element) {
-		parentDiv = element.parentElement;
-		lowResImageElement = parentDiv.querySelector("img:not([hidden])");
-		element.classList.remove("hidden");
-		lowResImageElement.classList.add("hidden");
-	}
-</script>
-<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" rel="stylesheet" />
-<link href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css" rel="stylesheet" />
-<link href="Resources/css/scc.css" rel="stylesheet">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript">
+		function upgradeImage(element) {
+			parentDiv = element.parentElement;
+			lowResImageElement = parentDiv.querySelector("img:not([hidden])");
+			element.classList.remove("hidden");
+			lowResImageElement.classList.add("hidden");
+		}
+	</script>
+	<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" rel="stylesheet" />
+	<link href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css" rel="stylesheet" />
+	<link href="Resources/css/scc.css" rel="stylesheet">
+	<link href="Resources/css/sidebar.css" rel="stylesheet">
+</head>
+<body>
 <div class="hidden" id="includedContent">
 	&nbsp;</div>
-<link href="Resources/css/sidebar.css" rel="stylesheet">
 <div class="topContainer">
 	<div class="top">
 		<div class="toplogo"> <img class="toplogo" src="Resources/img/logo.svg"> </div>
@@ -130,4 +134,5 @@
 		</div>
 	</div>
 </div>
+</body>
 <script type="text/javascript" src="Resources/javascript/sccGrid.js"></script>
