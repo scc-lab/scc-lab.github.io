@@ -54,7 +54,7 @@ div.top {
 	border-bottom-style: solid;
 }
 div.toplogo {
-	width:100px;
+	min(30%,100px);
 }
 img.toplogo {
 	width:100%;
@@ -65,6 +65,8 @@ img.toplogo {
 	padding-top:1em;
 	width:70%;
 	text-align:right;
+    	display: flex;
+    	align-items: center;
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
