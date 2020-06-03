@@ -1,54 +1,61 @@
-<script type="text/javascript">
-function upgradeImage(element) {
-	parentDiv = element.parentElement;
-	lowResImageElement = parentDiv.querySelector("img:not([hidden])");
-	element.classList.remove("hidden");
-	lowResImageElement.classList.add("hidden");
-}
-</script>
-<style type="text/css">
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript">
+		function upgradeImage(element) {
+			parentDiv = element.parentElement;
+			lowResImageElement = parentDiv.querySelector("img:not([hidden])");
+			element.classList.remove("hidden");
+			lowResImageElement.classList.add("hidden");
+		}
+	</script>
+	<style type="text/css">
 
-.hidden {
-	display:none;
-}
-.flyerContainer {
-	display: grid;
-	grid-gap:1em;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-div.courseFlyer {
-	box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
-	border-radius: 1em;
-	overflow:hidden;
-}
-</style>
-<link href="Resources/css/sidebar.css" rel="stylesheet">
-<div class="topContainer">
-	<div class="top">
-		<div class="toplogo"> <img class="toplogo" src="Resources/img/logo.svg"> </div>
-		<div class="toptext">Systems, Cognition, and Control Laboratory</div>
-	</div>
-</div>
-<div class="sidebar">
-	<a href="index.html">Home</a>
-	<a href="Research.html">Research</a>
-	<a href="Publications.html">Publications</a>
-	<a href="People.html">People</a>
-	<a class="active" href="Courses.html">Courses</a>
-</div>
-<div class="contentWrapper">
-	<div class="flyerContainer ">
-		<div class="courseFlyer ">
-			<img alt="" src="Resources/img/Flyers/small_Optimal_Control_Flyer.png"  style="width: 100%;" />
-			<img class="hidden" alt="" src="Resources/img/Flyers/Optimal_Control_Flyer.png" style="width: 100%;" onload="upgradeImage(this)"/>
-		</div>
-		<div class="courseFlyer ">
-			<img alt="" src="Resources/img/Flyers/small_Nonlinear_Control_Flyer.png" style="width: 100%;" />
-			<img class="hidden" alt="" src="Resources/img/Flyers/Nonlinear_Control_Flyer.png" style="width: 100%;" onload="upgradeImage(this)" />
-		</div>
-		<div class="courseFlyer ">
-			<img alt="" src="Resources/img/Flyers/small_Autonomous_Systems_Flyer.png" style="width: 100%;" />
-			<img class="hidden" alt="" src="Resources/img/Flyers/Autonomous_Systems_Flyer.png" style="width: 100%;" onload="upgradeImage(this)" />
+	.hidden {
+		display:none;
+	}
+	.flyerContainer {
+		display: grid;
+		grid-gap:1em;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+	div.courseFlyer {
+		box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
+		border-radius: 1em;
+		overflow:hidden;
+	}
+	</style>
+	<link href="Resources/css/sidebar.css" rel="stylesheet">
+</head>
+<body>
+	<div class="topContainer">
+		<div class="top">
+			<div class="toplogo"> <img class="toplogo" src="Resources/img/logo.svg"> </div>
+			<div class="toptext">Systems, Cognition, and Control Laboratory</div>
 		</div>
 	</div>
-</div>
+	<div class="sidebar">
+		<a href="index.html">Home</a>
+		<a href="Research.html">Research</a>
+		<a href="Publications.html">Publications</a>
+		<a href="People.html">People</a>
+		<a class="active" href="Courses.html">Courses</a>
+	</div>
+	<div class="contentWrapper">
+		<div class="flyerContainer ">
+			<div class="courseFlyer ">
+				<img alt="" src="Resources/img/Flyers/small_Optimal_Control_Flyer.png"  style="width: 100%;" />
+				<img class="hidden" alt="" src="Resources/img/Flyers/Optimal_Control_Flyer.png" style="width: 100%;" onload="upgradeImage(this)"/>
+			</div>
+			<div class="courseFlyer ">
+				<img alt="" src="Resources/img/Flyers/small_Nonlinear_Control_Flyer.png" style="width: 100%;" />
+				<img class="hidden" alt="" src="Resources/img/Flyers/Nonlinear_Control_Flyer.png" style="width: 100%;" onload="upgradeImage(this)" />
+			</div>
+			<div class="courseFlyer ">
+				<img alt="" src="Resources/img/Flyers/small_Autonomous_Systems_Flyer.png" style="width: 100%;" />
+				<img class="hidden" alt="" src="Resources/img/Flyers/Autonomous_Systems_Flyer.png" style="width: 100%;" onload="upgradeImage(this)" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>
