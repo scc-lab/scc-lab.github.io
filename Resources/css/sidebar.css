@@ -45,6 +45,7 @@ div.top {
 	justify-content: center;
 	flex-wrap: nowrap;
 	padding:0.5em;
+	background-color: antiquewhite;
 }
 div.toplogo {
 	max-width:min(100px,25%);
