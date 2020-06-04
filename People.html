@@ -8,7 +8,16 @@
 			element.classList.remove("hidden");
 			lowResImageElement.classList.add("hidden");
 		}
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
 	</script>
+	<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" rel="stylesheet" />
 	<style type="text/css">
 	h1 {
 		margin-bottom: 0;
@@ -75,12 +84,17 @@
 			<div class="toptext">Systems, Cognition, and Control Laboratory</div>
 		</div>
 	</div>
-	<div class="sidebar">
-		<a href="index.html">Home</a>
-		<a href="Research.html">Research</a>
-		<a href="Publications.html">Publications</a>
-		<a class="active" href="People.html">People</a>
-		<a href="Courses.html">Courses</a>
+	<div class="topnavContainer">
+		<div class="topnav" id="myTopnav">
+			<a href="index.html">Home</a>
+			<a href="Research.html">Research</a>
+			<a href="Publications.html">Publications</a>
+			<a class="active" href="People.html">People</a>
+			<a href="Courses.html">Courses</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
 	</div>
 	<div class="contentWrapper">
 		<h3>Lab Director</h3>
