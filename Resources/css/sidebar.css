@@ -6,6 +6,8 @@ body {
 	margin:0;
 	padding:0;
 	background-color: #777;
+	position: sticky;
+	top: 0;
 }
 .topnav {
 	overflow: hidden;
