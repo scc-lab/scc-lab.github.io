@@ -38,9 +38,8 @@ body {
 }
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.top {
-	-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-			justify-content: space-between;
+	-ms-flex-pack: distribute;
+		justify-content: space-around;
 	-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 	display: -webkit-flex;
