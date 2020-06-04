@@ -17,13 +17,17 @@ body {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	font-size: 1.25em;
-	font-family:'Segoe UI',Arial,sans-serif;
+	font-size:min(1.25em,4vw);
 	color: white;
+	border-top-color: #777;
+	border-top-style: solid;
+	border-width: 3px;
 }
 /* Active/current link */
 .topnav a.active {
-	background-color: #FE5C00;
+	border-top-color: #FE5C00;
+	border-top-style: solid;
+	border-width: 3px;
 	color: white;
 }
 /* Links on mouse-over */
@@ -36,23 +40,22 @@ body {
 }
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.top {
-	-ms-flex-pack: distribute;
-		justify-content: space-around;
-	-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	flex-wrap: nowrap;
 	padding:0.5em;
 }
 div.toplogo {
-	width:100px;
+	max-width:min(100px,25%);
+	display:flex;
+	margin-right:auto;
 }
 img.toplogo {
-	width:100%;
+	max-width:100%;
 }
 .toptext {
 	display: flex;
-	font-family:'Segoe UI',Arial,sans-serif;
-	font-size:1.5em;
+	font-size:min(1.5em,6vw);
 	width:70%;
 	justify-content: flex-end;
 	align-items: center;
@@ -89,6 +92,7 @@ div.twitterContainer {
 		float: none;
 		display: block;
 		text-align: center;
+		border:none;
 	}
 	div.contentWrapper {margin-left: 0;}
 	div.topContainer {margin-left:0;}
