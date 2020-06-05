@@ -36,42 +36,44 @@
 		</div>
 	</div>
 	<div class="contentWrapper">
-		<form action="" id="quicksearch">
-			<div id="searchFlexBox">
-				<input type="text" id="qs_field" autocomplete="off" placeholder="Search..." />
-				<div id="searchButtons">
-					<button class="Reset Button Margin hidden" type="reset"/> Reset </button>
-					<select id = "groupSelector" >
-						<option selected="selected">Group By</option>
-						<option value="workAuthor">Author</option>
-						<option value="entryType">Type</option>
-						<option value="workYear">Year</option>
-						<option value="topicKeywords">Topic</option>
-					</select>
-					<button class="Arrow Button Margin" type="button" id="toggleBibliometrics"> Bibliometrics <i class="fas fa-angle-down" title="Show Bibliometrics"></i></button>
-					<button class="Arrow Button Margin" type="button" id="toggleSettings"><i class="fas fa-cog" title="show settings"></i></button>
-					<span id="searchstat" class="hidden">Matching entries: <span id="stat">0</span></span>
+		<div class="searchContainer">
+			<form action="" id="quicksearch">
+				<div id="searchFlexBox">
+					<input type="text" id="qs_field" autocomplete="off" placeholder="Search..." />
+					<div id="searchButtons">
+						<button class="Reset Button Margin hidden" type="reset"/> Reset </button>
+						<select id = "groupSelector" >
+							<option selected="selected">Group By</option>
+							<option value="workAuthor">Author</option>
+							<option value="entryType">Type</option>
+							<option value="workYear">Year</option>
+							<option value="topicKeywords">Topic</option>
+						</select>
+						<button class="Arrow Button Margin" type="button" id="toggleBibliometrics"> Bibliometrics <i class="fas fa-angle-down" title="Show Bibliometrics"></i></button>
+						<button class="Arrow Button Margin" type="button" id="toggleSettings"><i class="fas fa-cog" title="show settings"></i></button>
+						<span id="searchstat" class="hidden">Matching entries: <span id="stat">0</span></span>
+					</div>
 				</div>
-			</div>
-		<div id="settings" class="initiallyHidden">
-			<span class="searchSettings">Use RegExp
-				<label class="switch">
-					<input type="checkbox" class="hidden search_setting" id="opt_useRegExp" >
-					<span class="slider round" ></span>
-				</label>
-			</span>
-			<span class="searchSettings">Ignore Accents
-				<label class="switch">
-					<input type="checkbox" checked="checked" class="hidden search_setting" id="opt_noAccents" >
-					<span class="slider round" ></span>
-				</label>
-			</span>
+				<div id="settings" class="initiallyHidden">
+					<span class="searchSettings">Use RegExp
+						<label class="switch">
+							<input type="checkbox" class="hidden search_setting" id="opt_useRegExp" >
+							<span class="slider round" ></span>
+						</label>
+					</span>
+					<span class="searchSettings">Ignore Accents
+						<label class="switch">
+							<input type="checkbox" checked="checked" class="hidden search_setting" id="opt_noAccents" >
+							<span class="slider round" ></span>
+						</label>
+					</span>
+				</div>
+				<div id="bibliometrics" class="initiallyHidden">
+					<a class="bibliometrics"; href="https://scholar.google.com/citations?user=iCV8dY0AAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar" title="GoogleScholar"></i>Google Scholar</a>
+					<a class="bibliometrics"; href="https://www.researcherid.com/rid/M-4100-2016" target="_blank"><i class="ai ai-researcherid" title="ResearcherID"></i>ResearcherID</a>
+				</div>
+			</form>
 		</div>
-		<div id="bibliometrics" class="initiallyHidden">
-			<a class="bibliometrics"; href="https://scholar.google.com/citations?user=iCV8dY0AAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar" title="GoogleScholar"></i>Google Scholar</a>
-			<a class="bibliometrics"; href="https://www.researcherid.com/rid/M-4100-2016" target="_blank"><i class="ai ai-researcherid" title="ResearcherID"></i>ResearcherID</a>
-		</div>
-		</form>
 		<div id="includedContent"></div>
 	</div>
 </body>

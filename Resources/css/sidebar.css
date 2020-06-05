@@ -3,10 +3,14 @@ body {
 	margin:0;
 	font: normal normal 14px/1.4 Helvetica,Roboto,"Segoe UI",Calibri,sans-serif;
 }
+.topcontainer {
+	font-variant: small-caps;
+}
 .topnavContainer {
 	margin:0;
 	padding:0;
 	background-color: #777;
+	font-variant: small-caps;
 }
 .topnav {
 	overflow: hidden;
@@ -58,6 +62,7 @@ img.toplogo {
 .toptext {
 	display: flex;
 	font-size:min(1.5em,6vw);
+	font-weight: bold;
 	width:70%;
 	justify-content: flex-end;
 	align-items: center;
@@ -66,7 +71,6 @@ img.toplogo {
 div.contentWrapper {
 	position:static;
 	right:0;
-	padding: 1em;
 }
 div.twitterContainer {
 	max-width: min(800px,100%);
