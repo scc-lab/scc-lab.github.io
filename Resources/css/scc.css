@@ -411,6 +411,7 @@ img.itemImg {
 	-o-transition: none;
 	transition: none;
 	color: black;
+	text-shadow:none;
 	pointer-events: none;
 	font-weight: bold;
 	margin-bottom: 1em;
@@ -443,9 +444,7 @@ img.itemImg {
 	cursor:text;
 }
 .gridItemContainer.showText .itemPublications {
-	background-color: white;
 	display: none;
-	margin-top: 1em;
 }
 /* when publications screen is opened*/
 .itemDetailsContainer.fullScreen {
@@ -470,9 +469,10 @@ img.itemImg {
 	margin-right: auto;
 	pointer-events:auto;
 	cursor:auto;
-	-webkit-box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
+	box-shadow:0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+/* 	-webkit-box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
 			box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
-	border-radius: 1em;
+	border-radius: 1em; */
 	overflow: hidden;
 	margin-top: 0.5em;
 }
@@ -487,16 +487,18 @@ img.itemImg {
 	margin:1em;
 	width: auto;
 	height:auto;
-	background-color:white;
+/* 	background-color:white;
 	-webkit-box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
 			box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
-	border-radius: 1em;
+	border-radius: 1em; */
+	box-shadow:0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
 	max-height: none;
 	pointer-events: auto;
 	cursor:text;
 }
 .itemDetailsContainer.fullScreen .itemPublications {
 	display: block;
+	margin:0 1em 0 1em;
 }
 /* click to publish... text blocks*/
 .backToGridLink, .fullScreenLink {
