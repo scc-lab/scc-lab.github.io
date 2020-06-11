@@ -8,7 +8,16 @@
 			element.classList.remove("hidden");
 			lowResImageElement.classList.add("hidden");
 		}
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
 	</script>
+	<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" rel="stylesheet" />
 	<style type="text/css">
 	h1 {
 		margin-bottom: 0;
@@ -16,22 +25,24 @@
 	h2 {
 		margin-top: 3em;
 		padding-top: 1em;
+		margin-left:1em;
 	}
 	h3 {
 		padding-bottom: 1em;
 		padding-top: 1em;
-		margin-bottom: 1em
+		margin-bottom: 1em;
+		margin-left:1.5em;
 	}
 	.hidden {
 		display:none;
 	}
 	div.bioCard {
 		min-height: 250px;
-		box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
-		border-radius: 1em;
+		box-shadow:0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
 		display: block;
 		overflow: hidden;
-		margin:1em;
+		margin-left:1.5em;
+		margin-right:1.5em;
 		padding: 1em;
 	}
 	div.bioCard + div.bioCard {
@@ -49,10 +60,10 @@
 		margin:0;
 	}
 	div.bioImage > img {
-		border-radius: 1em;
 		max-width:200px;
 		height:auto;
 		width:100%;
+		box-shadow:0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
 	}
 	@media (max-aspect-ratio: 7/8) {
 		.bioImage {
@@ -75,12 +86,17 @@
 			<div class="toptext">Systems, Cognition, and Control Laboratory</div>
 		</div>
 	</div>
-	<div class="sidebar">
-		<a href="index.html">Home</a>
-		<a href="Research.html">Research</a>
-		<a href="Publications.html">Publications</a>
-		<a class="active" href="People.html">People</a>
-		<a href="Courses.html">Courses</a>
+	<div class="topnavContainer">
+		<div class="topnav" id="myTopnav">
+			<a href="index.html">Home</a>
+			<a href="Research.html">Research</a>
+			<a href="Publications.html">Publications</a>
+			<a class="active" href="People.html">People</a>
+			<a href="Courses.html">Courses</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
 	</div>
 	<div class="contentWrapper">
 		<h3>Lab Director</h3>

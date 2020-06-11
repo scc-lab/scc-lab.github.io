@@ -6,6 +6,17 @@
 		<title>Systems, Cognition, and Control Laboratory</title>
 		<meta name="description" content="Systems, Cognition, and Control Laboratory">
 		<meta name="author" content="Rushikesh Kamalapurkar">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<link href="Resources/css/sidebar.css" rel="stylesheet">
@@ -15,15 +26,22 @@
 				<div class="toptext">Systems, Cognition, and Control Laboratory</div>
 			</div>
 		</div>
-		<div class="sidebar">
-			<a class="active" href="index.html">Home</a>
-			<a href="Research.html">Research</a>
-			<a href="Publications.html">Publications</a>
-			<a href="People.html">People</a>
-			<a href="Courses.html">Courses</a>
+		<div class="topnavContainer">
+			<div class="topnav" id="myTopnav">
+				<a class="active" href="index.html">Home</a>
+				<a href="Research.html">Research</a>
+				<a href="Publications.html">Publications</a>
+				<a href="People.html">People</a>
+				<a href="Courses.html">Courses</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
 		</div>
 		<div class="contentWrapper">
-		<a class="twitter-timeline" href="https://twitter.com/LaboratoryScc?ref_src=twsrc%5Etfw">Tweets by LaboratoryScc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<div class="twitterContainer">
+				<a class="twitter-timeline" href="https://twitter.com/LaboratoryScc?ref_src=twsrc%5Etfw">Tweets by LaboratoryScc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
 		</div>
 	</body>
 </html>

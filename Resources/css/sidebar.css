@@ -1,90 +1,105 @@
 /* The side navigation menu */
-.sidebar {
-	margin: 0;
-	padding: 0;
-	width: 200px;
-	top:0;
-	background-color: #F7F7F7;
-	position: fixed;
-	height: 100%;
-	overflow: auto;
-	font-family:'Segoe UI',Arial,sans-serif;
+body {
+	margin:0;
+	font: normal normal 14px/1.4 Helvetica,Roboto,"Segoe UI",Calibri,sans-serif;
 }
-
+.topContainer {
+	font-variant: small-caps;
+}
+.topnavContainer {
+	margin:0;
+	padding:0;
+	background-color: #777;
+	font-variant: small-caps;
+}
+.topnav {
+	overflow: hidden;
+}
 /* Sidebar links */
-.sidebar a {
+.topnav a {
+	float: right;
 	display: block;
-	color: black;
-	padding: 16px;
+	text-align: center;
+	padding: 14px 16px;
 	text-decoration: none;
+	font-size:min(1.25em,4vw);
+	color: white;
+	border-top-color: #777;
+	border-top-style: solid;
+	border-width: 3px;
 }
-
 /* Active/current link */
-.sidebar a.active {
-	background-color: #FE5C00;
+.topnav a.active {
+	border-top-color: #FE5C00;
+	border-top-style: solid;
+	border-width: 3px;
 	color: white;
 }
-
 /* Links on mouse-over */
-.sidebar a:hover:not(.active) {
+.topnav a:hover {
 	background-color: #555;
 	color: white;
 }
-
+.topnav .icon {
+	display: none;
+}
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.contentWrapper {
-	position:static;
-	margin-left:200px;
-	right:0;
-	padding: 1em;
-}
-div.topContainer {
-	margin-left:200px;
-}
 div.top {
-	-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-			justify-content: space-between;
-	-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-	display: -webkit-flex;
-	margin-bottom:1em;
+	display: flex;
+	justify-content: center;
+	flex-wrap: nowrap;
 	padding:0.5em;
-	border-bottom-width:5px;
-	border-bottom-color:black;
-	border-bottom-style: solid;
+	background-color: antiquewhite;
 }
 div.toplogo {
-	width:min(25%,100px);
+	max-width:min(100px,25%);
+	display:flex;
+	margin-right:auto;
 }
 img.toplogo {
-	width:100%;
+	max-width:100%;
 }
 .toptext {
 	display: flex;
-	font-family:'Segoe UI',Arial,sans-serif;
-	font-size:1.5em;
+	font-size:min(1.5em,6vw);
+	font-weight: bold;
 	width:70%;
 	justify-content: flex-end;
 	align-items: center;
+	text-align: center;
 }
-
-/* On screens that are less than 500px wide, make the sidebar into a topbar */
-@media (max-width: 500px) {
-	.sidebar {
-		width: 100%;
-		height: auto;
-		position: relative;
+div.contentWrapper {
+	position:static;
+	right:0;
+}
+div.twitterContainer {
+	max-width: min(800px,100%);
+	margin-right:auto;
+	margin-left:auto;
+}
+@media (max-width: 600px) {
+	.topnav a.active {background-color: transparent;}
+	.topnav a.active:hover {
+		background-color: #555;
+		color: white;
 	}
-	.sidebar a {float: left;}
+	.topnav a:not(.active) {display: none;}
+	.topnav a.icon {
+		float: left;
+		display: block;
+	}
+	.topnav.responsive {position: relative;}
+	.topnav.responsive a.icon {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.topnav.responsive a {
+		float: none;
+		display: block;
+		text-align: center;
+		border:none;
+	}
 	div.contentWrapper {margin-left: 0;}
 	div.topContainer {margin-left:0;}
-}
-
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 300px) {
-	.sidebar a {
-		text-align: center;
-		float: none;
-	}
 }
