@@ -404,7 +404,7 @@ img.itemImg {
 	opacity:0.05;
 }
 .gridItemContainer.showText .itemTitle {
-	font-size: 1.25em;
+	font-size: min(1.25em,4vw);
 	top: 0%;
 	left: 50%;
 	-webkit-transform: translate(-50%, 0%);
@@ -422,7 +422,7 @@ img.itemImg {
 	pointer-events: none;
 	font-weight: bold;
 	margin-bottom: 1em;
-	
+	overflow: hidden;
 	z-index:99999;
 }
 .gridItemContainer.showText .itemDetailsContainer {
