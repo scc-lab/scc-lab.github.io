@@ -28,8 +28,8 @@ request.send();
 var noSquiggles = true;// ignore diacritics when searching
 var searchRegExp = false;// enable RegExp searches
 // List of headings corresponding to BibTeX entry types
-var entryTypes = ["Book","Article","InCollection","InProceedings","PhdThesis","MastersThesis","TechReport"];
-var entryTypeNames = ["Books","Peer-reviewed journal papers","Book chapters","Peer-reviewed conference papers","Ph.D. dissertations","M.S. thesis","Technical reports"];
+var entryTypes = ["Book","Article","InCollection","InProceedings","Conference","PhdThesis","MastersThesis","TechReport"];
+var entryTypeNames = ["Books","Peer-reviewed journal papers","Book chapters","Peer-reviewed conference papers","Abstract-reviewed papers and posters","Ph.D. dissertations","M.S. thesis","Technical reports"];
 var keywordTopics = ["mbrl","mbirl","sysid","delay","fes","nonsmooth","games","sheet-stamping"];
 var keywordTopicNames = ["Model-based reinforcement learning","Model-based inverse reinforcement learning","Data-driven modeling","Feedback control of systems with state and input delays","Functional electrical stimulation","Stability of nonsmooth systems","Differential games","Sheetmetal stamping"];
 
