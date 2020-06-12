@@ -313,7 +313,7 @@ input:checked + .slider:before {
 .gridContainer {
 	display: -ms-grid;
 	display: grid;
-	padding: 2em;
+	padding: 2em 1em 1em 1em;
 	grid-gap: 2em;
 	grid-template-columns: repeat(auto-fit, minmax(min(300px,100%), 1fr));
 	justify-content: center;
