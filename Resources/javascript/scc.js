@@ -161,7 +161,7 @@ function groupBy(groupChoice) {
 			currentGroupList = currentGroupText.split(" ");
 			for( let k = currentGroupList.length-1; k >=0; k--){ 
 				let cleanedID = currentGroupList[k].replace(",","");
-				if (cleanedID === "Keywords:" || cleanedID === "scc" || cleanedID === "inprint" || cleanedID === "1page" || cleanedID === "2page" || cleanedID === "peer-reviewed" || cleanedID === "abstract-reviewed" || cleanedID === "afrl-fa8651-19-2-0009" || cleanedID === "nsf-1925147" || cleanedID === "afosr-fa9550-19-s-0003" || cleanedID === "onr-n00014-16-1-2091") {
+				if (cleanedID === "Keywords:" || cleanedID === "scc" || cleanedID === "inprint" || cleanedID === "1page" || cleanedID === "2page" || cleanedID === "peer-reviewed" || cleanedID === "abstract-reviewed" || cleanedID === "afrl-fa8651-19-2-0009" || cleanedID === "nsf-1925147" || cleanedID === "afosr-fa9550-20-1-0127" || cleanedID === "onr-n00014-16-1-2091") {
 					currentGroupList.splice(k, 1); 
 				}
 			}
@@ -195,7 +195,7 @@ function groupBy(groupChoice) {
 				var currentGroup = new Object();
 				currentGroup.ID = currentGroupList[j].replace(/and\s/,"");
 				currentGroup.ID = currentGroup.ID.replace(/[A-Z]\.\-[A-Z]\.\s/,"");
-				currentGroup.ID = currentGroup.ID.replace(/([A-Z]\.\s){1,2}/,"");
+				currentGroup.ID = currentGroup.ID.replace(/([A-Z]\.\s){1,3}/,"");
 				currentGroup.Name = currentGroupList[j].replace(/and\s/,"");
 			} else if (groupChoice === "topicKeywords") {
 				var currentGroup = new Object();
