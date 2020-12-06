@@ -1,81 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Retrospect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-	<link href="Resources/css/scc.css" rel="stylesheet">
-	<link href="Resources/css/sidebar.css" rel="stylesheet">
-	<script>
-		function myFunction() {
-			var x = document.getElementById("myTopnav");
-			if (x.className === "topnav") {
-				x.className += " responsive";
-			} else {
-				x.className = "topnav";
+	<head>
+		<title>Publications</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="Resources/template/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="Resources/template/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="Resources/template/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="Resources/template/css/ie9.css" /><![endif]-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+		<link href="Resources/scc/css/scc.css" rel="stylesheet">
+		<script type="text/javascript">
+			function upgradeBackgroundImage(element) {
+				element.parentElement.style.backgroundImage = "url('Resources/template/css/images/overlay.png'), url('Resources/scc/img/" + element.parentElement.id + ".png')";
 			}
-		}
-	</script>
-</head>
-<body>
-	<div class="topContainer">
-		<div class="top">
-			<div class="toplogo"> <img class="toplogo" src="Resources/img/logo.svg"> </div>
-			<div class="toptext">Systems, Cognition, and Control Laboratory</div>
-		</div>
-	</div>
-	<div class="topnavContainer">
-		<div class="topnav" id="myTopnav">
-			<a href="index.html">Home</a>
-			<a href="Research.html">Research</a>
-			<a class="active" href="Publications.html">Publications</a>
-			<a href="People.html">People</a>
-			<a href="Courses.html">Courses</a>
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-				<i class="fa fa-bars"></i>
-			</a>
-		</div>
-	</div>
-	<div class="contentWrapper">
-		<div class="searchContainer">
-			<form action="" id="quicksearch">
-				<div id="searchFlexBox">
-					<input type="text" id="qs_field" autocomplete="off" placeholder="Search..." />
-					<div id="searchButtons">
-						<button class="Reset Button Margin hidden" type="reset"/> Reset </button>
-						<select id = "groupSelector" >
-							<option selected="selected">Group By</option>
-							<option value="workAuthor">Author</option>
-							<option value="entryType">Type</option>
-							<option value="workYear">Year</option>
-							<option value="topicKeywords">Topic</option>
-						</select>
-						<button class="Arrow Button Margin" type="button" id="toggleBibliometrics"> Bibliometrics <i class="fas fa-angle-down" title="Show Bibliometrics"></i></button>
-						<button class="Arrow Button Margin" type="button" id="toggleSettings"><i class="fas fa-cog" title="show settings"></i></button>
-						<span id="searchstat" class="hidden">Matching entries: <span id="stat">0</span></span>
+		</script>
+	</head>
+	<body class="landing">
+
+	<!-- Header -->
+		<header id="header" class="alt">
+			<h1><a href="index.html">SCC Home</a></h1>
+			<a href="#nav">Menu</a>
+		</header>
+
+	<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="publications.html">Publications</a></li>
+				<li><a href="projects.html">Research Projects</a></li>
+				<li><a href="topics.html">Research Topics</a></li>
+			</ul>
+		</nav>
+
+	<!-- Banner -->
+		<section id="banner">
+			<!--<i class="icon fa-diamond"></i>-->
+			<img class="hidden" src="Resources/scc/img/banner.png" onload="upgradeBackgroundImage(this)"/>
+			<h2>Publications</h2>
+			<p>न चोरहार्य न राजहार्य न भ्रातृभाज्यं न च भारकारि | व्यये कृते वर्धत एव नित्यं विद्याधनं सर्वधनप्रधानम् ||</p>
+			<p><a href="https://scholar.google.com/citations?user=iCV8dY0AAAAJ&hl=en">Google Scholar Bibliometrics</a></p>
+			<!--<ul class="actions">
+				<li><a href="#" class="button big special">Learn More</a></li>
+			</ul>-->
+		</section>
+
+	<!-- One -->
+		<div class="contentWrapper">
+			<div class="searchContainer">
+				<form action="" id="quicksearch">
+					<div class="row uniform 50%">
+						<div class="6u 12u$(small)">
+							<input type="text" id="qs_field" autocomplete="off" placeholder="Search..." />
+							<button class="alt" type="button" id="toggleSettings">
+								<i class="fas fa-cog" title="show settings"></i>
+							</button>
+						</div>
+						<div class="6u 12u$(small)">
+							<div class="select-wrapper">
+								<select id = "groupSelector" >
+									<option selected="selected">Group By</option>
+									<option value="workAuthor">Author</option>
+									<option value="entryType">Type</option>
+									<option value="workYear">Year</option>
+									<option value="topicKeywords">Topic</option>
+								</select>
+							</div>
+							<!-- <button class="Button alt" type="button" id="toggleBibliometrics"> Bibliometrics <i class="fas fa-angle-down" title="Show Bibliometrics"></i></button> -->
+						</div>
 					</div>
-				</div>
-				<div id="settings" class="initiallyHidden">
-					<span class="searchSettings">Use RegExp
-						<label class="switch">
-							<input type="checkbox" class="hidden search_setting" id="opt_useRegExp" >
-							<span class="slider round" ></span>
-						</label>
-					</span>
-					<span class="searchSettings">Ignore Accents
-						<label class="switch">
-							<input type="checkbox" checked="checked" class="hidden search_setting" id="opt_noAccents" >
-							<span class="slider round" ></span>
-						</label>
-					</span>
-				</div>
-				<div id="bibliometrics" class="initiallyHidden">
-					<a class="bibliometrics"; href="https://scholar.google.com/citations?user=iCV8dY0AAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar" title="GoogleScholar"></i>Google Scholar</a>
-					<a class="bibliometrics"; href="https://www.researcherid.com/rid/M-4100-2016" target="_blank"><i class="ai ai-researcherid" title="ResearcherID"></i>ResearcherID</a>
-				</div>
-			</form>
+					<div id="settings" class="initiallyHidden row uniform 50%">
+						<div class="6u 12u$(small) search_setting">
+							<input type="checkbox" id="opt_useRegExp" >
+							<label for="opt_useRegExp">
+								<font style="vertical-align: inherit;">
+									Use RegExp
+								</font>
+							</label>
+						</div>
+						<div class="6u 12u$(small) search_setting">
+							<input type="checkbox" checked="checked" class="hidden" id="opt_noAccents" >
+							<label for="opt_noAccents">
+								<font style="vertical-align: inherit;">
+									Ignore Accents
+								</font>
+							</label>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div id="includedContent"></div>
 		</div>
-		<div id="includedContent"></div>
-	</div>
-</body>
-<script type="text/javascript" src="Resources/javascript/scc.js"></script>
+
+	<!-- Two -->
+		<section id="contact" class="wrapper style2 special">
+			<div class="inner">
+				<header class="major narrow">
+				<h2>Get in touch</h2>
+				<p><a href="mailto:rushikesh.kamalapurkar@okstate.edu">rushikesh.kamalapurkar@okstate.edu</a></p>
+				</header>
+			</div>
+		</section>
+
+	<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="http://scholar.google.com/citations?user=iCV8dY0AAAAJ" class="icon ai ai-google-scholar">
+						<span class="label">Google Scholar</span>
+					</a></li>
+					<li><a href="https://www.researcherid.com/rid/M-4100-2016" class="icon ai ai-researcherid">
+						<span class="label">ResearcherID</span>
+					</a></li>
+					<li><a href="https://twitter.com/LaboratoryScc" class="icon fa-twitter">
+						<span class="label">Twitter</span>
+					</a></li>
+					<li><a href="https://www.linkedin.com/in/rushikesh-kamalapurkar-7182588" class="icon fa-linkedin">
+						<span class="label">LinkedIn</span>
+					</a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Rushikesh Kamalapurkar</li>
+				</ul>
+			</div>
+		</footer>
+
+	<!-- Scripts -->
+		<script src="Resources/template/js/jquery.min.js"></script>
+		<script src="Resources/template/js/skel.min.js"></script>
+		<script src="Resources/template/js/util.js"></script>
+		<!--[if lte IE 8]><script src="Resources/template/js/ie/respond.min.js"></script><![endif]-->
+		<script src="Resources/template/js/main.js"></script>
+		<script type="text/javascript" src="Resources/scc/js/scc.js"></script>
+
+	</body>
 </html>

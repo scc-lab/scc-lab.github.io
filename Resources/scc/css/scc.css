@@ -1,0 +1,214 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+.hidden {
+	display: none !important;
+}
+.initiallyHidden {
+	height: 0em;
+	margin: 0em;
+	padding:0em;
+}
+#includedContent {
+	margin: 0 1em 0 1em;
+}
+.searchContainer {
+	padding: 0 1em 0 1em;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	border-bottom: 1px solid #ccc;
+	background-color: white;
+}
+#quicksearch {
+	width: 100%;
+	margin-bottom:0.75em;
+	padding-top: 0.75em;
+}
+input[id="qs_field"] {
+	padding-right: 4.2em;
+	display: inline-block;
+	max-width: 70%;
+}
+button[id="toggleSettings"] {
+	margin-left: -4.2em;
+	box-shadow: none;
+	display: inline-block;
+	min-width: 1em;
+}
+button:focus {
+	outline: 0;
+}
+button.Button {
+	min-width: 1em;
+	margin-top: 0.25em;
+	margin-right: 0em;
+	margin-left: 0.75em;
+	box-shadow: none;
+}
+button.toggleType {
+	position: relative;
+	min-width: 5em;
+	margin: 0.75em 0.75em 0em 0.75em;
+	box-shadow: none;
+}
+button.toggleType i {
+	height:1em;
+	width:1em;
+	overflow:hidden;
+}
+button.collapseAllType, button.expandAllType {
+	min-width: 5em;
+	margin: 0.75em 0.75em 0em 0em;
+	box-shadow: none;
+}
+.collapseAllType i, .expandAllType i {
+	height:1em;
+	width:1em;
+	overflow:hidden;
+}
+span.workTitle {
+	font-weight: bold;
+}
+span.journalTitle, span.bookTitle {
+	font-style: italic;
+}
+[id$=groupSelector] {
+	cursor: pointer;
+	width: auto;
+	padding-right:3.5em;
+	display: inline;
+}
+i.fas.fa-external-link-alt, i.fas.fa-external-link-square-alt, i.far, i.fab {
+	color: #FE5C00;
+	margin-left: 0.75em;
+	height: 1.25em;
+	width: 1.25em;
+	padding-top: 0.25em;
+	overflow:hidden;
+}
+i.ai {
+	color: #FE5C00;
+	height: 1.25em;
+	width: 1.25em;
+}
+.icon.ai:before {
+		font-family: 'Academicons';
+}
+span.workURL i.fas.fa-external-link-alt {
+	margin-left: 0em;
+}
+div.select-wrapper {
+	float: right;
+}
+#settings {
+	overflow:hidden;
+	-webkit-transition: height 0.25s, margin 0.25s, padding 0.25s;
+	-o-transition: height 0.25s, margin 0.25s, padding 0.25s;
+	transition: height 0.25s, margin 0.25s, padding 0s;
+	padding: 0em 0em 0em 0.75em;
+}
+div.BiBTeX {
+	overflow:hidden;
+	font-family: monospace;
+	line-height: normal;
+	background-color: #272727;
+	border-radius: 1em;
+	padding-left:1em;
+	padding-right:1em;
+	color: #fff;
+	-webkit-transition: height 0.25s, margin 0.25s, padding-top 0.25s;
+	-o-transition: height 0.25s, margin 0.25s, padding-top 0.25s;
+	transition: height 0.25s, margin 0.25s, padding-top 0.25s;
+	word-wrap: break-word;
+}
+div.BiBTeX.notHidden {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+div.BiBTeX.zeroHeight {
+	padding-top: 0.0em;
+	padding-bottom: 0.0em;
+	margin-top: 0.0em;
+	margin-bottom: 0.0em;
+}
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+a:hover {
+	color: inherit;
+	text-decoration: inherit;
+}
+ol {
+	overflow:hidden;
+	list-style-position: inside;
+	-webkit-padding-start: 0em;
+			padding-inline-start: 0em;
+}
+ol.zeroHeight {
+	-webkit-transition:height 0.3s cubic-bezier(0,0.85,1,1);
+	-o-transition:height 0.3s cubic-bezier(0,0.85,1,1);
+	transition:height 0.3s cubic-bezier(0,0.85,1,1);
+}
+ol.notHidden {
+	height:auto;
+	-webkit-transition:height 0.3s cubic-bezier(0.85,0,1,1);
+	-o-transition:height 0.3s cubic-bezier(0.85,0,1,1);
+	transition:height 0.3s cubic-bezier(0.85,0,1,1);
+}
+li.entry {
+	margin: 0.25em 1em 1em 1em;
+	-webkit-box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
+			box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
+	padding: 0.5em;
+}
+li.entry:hover {
+	-webkit-box-shadow: 0 0.25em 1em 0 rgba(0,0,0,0.2);
+			box-shadow: 0 0.25em 1em 0 rgba(0,0,0,0.2);
+}
+@media (min-width: 736px) {
+	ol {
+		list-style-position: outside;
+		-webkit-padding-start: 1em;
+				padding-inline-start: 1em;
+	}
+}
+@media (max-width: 736px) {
+	#includedContent {
+		margin: 0 0.25em 0 0.25em;
+	}
+	.searchContainer {
+		padding: 0 0.25em 0 0.25em;
+	}
+	div.select-wrapper {
+		float: left;
+	}
+}
+.image.left.peopleImg{
+	width: min(200px,40%);
+}
+.feature .content {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 1em;
+}
+.feature .content .button {
+	align-self: flex-start;
+}
+.feature .content .shortItemText {
+	flex: 1 0 auto;
+}
+.itemPublications {
+	display: block;
+	margin:0 1em 0 1em;
+}
+.search_setting {
+	margin-bottom: 0.2em
+}
