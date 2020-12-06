@@ -52,8 +52,8 @@ button.Button {
 }
 button.toggleType {
 	position: relative;
-	min-width: 5em;
-	margin: 0.75em 0.75em 0em 0.75em;
+	min-width: 1em;
+	margin: 0.5em 0.5em 0em 0.5em;
 	box-shadow: none;
 }
 button.toggleType i {
@@ -62,8 +62,8 @@ button.toggleType i {
 	overflow:hidden;
 }
 button.collapseAllType, button.expandAllType {
-	min-width: 5em;
-	margin: 0.75em 0.75em 0em 0em;
+	min-width: 1em;
+	margin: 0.5em 0.5em 0em 0em;
 	box-shadow: none;
 }
 .collapseAllType i, .expandAllType i {
@@ -173,19 +173,16 @@ li.entry:hover {
 	-webkit-box-shadow: 0 0.25em 1em 0 rgba(0,0,0,0.2);
 			box-shadow: 0 0.25em 1em 0 rgba(0,0,0,0.2);
 }
-@media (min-width: 736px) {
+/*@media (min-width: 736px) {
 	ol {
 		list-style-position: outside;
 		-webkit-padding-start: 1em;
 				padding-inline-start: 1em;
 	}
-}
+}*/
 @media (max-width: 736px) {
 	#includedContent {
 		margin: 0 0.25em 0 0.25em;
-	}
-	.searchContainer {
-		padding: 0 0.25em 0 0.25em;
 	}
 	div.select-wrapper {
 		float: left;
@@ -207,7 +204,7 @@ li.entry:hover {
 }
 .itemPublications {
 	display: block;
-	margin:0 1em 0 1em;
+	margin:0;
 }
 .search_setting {
 	margin-bottom: 0.2em
