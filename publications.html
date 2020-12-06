@@ -56,43 +56,32 @@
 		<div class="contentWrapper">
 			<div class="searchContainer">
 				<form action="" id="quicksearch">
-					<div class="row uniform 50%">
-						<div class="6u 12u$(small)">
-							<input type="text" id="qs_field" autocomplete="off" placeholder="Search..." />
-							<button class="alt" type="button" id="toggleSettings">
-								<i class="fas fa-cog" title="show settings"></i>
-							</button>
-						</div>
-						<div class="6u 12u$(small)">
-							<div class="select-wrapper">
-								<select id = "groupSelector" >
-									<option selected="selected">Group By</option>
-									<option value="workAuthor">Author</option>
-									<option value="entryType">Type</option>
-									<option value="workYear">Year</option>
-									<option value="topicKeywords">Topic</option>
-								</select>
-							</div>
-							<!-- <button class="Button alt" type="button" id="toggleBibliometrics"> Bibliometrics <i class="fas fa-angle-down" title="Show Bibliometrics"></i></button> -->
-						</div>
+					<input type="text" id="qs_field" autocomplete="off" placeholder="Search..." />
+					<button class="alt" type="button" id="toggleSettings">
+						<i class="fas fa-cog" title="show settings"></i>
+					</button>
+					<div class="select-wrapper">
+						<select id = "groupSelector" >
+							<option selected="selected">Group By</option>
+							<option value="workAuthor">Author</option>
+							<option value="entryType">Type</option>
+							<option value="workYear">Year</option>
+							<option value="topicKeywords">Topic</option>
+						</select>
 					</div>
-					<div id="settings" class="initiallyHidden row uniform 50%">
-						<div class="6u 12u$(small) search_setting">
-							<input type="checkbox" id="opt_useRegExp" >
-							<label for="opt_useRegExp">
-								<font style="vertical-align: inherit;">
-									Use RegExp
-								</font>
-							</label>
-						</div>
-						<div class="6u 12u$(small) search_setting">
-							<input type="checkbox" checked="checked" class="hidden" id="opt_noAccents" >
-							<label for="opt_noAccents">
-								<font style="vertical-align: inherit;">
-									Ignore Accents
-								</font>
-							</label>
-						</div>
+					<div id="settings" class="initiallyHidden">
+						<input type="checkbox" id="opt_useRegExp" >
+						<label for="opt_useRegExp" class="search_setting">
+							<font style="vertical-align: inherit;">
+								Use RegExp
+							</font>
+						</label>
+						<input type="checkbox" checked="checked" class="hidden" id="opt_noAccents" >
+						<label for="opt_noAccents" class="search_setting">
+							<font style="vertical-align: inherit;">
+								Ignore Accents
+							</font>
+						</label>
 					</div>
 				</form>
 			</div>
