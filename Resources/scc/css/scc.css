@@ -28,6 +28,9 @@
 #header a {
 	margin:0;
 }
+.headerWrapper {
+	height:100%;
+}
 #includedContent {
 	margin: 0 1em 0 1em;
 }

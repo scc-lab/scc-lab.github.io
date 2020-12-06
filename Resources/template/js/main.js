@@ -57,11 +57,17 @@
 
 })(jQuery);
 
+var initiallyAlt = 0;
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
 	if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-		document.getElementById("header").classList.remove("alt");
+		if (document.getElementById("header").classList.contains("alt")) {
+			document.getElementById("header").classList.remove("alt");
+			initiallyAlt = 1;
+		}
 	} else {
-		document.getElementById("header").classList.add("alt");
+		if (initiallyAlt) {
+			document.getElementById("header").classList.add("alt");
+		}
 	}
 }
