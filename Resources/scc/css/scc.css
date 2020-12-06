@@ -134,10 +134,9 @@ div.select-wrapper {
 #settings.zeroHeight, #settings.initiallyHidden {
 	padding:0;
 }
-}
 .search_setting {
 	margin:0;
-	padding-bottom: 0.5em;
+	padding-bottom: 0.1em;
 }
 div.BiBTeX {
 	overflow:hidden;
