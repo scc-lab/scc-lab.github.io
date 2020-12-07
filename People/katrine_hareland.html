@@ -30,6 +30,11 @@
 	</head>
 	<body class="landing">
 
+	<!-- Placeholder for publications -->
+		<div class="hidden" id="includedContent">
+			&nbsp;
+		</div>
+
 	<!-- Header -->
 		<header id="header">
 			<h1><a href="../index.html">SCC Home</a></h1>
@@ -58,11 +63,19 @@
 					<img class="hidden" src="../Resources/scc/img/People/katrine_hareland.jpg" onload="upgradeImage(this)" />
 				</span>
 				<p><strong>Katrine Hareland</strong> received her Bachelor’s Degree in Mechanical Engineering at Oklahoma State University in 2019. During her undergraduate study at Oklahoma State University she developed research interests in robotics, controls and biomechanics. She is currently working on her MS thesis with Dr. Rushikesh Kamalapurkar in the Rushikesh Kamalapurkar along with Dr. Jerome Hausselle in the Biomechanical Analysis & Musculoskeletal Modeling (BAMM) Lab.</p>
-
 			</div>
 		</section>
 
-	<!-- Two -->
+	<!-- Publications -->
+		<section id="publications">
+			<div class="container">
+				<div class="itemPublications workAuthor">
+					<p id="filterName" class="hidden">K. Hareland</p>
+				</div>
+			</div>
+		</section>
+
+	<!-- Contact -->
 		<section id="contact" class="wrapper style2 special">
 			<div class="inner">
 				<header class="major narrow">
@@ -101,6 +114,6 @@
 		<script src="../Resources/template/js/util.js"></script>
 		<!--[if lte IE 8]><script src="Resources/template/js/ie/respond.min.js"></script><![endif]-->
 		<script src="../Resources/template/js/main.js"></script>
-
+		<script type="text/javascript" src="../Resources/scc/js/sccBibliographyGenerator.js"></script>
 	</body>
 </html>
