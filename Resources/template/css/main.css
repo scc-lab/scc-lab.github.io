@@ -3357,6 +3357,12 @@
 			background-image: url("images/overlay.png"), url("../../scc/img/small_hiring.png");
 			background-size: cover;
 		}
+		
+			@supports (-webkit-touch-callout: none) {
+				.wrapper.style3 {
+					background-attachment: scroll;/* FIX FOR FIXED COVER SIZE BACKGROUND ON IOS*/ 
+				}
+			}
 
 			.wrapper.style3 input, .wrapper.style3 select, .wrapper.style3 textarea {
 				color: #fff;
