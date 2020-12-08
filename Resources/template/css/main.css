@@ -3637,6 +3637,11 @@
 				padding: 2em 1em 0.1em 1em;
 			}
 
+			.wrapper.style2 header.narrow a {
+				font-size: 0.9em;
+			}
+
+
 		}
 
 /* Header */
