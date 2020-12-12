@@ -3937,6 +3937,7 @@
 
 		#banner a {
 			color: #FE5C00;
+			text-shadow: 0px 0px 3px #000;
 		}
 
 		#banner strong, #banner b {
