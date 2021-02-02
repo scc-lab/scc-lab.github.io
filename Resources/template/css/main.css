@@ -4054,14 +4054,14 @@
 				}
 
 		#banner h2 {
-			font-size: 2.5em;
+			font-size: 2em;
 			margin: 0 0 0.5em 0;
 			padding: 0;
 		}
 
 		#banner p {
 			color: #fff;
-			font-size: 1.5em;
+			font-size: 1.25em;
 			margin-bottom: 1.75em;
 			text-transform: uppercase;
 		}
@@ -4094,7 +4094,7 @@
 			}
 
 				#banner h2 {
-					font-size: 2em;
+					font-size: 1.75em;
 				}
 
 		}
@@ -4119,12 +4119,12 @@
 			}
 
 				#banner h2 {
-					font-size: 1.5em;
+					font-size: 1.25em;
 					padding: 0em 2em 0em 2em;
 				}
 
 				#banner p {
-					font-size: 1em;
+					font-size: 0.75em;
 					padding: 0em 2em 0em 2em;
 				}
 

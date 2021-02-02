@@ -30,7 +30,7 @@
 #banner .carousel-cell p {
 	margin:0;
 	text-transform: none;
-	font-size:1em;
+	font-size:0.75em;
 	line-height:1.5em;
 }
 	@media screen and (max-width: 480px) {
@@ -40,14 +40,14 @@
 	}
 	@media screen and (min-width: 980px){
 		#banner .carousel-cell p {
-			font-size:1.1em;
+			font-size:1em;
 			padding: 0;
 		}
 	}
 
 	@media screen and (min-width: 1280px){
 		#banner .carousel-cell p {
-			font-size:1.3em;
+			font-size:1.25em;
 		}
 	}
 
