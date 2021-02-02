@@ -1,14 +1,17 @@
 .carousel-cell {
 	width: 50%;
-	margin: 10px;
+	margin-right: 10px;
+	margin-left:10px;
 	border-radius: 5px;
 	counter-increment: gallery-cell;
-	
 	-webkit-box-shadow: 0 0.15em 0.5em 0 rgba(1,1,1,0.2);
 			box-shadow: 0 0.15em 0.5em 0 rgba(200,200,200,0.5);
 	background-color: #303030;
 	opacity: 0.4;
 	overflow: hidden;
+}
+.flickity-resize .carousel-cell {
+  min-height: 100%;
 }
 	.carousel-cell.is-selected {
 		background-color: #303030;
@@ -37,19 +40,19 @@
 	}
 	@media screen and (min-width: 980px){
 		#banner .carousel-cell p {
-			font-size:1.2em;
+			font-size:1.1em;
 			padding: 0;
 		}
 	}
 
 	@media screen and (min-width: 1280px){
 		#banner .carousel-cell p {
-			font-size:1.5em;
+			font-size:1.3em;
 		}
 	}
 
 	@media screen and (min-width: 1680px) {
 		#banner .carousel-cell p {
-			font-size:1.7em;
+			font-size:1.5em;
 		}
 	}
