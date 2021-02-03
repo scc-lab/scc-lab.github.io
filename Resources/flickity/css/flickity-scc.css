@@ -26,6 +26,7 @@
 .carousel-cell .feature{
 	margin:0;
 	align-items: center;
+	background-color: transparent;
 }
 #banner .carousel-cell p {
 	margin:0;

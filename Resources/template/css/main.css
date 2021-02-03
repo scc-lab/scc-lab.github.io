@@ -2744,7 +2744,7 @@
 		}
 
 		.feature .image {
-			width: 48%;
+			width: 55%;
 		}
 
 			.feature .image img {
@@ -2753,12 +2753,12 @@
 
 		.feature .content {
 			padding: 2em 3em 0.1em 3em;
-			width: 52%;
+			width: 45%;
 		}
 
 		.feature .content p { /* modified */
-			color: #777;
-}
+					color: #777;
+		}
 		@media screen and (max-width: 1280px) {
 
 			.feature {
@@ -2766,12 +2766,12 @@
 			}
 
 				.feature .content {
-					padding: 1em 2em 0.1em 2em;
+					padding: 1em 1em 0.1em 1em;/* modified */
 				}
 
 		}
 
-		@media screen and (max-width: 980px) {
+		@media screen and (max-width: 736px) { /* modified */
 
 			.feature.left, .feature.right {
 				-moz-flex-direction: column;
@@ -3666,8 +3666,8 @@
 		}
 
 	#header {
-		background: #07090c;
-		color: rgba(255, 255, 255, 0.75);
+		background: rgba(0, 0, 0, 0.5);
+		color: rgba(255, 255, 255, 1);
 		cursor: default;
 		height: 3.25em;
 		left: 0;
@@ -3791,9 +3791,9 @@
 /* Nav */
 
 	#nav {
-		-webkit-transform: translateX(20em);
-		-ms-transform: translateX(20em);
-		transform: translateX(20em);
+		-webkit-transform: translateX(15em);
+		-ms-transform: translateX(15em);
+		transform: translateX(15em);
 		-webkit-transition: -webkit-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		-webkit-transition: visibility 0.5s, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
 		transition: visibility 0.5s, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
@@ -3801,7 +3801,7 @@
 		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #07090c;
+		background: rgba(0, 0, 0, 0.75);/*#07090c;*/
 		-webkit-box-shadow: none;
 		        box-shadow: none;
 		color: #fff;
@@ -3814,7 +3814,7 @@
 		text-transform: uppercase;
 		top: 0;
 		visibility: hidden;
-		width: 20em;
+		width: 15em;
 		z-index: 10002;
 	}
 
@@ -3974,7 +3974,9 @@
 			        box-shadow: none;
 			color: #1E2832 !important;
 		}
-
+		#banner .feature .content p { /* modified */
+			padding: 0px;
+		}
 			#banner input[type="submit"].icon:before,
 			#banner input[type="reset"].icon:before,
 			#banner input[type="button"].icon:before,
