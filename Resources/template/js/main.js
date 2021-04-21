@@ -53,6 +53,19 @@
 					side: 'right'
 				});
 
+		// TOC.
+			$('#toc')
+				.append('<a href="#toc" class="close"></a>')
+				.appendTo($body)
+				.panel({
+					delay: 500,
+					hideOnClick: true,
+					hideOnSwipe: true,
+					resetScroll: true,
+					resetForms: true,
+					side: 'right'
+				});
+
 	});
 
 })(jQuery);
