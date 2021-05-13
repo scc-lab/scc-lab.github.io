@@ -17,7 +17,7 @@ request.onerror = function() {
 };
 request.send(); */
 
-fetch('https://scc-lab.github.io/scc.html')
+fetch('scc.html')
 	.then(function (response) {
 		return response.text();
 	})
