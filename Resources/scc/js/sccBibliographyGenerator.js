@@ -1,4 +1,4 @@
-var request = new XMLHttpRequest();
+/* var request = new XMLHttpRequest();
 request.open("GET", "https://scc-lab.github.io/scc.html", true);
 request.onload = function() {
 	if (this.status >= 200 && this.status < 400) {
@@ -15,7 +15,22 @@ request.onload = function() {
 request.onerror = function() {
 	alert("Error retrieving the bib file");
 };
-request.send();
+request.send(); */
+
+fetch('https://scc-lab.github.io/scc.html')
+	.then(function (response) {
+		return response.text();
+	})
+	.then(function (data) {
+		document.getElementById("includedContent").innerHTML=data;
+		if (document.getElementById("quicksearch") != null) {
+			initSearch();
+		};
+		initPage();
+	})
+	.catch(function (err) {
+		alert("Error retrieving the bib file");
+	});
 
 var entryTypes = ["Book","Article","InCollection","InProceedings","Conference","PhdThesis","MastersThesis","TechReport"];
 var entryTypeNames = ["Books","Peer-reviewed journal papers","Book chapters","Peer-reviewed conference papers","Abstract-reviewed papers and posters","Ph.D. dissertations","M.S. thesis","Technical reports"];
