@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Mine Countermeasures and Optimal Control</title>
+		<title>Mehnaz Sharna</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<base href="../">
@@ -17,17 +17,28 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
 		<link href="Resources/scc/css/scc.css" rel="stylesheet">
+		<script type="text/javascript">
+			function upgradeImage(element) {
+				parentDiv = element.parentElement;
+				lowResImageElement = parentDiv.querySelector("img:not([hidden])");
+				element.classList.remove("hidden");
+				lowResImageElement.classList.add("hidden");
+			}
+			function upgradeBackgroundImage(element) {
+				element.parentElement.style.backgroundImage = "url('Resources/template/css/images/overlay.png'), url('Resources/scc/img/" + element.parentElement.id + ".png')";
+			}
+		</script>
 	</head>
 	<body class="landing">
-	
+
 	<!-- Placeholder for publications -->
 		<div class="hidden" id="includedContent">
 			&nbsp;
 		</div>
-		
+
 	<!-- Header -->
-		<header id="header" class="alt">
-			<h1><a href="projects.html">Research Projects</a></h1>
+		<header id="header">
+			<h1><a href="index.html">SCC Home</a></h1>
 			<a href="#nav">Menu</a>
 		</header>
 
@@ -41,26 +52,31 @@
 			</ul>
 		</nav>
 
-	<!-- Banner -->
-		<section id="banner" class="projectBanner">
-			<h2>Mine Countermeasures and Optimal Control</h2>
-		</section>
-
-	<!-- One -->
+	<!-- Main -->
 		<section id="main" class="wrapper">
 			<div class="container">
-				<div class="content completedProject">
-					<p class="fullItemText">This research project focused on establishing reinforcement learning methods for continuous-time dynamic systems. Efforts focused on the underlying principles of the actor-critic-identifier structure and computational methods for efficient function approximation.</p>
-					<h3>Publications:</h3>
-					<div class="itemPublications topicKeyword">
-						<p id="filterName" class="hidden">onr-n00014-16-1-2091</p>
-					</div>
+				<header class="major special">
+					<h2>Jared Town</h2>
+					<p>M.S. Student</p>
+				</header>
+				<span class="image left peopleImg">
+					<img src="Resources/scc/img/People/medium_jared_town.jpg" alt="" />
+					<img class="hidden" src="Resources/scc/img/People/jared_town.jpg" onload="upgradeImage(this)" />
+				</span>
+				<p><strong>Jared Town</strong> graduated with an honors Bachelor of Science Degree in Mechanical Engineering from Oklahoma State University in 2021. While an undergraduate, he pursued an interest in the BAJA SAE team, CAD, and control theory. He is currently pursuing a Master of Science under the guidance of Dr. Kamalapurkar with an interest in UAV controls.</p>
+			</div>
+		</section>
+
+	<!-- Publications -->
+		<section id="publications">
+			<div class="container">
+				<div class="itemPublications workAuthor">
+					<p id="filterName" class="hidden">J. Town</p>
 				</div>
 			</div>
 		</section>
 
-
-	<!-- Four -->
+	<!-- Contact -->
 		<section id="contact" class="wrapper style2 special">
 			<div class="inner">
 				<header class="major narrow">
@@ -92,7 +108,7 @@
 				</ul>
 			</div>
 		</footer>
-	
+
 	<!-- Scripts -->
 		<script src="Resources/template/js/jquery.min.js"></script>
 		<script src="Resources/template/js/skel.min.js"></script>
@@ -100,10 +116,5 @@
 		<!--[if lte IE 8]><script src="Resources/template/js/ie/respond.min.js"></script><![endif]-->
 		<script src="Resources/template/js/main.js"></script>
 		<script type="text/javascript" src="Resources/scc/js/sccBibliographyGenerator.js"></script>
-		<script type="text/javascript">
-				window.addEventListener('load', (event) => {
-					document.getElementById("banner").style.backgroundImage = "url('Resources/template/css/images/overlay.png'), url('Resources/scc/img/Project-Img/onr-n00014-16-1-2091.png')";
-				}, false);
-		</script>
 	</body>
 </html>
