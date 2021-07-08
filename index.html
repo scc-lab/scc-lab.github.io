@@ -33,9 +33,11 @@
 				lowResImageElement = parentDiv.querySelector("img:not([hidden])");
 				element.classList.remove("hidden");
 				lowResImageElement.classList.add("hidden");
-				var flkty = new Flickity('.carousel');
-				if( typeof flkty !== 'undefined' ) {
-					flkty.resize();
+				if (typeof Flickity === "function") { 
+					var flkty = new Flickity('.carousel');
+					if( typeof flkty !== 'undefined' ) {
+						flkty.resize();
+					}
 				}
 			}
 			function upgradeBackgroundImage(element) {
