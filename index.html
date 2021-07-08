@@ -33,6 +33,10 @@
 				lowResImageElement = parentDiv.querySelector("img:not([hidden])");
 				element.classList.remove("hidden");
 				lowResImageElement.classList.add("hidden");
+				var flkty = new Flickity('.carousel');
+				if( typeof flkty !== 'undefined' ) {
+					flkty.resize();
+				}
 			}
 			function upgradeBackgroundImage(element) {
 				element.parentElement.style.backgroundImage = "url('Resources/template/css/images/overlay.png'), url('Resources/scc/img/" + element.parentElement.id + ".png')";
