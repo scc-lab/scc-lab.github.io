@@ -9,6 +9,12 @@
 	background-color: #303030;
 	opacity: 0.4;
 	overflow: hidden;
+	display: flex;
+	align-items: stretch;
+	min-height: 100%;
+}
+.flickity-slider {
+	display: flex;
 }
 .flickity-resize .carousel-cell {
   min-height: 100%;
