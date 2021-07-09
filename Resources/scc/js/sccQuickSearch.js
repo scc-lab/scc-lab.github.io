@@ -15,21 +15,15 @@ var searchRegExp = false;// enable RegExp searches
 function initSearch() {
 	// check for quick search table and searchfield
 	if (!document.getElementById("quicksearch")) { return; }
-		//find the query field
+	//find the query field
 	qsfield = document.getElementById("qs_field"); // global variable
 	// previous search term; used for speed optimization
 	prevSearch = "";
 	initPreferences();
 	// shows the searchfield
 	document.getElementById("quicksearch").style.display = "block";
-	// if searchFlag is set, perform a search as soon as the page is loaded
-	// if not, wait until the onkeyup event in the searchfield
-	if (document.getElementById("searchFlag") == null) {
-		document.getElementById("qs_field").onkeyup = quickSearch;
-	} else {
-		searchRegExp = true;
-		quickSearch(qsfield);
-	}
+	// wait until the onkeyup event in the searchfield
+	document.getElementById("qs_field").onkeyup = quickSearch;
 	// add event listeners for buttons
 	document.addEventListener("click", function (event) {
 		if (event.target.parentElement==null) {

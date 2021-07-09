@@ -27,6 +27,7 @@ fetch('scc.html')
 			initSearch();
 		};
 		initPage();
+		querySearch();
 	})
 	.catch(function (err) {
 		alert("Error retrieving the bib file");
@@ -421,3 +422,19 @@ function expandSection(element) {
 		element.style.paddingBottom = null;
 	});
 };
+
+function querySearch() {
+// check if the URL includes a search string
+var queryParams = new URLSearchParams(window.location.search);
+if (queryParams) {
+	searchParam = queryParams.get('s');
+}
+if (searchParam) {
+	//var p = searchParam.split('=');
+	if (document.getElementById("quicksearch") != null) {
+		// (p[0] === "s") {
+			document.getElementById("qs_field").value = decodeURIComponent(searchParam);
+			quickSearch();
+		}
+	}
+}
