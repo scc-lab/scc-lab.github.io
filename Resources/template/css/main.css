@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 @charset "UTF-8";
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700");
@@ -59,6 +52,7 @@
 /* Box Model */
 
 	*, *:before, *:after {
+		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 	}
@@ -226,12 +220,14 @@
 
 	.row {
 		border-bottom: solid 1px transparent;
+		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 	}
 
 	.row > * {
 		float: left;
+		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 	}
@@ -1576,10 +1572,13 @@
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+			-moz-animation: none !important;
 			-webkit-animation: none !important;
+			-ms-animation: none !important;
 			animation: none !important;
+			-moz-transition: none !important;
 			-webkit-transition: none !important;
-			-o-transition: none !important;
+			-ms-transition: none !important;
 			transition: none !important;
 		}
 
@@ -1765,7 +1764,7 @@
 	}
 
 	a {
-		color: #FE5C00;
+		color: #FE5C00; /* modified */
 	}
 
 	strong, b {
@@ -1930,7 +1929,7 @@
 
 	.select-wrapper {
 		text-decoration: none;
-		display: inline-block;
+		display: inline-block; /* modified */
 		position: relative;
 	}
 
@@ -1953,7 +1952,7 @@
 			right: 0;
 			text-align: center;
 			top: 0;
-			width: 2.5em;
+			width: 2.5em; /* modified */
 		}
 
 		.select-wrapper select::-ms-expand {
@@ -2075,13 +2074,14 @@
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
+			 /* modified */
 			border-color: #FE5C00;
 			-webkit-box-shadow: 0 0 0 1px #FE5C00;
 			        box-shadow: 0 0 0 1px #FE5C00;
 		}
 
 	.select-wrapper:before {
-		color: #FE5C00;/*rgba(144, 144, 144, 0.25);modified*/
+		color: #FE5C00; /*rgba(144, 144, 144, 0.25);modified*/
 	}
 
 	input[type="checkbox"] + label,
@@ -2098,12 +2098,13 @@
 	input[type="checkbox"]:checked + label:before,
 	input[type="radio"]:checked + label:before {
 		background-color: rgba(144, 144, 144, 0.075);
-		border-color: #FE5C00;
+		border-color: #FE5C00;  /* modified */
 		color: #25383B;
 	}
 
 	input[type="checkbox"]:focus + label:before,
 	input[type="radio"]:focus + label:before {
+		 /* modified */
 		border-color: #FE5C00;
 		-webkit-box-shadow: 0 0 0 1px #FE5C00;
 		        box-shadow: 0 0 0 1px #FE5C00;
@@ -2518,8 +2519,9 @@
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		-o-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		border-radius: 2.5em;
 		border: 0;
@@ -2528,7 +2530,7 @@
 		font-weight: 700;
 		height: 2.85em;
 		line-height: 2.95em;
-		min-width: 2em;
+		min-width: 2em; /* modified */
 		padding: 0 1.5em;
 		text-align: center;
 		text-decoration: none;
@@ -2658,7 +2660,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #FE5C00;
+			background-color: #FE5C00;  /* modified */
 			-webkit-box-shadow: none;
 			        box-shadow: none;
 			color: #fff !important;
@@ -2686,6 +2688,7 @@
 		button.alt,
 		.button.alt {
 			background-color: transparent;
+			 /* modified */
 			-webkit-box-shadow: inset 0 0 0 2px #FE5C00;
 			        box-shadow: inset 0 0 0 2px #FE5C00;
 			color: #FE5C00 !important;
@@ -2711,9 +2714,8 @@
 
 	.feature {
 		display: -moz-flex;
+		display: -webkit-flex;
 		display: -ms-flex;
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
 		/* modified
 		-moz-align-items: center;
@@ -2729,22 +2731,20 @@
 
 		.feature.left {
 			-moz-flex-direction: row;
+			-webkit-flex-direction: row;
 			-ms-flex-direction: row;
-			-webkit-box-orient: horizontal;
-			-webkit-box-direction: normal;
-			        flex-direction: row;
+			flex-direction: row;
 		}
 
 		.feature.right {
 			-moz-flex-direction: row-reverse;
+			-webkit-flex-direction: row-reverse;
 			-ms-flex-direction: row-reverse;
-			-webkit-box-orient: horizontal;
-			-webkit-box-direction: reverse;
-			        flex-direction: row-reverse;
+			flex-direction: row-reverse;
 		}
 
 		.feature .image {
-			width: 55%;
+			width: 55%; /* modified */
 		}
 
 			.feature .image img {
@@ -2753,10 +2753,10 @@
 
 		.feature .content {
 			padding: 2em 3em 0.1em 3em;
-			width: 45%;
+			width: 45%; /* modified */
 		}
-
-		.feature .content p { /* modified */
+		 /* modified */
+		.feature .content p {
 					color: #777;
 		}
 		@media screen and (max-width: 1280px) {
@@ -2775,40 +2775,38 @@
 
 			.feature.left, .feature.right {
 				-moz-flex-direction: column;
+				-webkit-flex-direction: column;
 				-ms-flex-direction: column;
-				-webkit-box-orient: vertical;
-				-webkit-box-direction: normal;
-				        flex-direction: column;
+				flex-direction: column;
 			}
 
 			.feature .image {
 				width: 100%;
 			}
-
+				/* modified */
 				.feature .image img {
-					max-width: min(500px, 100%); /* modified */
-					margin-left: auto; /* modified */
-					margin-right: auto; /* modified */
+					max-width: min(500px, 100%);
+					margin-left: auto;
+					margin-right: auto;
 				}
 
 			.feature .content {
-				padding: 1em 2em 0.1em 2em;
+				padding: 0.5em 2em 0.1em 2em; /* modified */
 				width: 100%;
 			}
-
-		}
-
-		@media screen and (max-width: 736px) {
 
 			.feature {
 				margin-bottom: 2em;
 			}
+		}
+
+/* 		@media screen and (max-width: 736px) {
 
 				.feature .content {
-					padding: 1em 1em 0.1em 1em;
+					padding: 1em 1em 0.1em 1em; modified 
 				}
 
-		}
+		} */
 
 	.feature {
 		background-color: rgba(144, 144, 144, 0.075);
@@ -2818,10 +2816,11 @@
 
 	.image-grid {
 		display: -moz-flex;
+		display: -webkit-flex;
 		display: -ms-flex;
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		margin-bottom: 4em;
@@ -2883,7 +2882,7 @@
 			}
 
 			.wrapper.style1 a {
-				color: #FE5C00;
+				color: #FE5C00; /*modified*/
 			}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -2934,6 +2933,7 @@
 				.wrapper.style1 input[type="email"]:focus,
 				.wrapper.style1 select:focus,
 				.wrapper.style1 textarea:focus {
+					/*modified*/
 					border-color: #FE5C00;
 					-webkit-box-shadow: 0 0 0 1px #FE5C00;
 					        box-shadow: 0 0 0 1px #FE5C00;
@@ -2957,12 +2957,13 @@
 			.wrapper.style1 input[type="checkbox"]:checked + label:before,
 			.wrapper.style1 input[type="radio"]:checked + label:before {
 				background-color: #fff;
-				border-color: #FE5C00;
+				border-color: #FE5C00; /*modified*/
 				color: #555;
 			}
 
 			.wrapper.style1 input[type="checkbox"]:focus + label:before,
 			.wrapper.style1 input[type="radio"]:focus + label:before {
+				/*modified*/
 				border-color: #FE5C00;
 				-webkit-box-shadow: 0 0 0 1px #FE5C00;
 				        box-shadow: 0 0 0 1px #FE5C00;
@@ -3064,6 +3065,7 @@
 				.wrapper.style1 input[type="button"].special,
 				.wrapper.style1 button.special,
 				.wrapper.style1 .button.special {
+					/*modified*/
 					background-color: #FE5C00;
 					-webkit-box-shadow: none;
 					        box-shadow: none;
@@ -3092,6 +3094,7 @@
 				.wrapper.style1 button.alt,
 				.wrapper.style1 .button.alt {
 					background-color: transparent;
+					/*modified*/
 					-webkit-box-shadow: inset 0 0 0 2px #FE5C00;
 					        box-shadow: inset 0 0 0 2px #FE5C00;
 					color: #FE5C00 !important;
@@ -3123,7 +3126,7 @@
 			}
 
 			.wrapper.style2 a {
-				color: #FE5C00;
+				color: #FE5C00; /*modified*/
 			}
 
 			.wrapper.style2 strong, .wrapper.style2 b {
@@ -3174,6 +3177,7 @@
 				.wrapper.style2 input[type="email"]:focus,
 				.wrapper.style2 select:focus,
 				.wrapper.style2 textarea:focus {
+					/*modified*/
 					border-color: #FE5C00;
 					-webkit-box-shadow: 0 0 0 1px #FE5C00;
 					        box-shadow: 0 0 0 1px #FE5C00;
@@ -3197,12 +3201,13 @@
 			.wrapper.style2 input[type="checkbox"]:checked + label:before,
 			.wrapper.style2 input[type="radio"]:checked + label:before {
 				background-color: rgba(255, 255, 255, 0.05);
-				border-color: #FE5C00;
+				border-color: #FE5C00; /*modified*/
 				color: #fff;
 			}
 
 			.wrapper.style2 input[type="checkbox"]:focus + label:before,
 			.wrapper.style2 input[type="radio"]:focus + label:before {
+				/*modified*/
 				border-color: #FE5C00;
 				-webkit-box-shadow: 0 0 0 1px #FE5C00;
 				        box-shadow: 0 0 0 1px #FE5C00;
@@ -3304,7 +3309,7 @@
 				.wrapper.style2 input[type="button"].special,
 				.wrapper.style2 button.special,
 				.wrapper.style2 .button.special {
-					background-color: #FE5C00;
+					background-color: #FE5C00; /*modified*/
 					-webkit-box-shadow: none;
 					        box-shadow: none;
 					color: #fff !important;
@@ -3357,7 +3362,7 @@
 			background-color: #1E2832;
 			color: rgba(255, 255, 255, 0.75);
 			background-attachment: fixed;
-			background-image: url("images/overlay.png"), url("../../scc/img/small_hiring.png");
+			background-image: url("images/overlay.png"), url("../../scc/img/small_hiring.png"); /*modified*/
 			background-size: cover;
 		}
 		
@@ -3372,7 +3377,7 @@
 			}
 
 			.wrapper.style3 a {
-				color: #FE5C00;
+				color: #FE5C00; /*modified*/
 			}
 
 			.wrapper.style3 strong, .wrapper.style3 b {
@@ -3423,6 +3428,7 @@
 				.wrapper.style3 input[type="email"]:focus,
 				.wrapper.style3 select:focus,
 				.wrapper.style3 textarea:focus {
+					/*modified*/
 					border-color: #FE5C00;
 					-webkit-box-shadow: 0 0 0 1px #FE5C00;
 					        box-shadow: 0 0 0 1px #FE5C00;
@@ -3446,12 +3452,13 @@
 			.wrapper.style3 input[type="checkbox"]:checked + label:before,
 			.wrapper.style3 input[type="radio"]:checked + label:before {
 				background-color: rgba(255, 255, 255, 0.05);
-				border-color: #FE5C00;
+				border-color: #FE5C00; /*modified*/
 				color: #fff;
 			}
 
 			.wrapper.style3 input[type="checkbox"]:focus + label:before,
 			.wrapper.style3 input[type="radio"]:focus + label:before {
+				/*modified*/
 				border-color: #FE5C00;
 				-webkit-box-shadow: 0 0 0 1px #FE5C00;
 				        box-shadow: 0 0 0 1px #FE5C00;
@@ -3553,7 +3560,7 @@
 				.wrapper.style3 input[type="button"].special,
 				.wrapper.style3 button.special,
 				.wrapper.style3 .button.special {
-					background-color: #FE5C00;
+					background-color: #FE5C00; /*modified*/
 					-webkit-box-shadow: none;
 					        box-shadow: none;
 					color: #fff !important;
@@ -3639,7 +3646,7 @@
 			.wrapper {
 				padding: 2em 1em 0.1em 1em;
 			}
-
+			/*modified*/
 			.wrapper.style2 header.narrow a {
 				font-size: 0.9em;
 			}
@@ -3666,8 +3673,8 @@
 		}
 
 	#header {
-		background: rgba(0, 0, 0, 0.5);
-		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.5); /*modified*/
+		color: rgba(255, 255, 255, 1); /*modified*/
 		cursor: default;
 		height: 3.25em;
 		left: 0;
@@ -3696,8 +3703,9 @@
 			}
 
 		#header a {
+			-moz-transition: color 0.2s ease-in-out;
 			-webkit-transition: color 0.2s ease-in-out;
-			-o-transition: color 0.2s ease-in-out;
+			-ms-transition: color 0.2s ease-in-out;
 			transition: color 0.2s ease-in-out;
 			color: #fff;
 			display: inline-block;
@@ -3791,17 +3799,19 @@
 /* Nav */
 
 	#nav {
+		-moz-transform: translateX(20em);
 		-webkit-transform: translateX(15em);
 		-ms-transform: translateX(15em);
 		transform: translateX(15em);
+		-moz-transition: -moz-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		-webkit-transition: -webkit-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		-webkit-transition: visibility 0.5s, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
 		transition: visibility 0.5s, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
-		-o-transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
+		-ms-transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: rgba(0, 0, 0, 0.75);/*#07090c;*/
+		background: rgba(0, 0, 0, 0.75);/*modified #07090c;*/
 		-webkit-box-shadow: none;
 		        box-shadow: none;
 		color: #fff;
@@ -3814,7 +3824,7 @@
 		text-transform: uppercase;
 		top: 0;
 		visibility: hidden;
-		width: 15em;
+		width: 15em; /*modified*/
 		z-index: 10002;
 	}
 
@@ -3851,8 +3861,9 @@
 
 		#nav .close {
 			text-decoration: none;
+			-moz-transition: color 0.2s ease-in-out;
 			-webkit-transition: color 0.2s ease-in-out;
-			-o-transition: color 0.2s ease-in-out;
+			-ms-transition: color 0.2s ease-in-out;
 			transition: color 0.2s ease-in-out;
 			-webkit-tap-highlight-color: transparent;
 			border: 0;
@@ -3898,6 +3909,7 @@
 			}
 
 		#nav.visible {
+			-moz-transform: translateX(0);
 			-webkit-transform: translateX(0);
 			-ms-transform: translateX(0);
 			transform: translateX(0);
@@ -3917,17 +3929,18 @@
 /* Banner */
 
 	#banner {
-		padding: 8em 0 3em 0;
+		padding: 8em 0 3em 0; /*modified*/
 		background-color: #1E2832;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed;
-		background-image: url("images/overlay.png"), url("../../scc/img/small_banner.png");
+		background-image: url("images/overlay.png"), url("../../scc/img/small_banner.png"); /*modified*/
 		background-size: cover;
 		text-align: center;
 	}
+		/*modified*/
 		@supports (-webkit-touch-callout: none) {
 			#banner {
-				background-attachment: scroll;/* FIX FOR FIXED COVER SIZE BACKGROUND ON IOS*/ 
+				background-attachment: scroll;/* FIX FOR FIXED COVER SIZE BACKGROUND ON IOS */ 
 			}
 		}
 		#banner.projectBanner {
@@ -3939,7 +3952,7 @@
 		}
 
 		#banner a {
-			color: #FE5C00;
+			color: #FE5C00; /*modified*/
 			text-shadow: 0px 0px 3px #000;
 		}
 
@@ -3974,9 +3987,6 @@
 			        box-shadow: none;
 			color: #1E2832 !important;
 		}
-		#banner .feature .content p { /* modified */
-			padding: 0px;
-		}
 			#banner input[type="submit"].icon:before,
 			#banner input[type="reset"].icon:before,
 			#banner input[type="button"].icon:before,
@@ -4006,7 +4016,7 @@
 			#banner input[type="button"].special,
 			#banner button.special,
 			#banner .button.special {
-				background-color: #FE5C00;
+				background-color: #FE5C00; /*modified*/
 				-webkit-box-shadow: none;
 				        box-shadow: none;
 				color: #fff !important;
@@ -4056,15 +4066,15 @@
 				}
 
 		#banner h2 {
-			font-size: 2.25em;
+			font-size: 2.25em; /*modified*/
 			margin: 0 0 0.5em 0;
 			padding: 0;
 		}
 
 		#banner p {
 			color: #fff;
-			font-size: 1.25em;
-			line-height: 1.5em;
+			font-size: 1.25em; /*modified*/
+			line-height: 1.5em; /*modified*/
 			margin-bottom: 1.75em;
 			text-transform: uppercase;
 		}
@@ -4085,7 +4095,7 @@
 		@media screen and (max-width: 1680px) {
 
 			#banner {
-				padding: 11em 0 4em 0;
+				padding: 11em 0 4em 0; /*modified*/
 			}
 
 		}
@@ -4093,7 +4103,7 @@
 		@media screen and (max-width: 1280px) {
 
 			#banner {
-				padding: 9em 0 4em 0;
+				padding: 9em 0 4em 0; /*modified*/
 			}
 
 				#banner h2 {
@@ -4105,8 +4115,9 @@
 		@media screen and (max-width: 980px) {
 
 			#banner {
-				padding: 8em 0em 3em 0em;
+				padding: 8em 0em 3em 0em; /*modified*/
 			}
+				/*modified*/
 				#banner h2 {
 					padding: 0em 2em 0em 2em;
 				}
@@ -4118,17 +4129,17 @@
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 5em 0em 2em 0em;
+				padding: 5em 0em 2em 0em; /*modified*/
 			}
 
 				#banner h2 {
 					font-size: 1.5em;
-					padding: 0em 2em 0em 2em;
+					padding: 0em 2em 0em 2em; /*modified*/
 				}
 
 				#banner p {
 					font-size: 0.75em;
-					padding: 0em 2em 0em 2em;
+					padding: 0em 2em 0em 2em; /*modified*/
 				}
 
 				#banner .icon {
@@ -4140,12 +4151,13 @@
 		@media screen and (max-width: 480px) {
 
 			#banner {
-				padding: 5em 0em 2em 0em;
+				padding: 5em 0em 2em 0em; /*modified*/
 			}
+				/*modified*/
 				#banner h2 {
 					padding: 0em 2em 0em 2em;
 				}
-
+				/*modified*/
 				#banner p {
 					padding: 0em 2em 0em 2em;
 				}
@@ -4180,7 +4192,7 @@
 		@media screen and (max-width: 736px) {
 
 			#main {
-				padding: 3em 0 0.1em 0;
+				padding: 3em 0 0.1em 0; /*modified*/
 			}
 
 		}
@@ -4198,7 +4210,7 @@
 		}
 
 		#footer a {
-			color: #FE5C00;
+			color: #FE5C00; /*modified*/
 		}
 
 		#footer strong, #footer b {
@@ -4223,8 +4235,9 @@
 		}
 
 		#footer a {
+			-moz-transition: color 0.2s ease-in-out;
 			-webkit-transition: color 0.2s ease-in-out;
-			-o-transition: color 0.2s ease-in-out;
+			-ms-transition: color 0.2s ease-in-out;
 			transition: color 0.2s ease-in-out;
 			color: #a5a9ad;
 		}
