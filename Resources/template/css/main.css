@@ -2791,8 +2791,9 @@
 				}
 
 			.feature .content {
-				padding: 0.5em 2em 0.1em 2em; /* modified */
+				padding: 1em 2em 0.1em 2em; /* modified */
 				width: 100%;
+				text-align: center;
 			}
 
 			.feature {
@@ -3929,7 +3930,7 @@
 /* Banner */
 
 	#banner {
-		padding: 8em 0 3em 0; /*modified*/
+		padding: 5em 0 3em 0; /*modified*/
 		background-color: #1E2832;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed;
@@ -4066,14 +4067,14 @@
 				}
 
 		#banner h2 {
-			font-size: 2.25em; /*modified*/
+			font-size: 2em; /*modified*/
 			margin: 0 0 0.5em 0;
 			padding: 0;
 		}
 
 		#banner p {
 			color: #fff;
-			font-size: 1.25em; /*modified*/
+			font-size: 1em; /*modified*/
 			line-height: 1.5em; /*modified*/
 			margin-bottom: 1.75em;
 			text-transform: uppercase;
@@ -4095,7 +4096,7 @@
 		@media screen and (max-width: 1680px) {
 
 			#banner {
-				padding: 11em 0 4em 0; /*modified*/
+				padding: 5em 0 4em 0; /*modified*/
 			}
 
 		}
@@ -4103,11 +4104,11 @@
 		@media screen and (max-width: 1280px) {
 
 			#banner {
-				padding: 9em 0 4em 0; /*modified*/
+				padding: 5em 0 4em 0; /*modified*/
 			}
 
 				#banner h2 {
-					font-size: 2em;
+					font-size: 1.5em;
 				}
 
 		}
@@ -4115,7 +4116,7 @@
 		@media screen and (max-width: 980px) {
 
 			#banner {
-				padding: 8em 0em 3em 0em; /*modified*/
+				padding: 4em 0em 3em 0em; /*modified*/
 			}
 				/*modified*/
 				#banner h2 {
@@ -4129,7 +4130,7 @@
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 5em 0em 2em 0em; /*modified*/
+				padding: 4em 0em 2em 0em; /*modified*/
 			}
 
 				#banner h2 {
@@ -4151,11 +4152,12 @@
 		@media screen and (max-width: 480px) {
 
 			#banner {
-				padding: 5em 0em 2em 0em; /*modified*/
+				padding: 3em 0em 2em 0em; /*modified*/
 			}
 				/*modified*/
 				#banner h2 {
 					padding: 0em 2em 0em 2em;
+					font-size: 1.25em;
 				}
 				/*modified*/
 				#banner p {
