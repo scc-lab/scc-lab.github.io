@@ -69,11 +69,11 @@
 	});
 
 })(jQuery);
-
+// Header Transition modified
 var initiallyAlt = 0;
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
-	if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
 		if (document.getElementById("header").classList.contains("alt")) {
 			document.getElementById("header").classList.remove("alt");
 			initiallyAlt = 1;
