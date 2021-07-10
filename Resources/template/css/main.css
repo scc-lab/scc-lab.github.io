@@ -1586,7 +1586,7 @@
 
 	body {
 		background-color: #fff;
-		color: #777;
+		color: #353535;
 	}
 
 	body, input, select, textarea {
@@ -2757,7 +2757,15 @@
 		}
 		 /* modified */
 		.feature .content p {
-					color: #777;
+			color: #353535;
+			font-size: max(0.65em,min(1em,1.4vw));
+			line-height: max(1.5em,min(2em,2.4vw));
+		}
+		.feature .content h2 {
+			font-size: max(0.8em,min(1.5em,2vw));
+		}
+		.feature .content a {
+			font-size: max(0.65em,min(1em,1.4vw));
 		}
 		@media screen and (max-width: 1280px) {
 
@@ -2795,7 +2803,18 @@
 				width: 100%;
 				text-align: center;
 			}
-
+			
+			/* modified */
+			.feature .content p {
+				font-size: max(0.75em,min(1em,2vw));
+				line-height: max(1.5em,min(2em,2.5vw));
+			}
+			.feature .content h2 {
+				font-size: max(1em,min(1.5em,2.5vw));
+			}
+			.feature .content a {
+				font-size: max(0.75em,min(1em,2vw));
+			}
 			.feature {
 				margin-bottom: 2em;
 			}
