@@ -1,0 +1,17 @@
+<!-- Header -->
+{% if page.header == 'simple' or layout.header == 'simple' %}
+  <header id="header">
+{% else %}
+  <header id="header" class="alt">
+{% endif %}
+  {% if page.name != 'index.html' %}
+    {% if page.headerlink == 'projects' or layout.headerlink == 'projects' %}
+      <h1><a href="projects.html">Research Projects</a></h1>
+    {% elsif page.headerlink == 'topics' or layout.headerlink == 'topics' %}
+      <h1><a href="topics.html">Research Topics</a></h1>
+    {% else %}
+      <h1><a href="index.html">SCC Home</a></h1>
+    {% endif %}
+  {% endif %}
+  <a href="#nav">Menu</a>
+</header>

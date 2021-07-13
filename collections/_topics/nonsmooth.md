@@ -1,0 +1,7 @@
+---
+id: nonsmooth
+title: Stability of nonsmooth systems
+weight: 4
+description: Extensions of the LaSalle-Yoshizawa Theorem to nonsmooth nonautonomous systems and switched systems utilizing Filippov solutions of nonsmooth differential equations and nonstrict Lyapunov functions.
+---
+Various Lyapunov-based analysis methods were available for differential inclusions in literature for both autonomous and nonautonomous systems. Several of these stability theorems applied to nonsmooth systems for which strict Lyapunov functions could be found. However, for certain classes of controllers (e.g., adaptive controllers, output feedback controllers, etc.), a strict Lyapunov function may be difficult (or impossible) to find, which restricted the use of such existing methods. We contributed to the extension of the LaSalle-Yoshizawa Theorem to nonsmooth nonautonomous systems utilizing Filippov solutions of nonsmooth differential equations and nonstrict Lyapunov functions. Recently, in a paper titled “Invariance-like results for switched nonautonomous nonsmooth systems,” published in IEEE transactions on Automatic Control, we were able to extend the above results to systems described by switched differential inclusions. While conducting this work, we also discovered a fundamental fact about stability of differential inclusions that allows us to analyze these systems using Lyapunov methods with reduced conservativeness.

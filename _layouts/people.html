@@ -1,0 +1,37 @@
+---
+layout: default
+base: ../
+header: simple
+banner: no
+---
+{% assign pid = page.id | split:"/" | last %}
+<!-- Placeholder for publications -->
+  <div class="hidden" id="includedContent">
+    &nbsp;
+  </div>
+
+<!-- Main -->
+<section id="main" class="wrapper">
+  <div class="container">
+      <header class="major special">
+        <h2>{{ page.title }}</h2>
+        <p>{{ page.role }}{% if page.status == 'alumnus' %}, {{ page.year }}{% endif %}</p>
+    </header>
+    <span class="image left peopleImg">
+      <img src="assets/images/people/medium_{{ pid }}.jpg"/>
+      <img class="hidden" src="assets/images/people/{{ pid }}.jpg" onload="upgradeImage(this)" />
+    </span>
+    <p><strong>{{ page.title }}</strong> {{ page.bio }}</p>
+  </div>
+</section>
+
+<!-- Publications -->
+<section id="publications">
+  <div class="container">
+    <div class="itemPublications workAuthor">
+      <p id="filterName" class="hidden">{{ page.filtername }}</p>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/sccBibliographyGenerator.js"></script>

@@ -1,200 +1,52 @@
-<!DOCTYPE HTML>
-<!--
-	Retrospect by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
-	<head>
-		<title>Systems, Cognition, and Control Laboratory</title>
-		<link rel="apple-touch-icon" sizes="180x180" href="Resources/scc/img/Favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="Resources/scc/img/Favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="Resources/scc/img/Favicon/favicon-16x16.png">
-		<link rel="manifest" href="Resources/scc/img/Favicon/site.webmanifest">
-		<link rel="mask-icon" href="Resources/scc/img/Favicon/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="theme-color" content="#ffffff">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="Resources/template/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="Resources/template/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="Resources/template/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="Resources/template/css/ie9.css" /><![endif]-->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-		<link href="Resources/scc/css/scc.css" rel="stylesheet">
-		<link href="Resources/scc/css/sccRetrospect.css" rel="stylesheet">
-		<link href="Resources/scc/css/scctooltip.css" rel="stylesheet">
-		<link href="Resources/flickity/css/flickity.css" rel="stylesheet">
-		<link href="Resources/flickity/css/flickity-scc.css" rel="stylesheet">
-		<script src="Resources/template/js/jquery.min.js"></script>
-		<script type="text/javascript">
-			function upgradeImage(element) {
-				parentDiv = element.parentElement;
-				lowResImageElement = parentDiv.querySelector("img:not([hidden])");
-				element.classList.remove("hidden");
-				lowResImageElement.classList.add("hidden");
-			}
-			function upgradeBackgroundImage(element) {
-				element.parentElement.style.backgroundImage = "url('Resources/template/css/images/overlay.png'), url('Resources/scc/img/" + element.parentElement.id + ".png')";
-			}
-			$(function(){
-				$("#news").load("news.html"); 
-			});
-		</script>
-	</head>
-	<body class="landing">
+---
+layout: default
+title: Systems, Cognition, and Control Laboratory
+motto: विद्या ददाति विनयं विनयात् याति पात्रताम्। पात्रत्वाद्धनमाप्नोति धनाद्धर्मं ततः सुखम्॥
+translation: With great knowledge, comes humility; humility leads to worthiness; worthiness generates wealth; wealth begets good deeds; and good deeds lead to bliss.
+news: true
+---
+<!-- research -->
+<section id="research" class="wrapper style1">
+  <div class="inner">
+    <a href="projects.html">
+       <article class="feature left">
+         <span class="image">
+           <img src=" assets/images/small_research-projects.png"/>
+           <img class="hidden" src=" assets/images/research-projects.png" onload="upgradeImage(this)"/>
+         </span>
+         <div class="content">
+           <h2>Research Projects</h2>
+           <p>Our ongoing and past research, organized by research projects.<p>
+         </div>
+       </article>
+    </a>
+    <a href="topics.html">
+      <article class="feature right">
+        <span class="image">
+          <img src=" assets/images/small_research-topics.png"/>
+          <img class="hidden" src=" assets/images/research-topics.png" onload="upgradeImage(this)"/>
+        </span>
+        <div class="content">
+          <h2>Research Topics</h2>
+          <p>Our ongoing and past research, organized by research topics.</p>
+        </div>
+      </article>
+    </a>
+  </div>
+</section>
 
-	<!-- Header -->
-		<header id="header" class="alt">
-			<a href="#nav">Menu</a>
-		</header>
-
-	<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="publications.html">Publications</a></li>
-				<li><a href="projects.html">Research Projects</a></li>
-				<li><a href="topics.html">Research Topics</a></li>
-			</ul>
-		</nav>
-
-	<!-- Banner -->
-		<section id="banner">
-			<!--<i class="icon fa-diamond"></i>-->
-			<img class="hidden" src="Resources/scc/img/banner.png" onload="upgradeBackgroundImage(this)"/>
-			<h2>Systems, Cognition, and Control Laboratory</h2>
-			<p class="tooltip">विद्या ददाति विनयं विनयात् याति पात्रताम्। पात्रत्वाद्धनमाप्नोति धनाद्धर्मं ततः सुखम्॥<span class="tooltiptext">With great knowledge, comes humility; humility leads to worthiness; worthiness generates wealth; wealth begets good deeds; and good deeds lead to bliss.</span></p>
-			<!-- <h3><a href="publications.html">Publications</a></h3>
-			<ul class="actions">
-				<li><a href="publications.html" class="button big special">Publications</a></li>
-			</ul> -->
-			<!-- Placeholder for news -->
-			<section id="news">
-			</section>
-		</section>
-	<!-- research -->
-		<section id="research" class="wrapper style1">
-			<div class="inner">
-				<!-- <article  id="twitter" class="feature">
-					<a class="twitter-timeline" href="https://twitter.com/LaboratoryScc?ref_src=twsrc%5Etfw">News</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				</article> -->
-				<a href="projects.html">
-					<article class="feature left">
-						<span class="image">
-							<img src="Resources/scc/img/small_research-projects.png"/>
-							<img class="hidden" src="Resources/scc/img/research-projects.png" onload="upgradeImage(this)"/>
-						</span>
-						<div class="content">
-							<h2>Research Projects</h2>
-							<p>Our ongoing and past research, organized by research projects.<p>
-							<!-- <ul class="actions">
-								<li>
-									<a href="projects.html" class="button alt">More</a>
-								</li>
-							</ul> -->
-						</div>
-					</article>
-				</a>
-				<a href="topics.html">
-					<article class="feature right">
-						<span class="image">
-							<img src="Resources/scc/img/small_research-topics.png"/>
-							<img class="hidden" src="Resources/scc/img/research-topics.png" onload="upgradeImage(this)"/>
-						</span>
-						<div class="content">
-							<h2>Research Topics</h2>
-							<p>Our ongoing and past research, organized by research topics.</p>
-							<!-- <ul class="actions">
-								<li>
-									<a href="topics.html" class="button alt">More</a>
-								</li>
-							</ul> -->
-						</div>
-					</article>
-				</a>
-			</div>
-		</section>
-
-	<!-- hiring -->
-		<section id="hiring" class="wrapper style3 special">
-			<img class="hidden" src="Resources/scc/img/hiring.png" onload="upgradeBackgroundImage(this)"/>
-			<div class="inner">
-				<header class="major narrow	">
-					<h2>We are hiring</h2>
-					<p>We are looking for several Ph.D. students to work on the exciting projects described above. Read the project descriptions, go through our publications, and let us know if you are interested.</p>
-				</header>
-				<p>Send us an email that inlcludes "Graduate School Enquiry" in the subject line, your curriculum vitae, and a brief statement of purpose that explains the reason you want to pursue graduate education and explains what, specifically, made you interested in our lab for your graduate studies.</p>
-				<ul class="actions">
-				<li><a href="mailto:rushikesh.kamalapurkar@okstate.edu?subject=Graduate School Enquiry" class="button big alt">Join us</a></li>
-				</ul>
-			</div>
-		</section>
-
-	<!-- people -->
-		<section id="people" class="wrapper special">
-			<div class="inner">
-				<header class="major narrow">
-					<h2>The Team</h2>
-				</header>
-				<div class="image-grid">
-					<a href="People/rushikesh_kamalapurkar.html" class="image"><img src="Resources/scc/img/People/rushikesh_kamalapurkar.jpg" alt="" /></a>
-					<a href="People/moad_abudia.html" class="image"><img src="Resources/scc/img/People/moad_abudia.jpg" alt="" /></a>
-					<a href="People/nahid_mahmud.html" class="image"><img src="Resources/scc/img/People/nahid_mahmud.jpg" alt="" /></a>
-					<a href="People/mehnaz_sharna.html" class="image"><img src="Resources/scc/img/People/mehnaz_sharna.jpg" alt="" /></a>
-					<a href="People/jared_town.html" class="image"><img src="Resources/scc/img/People/jared_town.jpg" alt="" /></a>
-				</div>
-				<header class="major narrow">
-					<h3>Alumni</h3>
-				</header>
-				<div class="image-grid">
-					<a href="People/katrine_hareland.html" class="image"><img src="Resources/scc/img/People/katrine_hareland.jpg" alt="" /></a>
-					<a href="People/ryan_self.html" class="image"><img src="Resources/scc/img/People/ryan_self.jpg" alt="" /></a>
-					<a href="People/michael_harlan.html" class="image"><img src="Resources/scc/img/People/michael_harlan.jpg" alt="" /></a>
-					<a href="People/ketan_sachidanand.html" class="image"><img src="Resources/scc/img/People/ketan_sachidanand.jpg" alt="" /></a>
-					<a href="People/vivek_malik.html" class="image"><img src="Resources/scc/img/People/vivek_malik.jpg" alt="" /></a>
-				</div>
-			</div>
-		</section>
-
-	<!-- contact -->
-		<section id="contact" class="wrapper style2 special">
-			<div class="inner">
-				<header class="major narrow">
-					<h2>Get in touch</h2>
-					<p><a href="mailto:rushikesh.kamalapurkar@okstate.edu">rushikesh.kamalapurkar@okstate.edu</a><br /><a href="tel:+1405-744-5900">(405) 744-5900</a></p>
-				</header>
-			</div>
-		</section>
-
-	<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<ul class="icons">
-					<li><a href="http://scholar.google.com/citations?user=iCV8dY0AAAAJ" class="icon ai ai-google-scholar">
-						<span class="label">Google Scholar</span>
-					</a></li>
-					<li><a href="https://www.researcherid.com/rid/M-4100-2016" class="icon ai ai-researcherid">
-						<span class="label">ResearcherID</span>
-					</a></li>
-					<li><a href="https://twitter.com/LaboratoryScc" class="icon fa-twitter">
-						<span class="label">Twitter</span>
-					</a></li>
-					<li><a href="https://www.linkedin.com/in/rushikesh-kamalapurkar-7182588" class="icon fa-linkedin">
-						<span class="label">LinkedIn</span>
-					</a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Rushikesh Kamalapurkar</li>
-				</ul>
-			</div>
-		</footer>
-
-	<!-- Scripts -->
-		<script src="Resources/template/js/skel.min.js"></script>
-		<script src="Resources/template/js/util.js"></script>
-		<!--[if lte IE 8]><script src="Resources/template/js/ie/respond.min.js"></script><![endif]-->
-		<script src="Resources/template/js/main.js"></script>
-	</body>
-</html>
+ <!-- hiring -->
+ <section id="hiring" class="wrapper style3 special">
+  <img class="hidden" src=" assets/images/hiring.png" onload="upgradeBackgroundImage(this)"/>
+  <div class="inner">
+  <header class="major narrow ">
+   <h2>We are hiring</h2>
+   <p>We are looking for several Ph.D. students to work on the exciting projects described above. Read the project descriptions, go through our publications, and let us know if you are interested.</p>
+  </header>
+  <p>Send us an email that inlcludes "Graduate School Enquiry" in the subject line, your curriculum vitae, and a brief statement of purpose that explains the reason you want to pursue graduate education and explains what, specifically, made you interested in our lab for your graduate studies.</p>
+  <ul class="actions">
+  <li><a href="mailto:rushikesh.kamalapurkar@okstate.edu?subject=Graduate School Enquiry" class="button big alt">Join us</a></li>
+  </ul>
+  </div>
+ </section>
+{% include people.html %}

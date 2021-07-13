@@ -1,0 +1,28 @@
+{% assign imagepath = "assets/images" %}
+{% assign linkpath = "people" %}
+{% assign items = site.people | sort: 'year' %}
+<!-- people -->
+<section id="people" class="wrapper special">
+  <div class="inner">
+  <header class="major narrow">
+   <h2>The Team</h2>
+  </header>
+  <div class="image-grid">
+  {% for item in items reversed %}
+    {% if item.status == 'current' %}
+      <a href="{{ item.id }}.html" class="image"><img src="{{ imagepath }}{{ item.id }}.jpg"/></a>
+    {% endif %}
+  {% endfor %}
+  </div>
+  <header class="major narrow">
+   <h3>Alumni</h3>
+  </header>
+  <div class="image-grid">
+  {% for item in items reversed %}
+    {% if item.status == 'alumnus' %}
+      <a href="{{ item.id }}.html" class="image"><img src="{{ imagepath }}{{ item.id }}.jpg"/></a>
+    {% endif %}
+  {% endfor %}
+  </div>
+  </div>
+</section>

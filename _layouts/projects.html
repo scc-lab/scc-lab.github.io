@@ -1,0 +1,30 @@
+---
+layout: default
+headerlink: projects
+base: ../
+---
+{% assign pid = page.id | split:"/" | last %}
+<!-- Placeholder for publications -->
+<div class="hidden" id="includedContent">
+  &nbsp;
+</div>
+
+<!-- Main -->
+<section id="main" class="wrapper">
+  <div class="container">
+    <div class="content">
+      <p class="fullItemText">{{ page.content | markdownify }}</p>
+      <h3>Publications:</h3>
+      <div class="itemPublications topicKeyword">
+        <p id="filterName" class="hidden">{{ pid }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/sccBibliographyGenerator.js"></script>
+<script type="text/javascript">
+  window.addEventListener('load', (event) => {
+    document.getElementById("banner").style.backgroundImage = "url('assets/images/overlay.png'), url('assets/images/projects/{{ pid }}.png')";
+  }, false);
+</script>

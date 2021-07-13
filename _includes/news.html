@@ -1,0 +1,26 @@
+{% assign imagepath = "assets/images/news" %}
+{% assign items = site.news | sort: 'date' %}
+<!-- news -->
+<section id="news">
+  <div class="carousel" data-flickity='{"wrapAround": false, "pageDots": false, "autoPlay": 5000, "imagesLoaded": true}'>
+  {% for item in items reversed %}
+  {% assign nid = item.id | split:"/" | last %}
+    {% unless item.status %}
+      <div class="carousel-cell">
+        {% if item.exturl %}<a href="{{ item.exturl }}">{% endif %}
+        <article class="feature left">
+          <span class="image">
+            <img src="{{ imagepath }}/small_{{ nid }}.png"/>
+            <img class="hidden" src="{{ imagepath }}/{{ nid }}.png" onload="upgradeImage(this)"/>
+          </span>
+          <div class="content">
+            <p>{{ item.headline }}</br>{{ item.date | date: '%B, %Y' }}</p>
+          </div>
+        </article>
+        {% if item.url %}</a>{% endif %}
+      </div>
+    {% endunless %}
+  {% endfor %}
+  </div>
+</section>
+<script src="assets/js/flickity.pkgd.min.js"/></script>

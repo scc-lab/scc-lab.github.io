@@ -1,0 +1,7 @@
+---
+id: games
+title: Online solutions of differential games
+weight: 2
+description: Data-driven model-based architectures to find feedback equilibrium solutions to differential games under relaxed excitation conditions.
+---
+Existing methods to solve N-player nonzero-sum differential games online using a parametric function approximator such as a neural network to approximate the value functions utilized a set of residual errors (the so-called Bellman errors) to update the estimates of the unknown parameters in the function approximator using least-squares or gradient-based techniques. A restrictive persistence of excitation condition was required to ensure boundedness and convergence of the value function weights. An ad-hoc exploration signal is added to the control signal during the learning phase to satisfy the excitation condition along the system trajectories. We developed a data-driven model-based architecture to solve these differential games with relaxed excitation conditions. A similar approach was also generalized to the much harder problem of differential graphical games. We also utilized a Hamilton-Jacobi approach inspired by the work in to develop intrusion monitoring methods for a network of agents.

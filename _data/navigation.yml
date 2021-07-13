@@ -1,0 +1,8 @@
+- name: Home
+  link: /
+- name: Publications
+  link: /publications.html
+- name: Research Projects
+  link: /projects.html
+- name: Research Topics
+  link: /topics.html

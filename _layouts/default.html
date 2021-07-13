@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% if layout.base %}
+      <base href="{{ layout.base }}">
+    {% endif %}
+    {% include favicon.html %}
+    {% include stylesheets.html %}
+    <link rel="stylesheet" href="assets/css/flickity.css">
+    <link rel="stylesheet" href="assets/css/sccFlickity.css">
+    <script type="text/javascript">
+      function upgradeImage(element) {
+        parentDiv = element.parentElement;
+        lowResImageElement = parentDiv.querySelector("img:not([hidden])");
+        element.classList.remove("hidden");
+        lowResImageElement.classList.add("hidden");
+      }
+      function upgradeBackgroundImage(element) {
+        element.parentElement.style.backgroundImage = "url('assets/images/overlay.png'), url('assets/images/" + element.parentElement.id + ".png')";
+      }
+    </script>
+  </head>
+  <body class="landing">
+    {% include header.html %}
+    {% include navigation.html %}
+    {% include banner.html %}
+    {{ content }}
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>
