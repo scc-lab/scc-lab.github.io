@@ -26,9 +26,9 @@
   <body class="landing">
     {% include header.html %}
     {% include navigation.html %}
-    {% if page.banner != 'no' or layout.banner != 'no' %}
+    {% unless page.banner == 'absent' or layout.banner == 'absent' %}
       {% include banner.html %}
-    {% endif %}
+    {% endunless %}
     {{ content }}
     {% include footer.html %}
     {% include scripts.html %}

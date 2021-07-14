@@ -1,7 +1,14 @@
 <!-- Banner -->
-{% if layout.banner == 'simple' or page.banner == 'simple' %}
+{% if layout.banner == 'simple' %}
   <section id="banner" class="projectBanner">
     <h2>{{ page.title }}</h2>
+    {% if page.collaborators %}
+    <p> In collaboration with </br>
+      {% for item in page.collaborators %}
+        <a href= "{{ item.exturl }}">{{ item.name }}</a>
+      {% endfor %}
+    </p>
+    {% endif %}
   </section>
 {% else %}
   <section id="banner">
@@ -11,8 +18,10 @@
     {% if page.name == 'index.html' %}
       {% include news.html %}
     {% endif %}
-    {% if page.scholar =='true' %}
-      <h3><a href="https://scholar.google.com/citations?user=iCV8dY0AAAAJ&hl=en">Google Scholar</a></h3>
+    {% if page.subtitle == 'scholar' %}
+      <h3>
+        <a href="http://scholar.google.com/citations?user=iCV8dY0AAAAJ" class="icon ai ai-google-scholar"><span class="label">Google Scholar</span></a><a href="https://www.researcherid.com/rid/M-4100-2016" class="icon ai ai-researcherid"><span class="label">ResearcherID</span></a>
+      </h3>
     {% endif %}
   </section>
 {% endif %}
