@@ -9,6 +9,9 @@
 .headerWrapper {
 	height:100%;
 }
+.contentWrapper {
+	scroll-padding-top: 200px;
+}
 #includedContent {
 	margin: 0 1em 0 1em;
 }
@@ -19,17 +22,17 @@
 	}
 .searchContainer {
 	padding: 0 1em 0 1em;
-	position: -webkit-sticky;
 	position: sticky;
-	top: 3.25em;
+	bottom: 0;
+	width: 100%;
 	border-bottom: 1px solid #ccc;
-	background-color: white;
+	background: rgba(255,255,255,0.95);
 }
-	@media screen and (max-width: 980px) {
+/* 	@media screen and (max-width: 980px) {
 		.searchContainer {
 			top:44px;
 		}
-	}
+	} */
 #quicksearch {
 	width: 100%;
 	margin-bottom:0em;

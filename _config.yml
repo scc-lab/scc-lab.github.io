@@ -1,6 +1,7 @@
 # Site settings
 
 title: Systems, Cognition, and Control Laboratory
+author: Rushikesh Kamalapurkar
 email: scclaboratory@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Systems, Cognition, and Control Laboratory at Oklahoma State University directed by Rushikesh Kamalapurkar
@@ -46,6 +47,14 @@ defaults:
      type: topics
    values:
      layout: topics
+
+# plugins:
+#   - jekyll-feed
+# 
+# feed:
+#   collections:
+#     - news
+#   excerpt_only: true
 
 # Build settings
 

@@ -14,7 +14,7 @@
             <img class="hidden" src="{{ imagepath }}/{{ nid }}.png" onload="upgradeImage(this)"/>
           </span>
           <div class="content">
-            <p>{{ item.headline }}</br>{{ item.date | date: '%B, %Y' }}</p>
+            <p>{{ item.excerpt }}</br>{{ item.date | date: '%B, %Y' }}</p>
           </div>
         </article>
         {% if item.url %}</a>{% endif %}
