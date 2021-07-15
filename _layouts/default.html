@@ -19,7 +19,8 @@
         lowResImageElement.classList.add("hidden");
       }
       function upgradeBackgroundImage(element) {
-        element.parentElement.style.backgroundImage = "url('assets/images/overlay.png'), url('assets/images/" + element.parentElement.id + ".png')";
+        <!-- element.parentElement.style.backgroundImage = "url('assets/images/overlay.png'), url('assets/images/" + element.parentElement.id + ".png')"; -->
+        element.parentElement.classList.add("imagesLoaded");
       }
     </script>
   </head>

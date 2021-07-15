@@ -11,6 +11,8 @@
 }
 .contentWrapper {
 	scroll-padding-top: 200px;
+	background-color: #FEFEFE;
+	padding-top: 2em;
 }
 #includedContent {
 	margin: 0 1em 0 1em;
