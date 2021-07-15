@@ -67,6 +67,7 @@ html {
 	.container {
 		margin-left: auto;
 		margin-right: auto;
+		max-width: 90%;
 	}
 
 	.container.\31 25\25 {
@@ -2877,7 +2878,7 @@ html {
 
 		.image-grid .image {
 			margin: 0;
-			width: 25%;
+			width: 20%;
 		}
 
 			.image-grid .image img {
@@ -2891,7 +2892,7 @@ html {
 			}
 
 				.image-grid .image {
-					width: 33%; /* modified */
+					width: 25%; /* modified */
 				}
 
 		}
@@ -2903,7 +2904,7 @@ html {
 			}
 
 				.image-grid .image {
-					width: 50%; /* modified */
+					width: 33%; /* modified */
 				}
 
 		}
@@ -2920,6 +2921,7 @@ html {
 		.wrapper > .inner {
 			margin: 0 auto;
 			width: 70em;
+			max-width: 90%;
 		}
 
 		.wrapper.style1 {

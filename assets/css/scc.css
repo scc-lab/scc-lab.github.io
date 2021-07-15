@@ -16,10 +16,12 @@
 }
 #includedContent {
 	margin: 0 1em 0 1em;
+	padding-top: 2em;
 }
 	@media (max-width: 736px) {
 		#includedContent {
 			margin: 0 0.25em 0 0.25em;
+			padding-top: 1em;
 		}
 	}
 .searchContainer {
