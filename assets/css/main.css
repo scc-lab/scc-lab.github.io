@@ -1802,7 +1802,7 @@ html {
 	header p {
 		margin: 0 0 1.5em 0;
 		position: relative;
-		text-transform: uppercase;
+		/* text-transform: uppercase; */
 	}
 
 	header h2 + p {
@@ -1950,8 +1950,8 @@ html {
 
 		.select-wrapper:before {
 			display: block;
-			height: 3.5em;
-			line-height: 3.5em;
+			height: 2.5em;
+			line-height: 2.5em;
 			pointer-events: none;
 			position: absolute;
 			right: 0;
@@ -2217,6 +2217,10 @@ html {
 			padding: 0 1.5em 1em 0;
 			top: 0.25em;
 		}
+			/*modified*/
+			.image.left.peopleImg{
+				width: min(200px,40%);
+			}
 
 		.image.right {
 			float: right;
@@ -2758,21 +2762,40 @@ html {
 
 		.feature .content {
 			padding: 2em 3em 0.1em 3em;
-			width: 45%; /* modified */
+			width: 45%;
+			/* modified */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			padding-bottom: 1em;
 		}
-		 /* modified */
-		.feature .content p {
-			color: #353535;
-			font-size: max(0.75em,min(1em,1.5vw));
-			line-height: max(1.5em,min(2em,2.4vw));
-			margin: 0 0 0.5em 0;
-		}
-		.feature .content h2 {
-			font-size: max(1em,min(1.5em,2vw));
-		}
-		.feature .content a {
-			font-size: max(0.75em,min(1em,1.5vw));
-		}
+			/* modified */
+			.feature .content p {
+				color: #353535;
+				font-size: max(0.75em,min(1em,1.5vw));
+				line-height: max(1.5em,min(2em,2.4vw));
+				margin: 0 0 0.5em 0;
+			}
+			.feature .content h2 {
+				font-size: max(1em,min(1.5em,2vw));
+			}
+			.feature .content a {
+				font-size: max(0.75em,min(1em,1.5vw));
+			}
+			.feature .content .button {
+				-ms-flex-item-align: start;
+				align-self: flex-start;
+			}
+			.feature .content .shortItemText {
+				-webkit-box-flex: 1;
+					-ms-flex: 1 0 auto;
+						flex: 1 0 auto;
+			}
+
 		@media screen and (max-width: 1280px) {
 
 			.feature {
@@ -3710,6 +3733,13 @@ html {
 		top: 0;
 		width: 100%;
 		z-index: 10001;
+		/*modified*/
+		-webkit-transition: 1s;
+		-moz-transition: 1s;
+		-ms-transition: 1s;
+		transition: 1s;
+		padding-right:1.25em;
+		padding-left:1.25em;
 	}
 
 		#header > h1 {
@@ -3722,6 +3752,9 @@ html {
 			padding: 0;
 			position: absolute;
 			top: 0;
+			/*modified*/
+			position: static;
+			float:left;
 		}
 
 		#header a {
@@ -3733,6 +3766,7 @@ html {
 			display: inline-block;
 			margin-right: 1.25em;
 			text-decoration: none;
+			margin:0; /*modified*/
 		}
 
 			#header a[href="#nav"] {
@@ -3764,7 +3798,7 @@ html {
 			background-color: transparent;
 			font-size: 1em;
 			padding: 1em 2em;
-			position: absolute;
+			position: fixed; /*modified*/
 		}
 
 			#header.alt > h1 {
@@ -3799,12 +3833,18 @@ html {
 			}
 
 	}
-
+	@media screen and (max-width: 736px) {
+		#header {
+			display: none;
+		}
+	}
 	@media screen and (max-width: 480px) {
 
 		#header {
 			min-width: 320px;
 			font-size: 0.8em;
+			/* top:auto; */
+			/* bottom:0; */
 		}
 
 			#header > h1 {
@@ -3815,16 +3855,15 @@ html {
 				padding: 0.5em 1em;
 				font-size: 0.8em;
 			}
-
 	}
 
 /* Nav */
 
 	#nav {
 		-moz-transform: translateX(20em);
-		-webkit-transform: translateX(15em);
-		-ms-transform: translateX(15em);
-		transform: translateX(15em);
+		-webkit-transform: translateX(17em);
+		-ms-transform: translateX(17em);
+		transform: translateX(17em);
 		-moz-transition: -moz-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		-webkit-transition: -webkit-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		-webkit-transition: visibility 0.5s, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
@@ -3846,9 +3885,13 @@ html {
 		text-transform: uppercase;
 		top: 0;
 		visibility: hidden;
-		width: 15em; /*modified*/
+		width: 17em; /*modified*/
 		z-index: 10002;
 	}
+
+		#nav i {
+			padding-right: 1em;
+		}
 
 		#nav > ul {
 			margin: 0 0 1em 0;
@@ -3921,15 +3964,6 @@ html {
 				color: #fff;
 			}
 
-			@media screen and (max-width: 736px) {
-
-				#nav .close {
-					height: 4em;
-					line-height: 4em;
-				}
-
-			}
-
 		#nav.visible {
 			-moz-transform: translateX(0);
 			-webkit-transform: translateX(0);
@@ -3939,15 +3973,71 @@ html {
 			        box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.2);
 			visibility: visible;
 		}
-
+		
 		@media screen and (max-width: 736px) {
-
-			#nav {
-				padding: 2.5em 1.75em;
-			}
-
+/* 		#nav {
+			padding: 2.5em 1.75em;
 		}
-
+			#nav .close {
+				height: 4em;
+				line-height: 4em;
+			} */
+		#nav {
+			all: initial;
+			width: 100%;
+			position: fixed;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.8);
+			overflow: hidden;
+			font:inherit;
+			text-transform: uppercase;
+			-webkit-transition: 1s;
+			-moz-transition: 1s;
+			-ms-transition: 1s;
+			transition: 1s;
+			height: min(3.5em,10.5vw);
+		}
+			#nav.squeezed {
+				height:0
+			}
+			#nav .close {
+				display:none;
+			}
+			#nav span {
+				padding-top:0.5em;
+				display: block;
+				vertical-align: middle;
+			}
+			#nav i {
+				padding: 0;
+				display: block;
+				vertical-align: middle;
+			}
+			#nav a {
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+			}
+			#nav ul {
+				margin: 0;
+			}
+				#nav > ul.links > li > a:not(.button) {
+					line-height:1em;
+				}
+			#nav > ul.links > li {
+				float: left;
+				color: white;
+				text-decoration: none;
+				font-size: min(1em,3vw);
+				width: 25%;
+				text-align: center;
+			}
+			#nav a:hover {
+				background-color: #000;
+			}
+			#nav a:active {
+				background-color: #FE5C00;
+			}
+		}
 /* Banner */
 
 	#banner {
@@ -4110,7 +4200,7 @@ html {
 			font-size: 1em; /*modified*/
 			line-height: 1.5em; /*modified*/
 			margin-bottom: 1.75em;
-			text-transform: uppercase;
+			/* text-transform: uppercase; */
 			text-shadow: 0px 0px 10px #000;
 		}
 
@@ -4177,7 +4267,7 @@ html {
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 4em 0em 2em 0em; /*modified*/
+				padding: 3em 0em 2em 0em; /*modified*/
 			}
 				#banner h2 {
 					font-size: 1.5em;
@@ -4195,7 +4285,7 @@ html {
 		@media screen and (max-width: 480px) {
 
 			#banner {
-				padding: 4em 0em 2em 0em; /*modified*/
+				padding: 3em 0em 2em 0em; /*modified*/
 			}
 				/*modified*/
 				#banner h2 {

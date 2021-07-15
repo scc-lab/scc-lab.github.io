@@ -201,3 +201,19 @@ function hideEmptyGroupHeadings() {
 		}
 	});
 };
+//Mobile layout - bottom nav bar
+function swapSearch(mediaQuery) {
+	var searchElement = document.querySelector(".searchContainer");
+	var pubElement = document.getElementById("includedContent");
+	var containerElement = document.querySelector(".contentWrapper");
+	if (searchElement !== null) {
+		if (mediaQuery.matches) {
+			containerElement.insertBefore(searchElement,pubElement);
+		} else {
+			containerElement.insertBefore(pubElement,searchElement);
+		}
+	}
+}
+var mediaQuery = window.matchMedia("(max-width: 736px)");
+swapSearch(mediaQuery); // Call listener function at run time
+mediaQuery.addListener(swapSearch);

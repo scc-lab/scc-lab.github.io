@@ -28,6 +28,11 @@
 	border-bottom: 1px solid #ccc;
 	background: rgba(255,255,255,0.95);
 }
+@media screen and (max-width: 736px) {
+	.searchContainer {
+		top: 0;
+	}
+}
 /* 	@media screen and (max-width: 980px) {
 		.searchContainer {
 			top:44px;
@@ -36,13 +41,14 @@
 #quicksearch {
 	width: 100%;
 	margin-bottom:0em;
-	padding-bottom: 0.75em;
-	padding-top: 0.75em;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
 }
 input[id="qs_field"] {
 	padding: 0em 4.4em 0em 0.5em;
 	display: inline-block;
 	max-width: 70%;
+	height: 2.5em;
 }
 	@media (max-width: 736px) {
 		input[id="qs_field"] {
@@ -64,6 +70,7 @@ div.select-wrapper {
 	width: auto;
 	padding-right:2.5em;
 	display: inline;
+	height: 2.5em;
 }
 #settings {
 	overflow:hidden;
@@ -76,7 +83,7 @@ div.select-wrapper {
 	padding:0;
 }
 .search_setting {
-	margin:0.75em 0em 0em 0em;
+	margin:0.5em 0em 0em 0em;
 	padding-bottom: 0.2em;
 }
 button:focus {

@@ -1,8 +1,12 @@
 - name: Home
   link: /
+  icon: fas fa-home
 - name: Publications
   link: /publications.html
-- name: Research Projects
+  icon: fas fa-graduation-cap
+- name: Projects
   link: /projects.html
-- name: Research Topics
+  icon: fas fa-project-diagram
+- name: Topics
   link: /topics.html
+  icon: fas fas fa-list

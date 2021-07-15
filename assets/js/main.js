@@ -84,3 +84,22 @@ function scrollFunction() {
 		}
 	}
 }
+
+window.onload = function() {
+	lastScrollTop = window.pageYOffset;
+}// global variable lastScrollTop
+var initiallyAlt = 0;
+window.addEventListener("scroll", function(){
+	var st = window.pageYOffset;
+	var mediaQuery = window.matchMedia("(max-width: 736px)")
+	if (mediaQuery.matches) {
+		if (st > lastScrollTop){
+			document.getElementById("nav").classList.add("squeezed");
+		} else {
+			document.getElementById("nav").classList.remove("squeezed");
+		}
+	} else {
+		document.getElementById("header").classList.remove("squeezed");
+	}
+	lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+}, false);
