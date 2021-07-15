@@ -3889,6 +3889,11 @@ html {
 		z-index: 10002;
 	}
 
+		#nav a.current {
+			font-weight: 900;
+			color: #FE5C00;
+		}
+
 		#nav i {
 			padding-right: 1em;
 		}
@@ -3909,7 +3914,7 @@ html {
 					#nav > ul.links > li > a:not(.button) {
 						border: 0;
 						border-top: solid 1px transparent;
-						color: inherit;
+						/* color: inherit; */
 						display: block;
 						line-height: 3.5em;
 						text-decoration: none;
@@ -3982,62 +3987,63 @@ html {
 				height: 4em;
 				line-height: 4em;
 			} */
-		#nav {
-			all: initial;
-			width: 100%;
-			position: fixed;
-			bottom: 0;
-			background-color: rgba(0, 0, 0, 0.8);
-			overflow: hidden;
-			font:inherit;
-			text-transform: uppercase;
-			-webkit-transition: 1s;
-			-moz-transition: 1s;
-			-ms-transition: 1s;
-			transition: 1s;
-			height: min(3.5em,10.5vw);
-		}
-			#nav.squeezed {
-				height:0
+			#nav {
+				all: initial;
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+				background-color: rgba(0, 0, 0, 0.8);
+				overflow: hidden;
+				font:inherit;
+				text-transform: uppercase;
+				-webkit-transition: 1s;
+				-moz-transition: 1s;
+				-ms-transition: 1s;
+				transition: 1s;
+				height: min(4.5em,13.5vw);
 			}
-			#nav .close {
-				display:none;
-			}
-			#nav span {
-				padding-top:0.5em;
-				display: block;
-				vertical-align: middle;
-			}
-			#nav i {
-				padding: 0;
-				display: block;
-				vertical-align: middle;
-			}
-			#nav a {
-				padding-top: 0.5em;
-				padding-bottom: 0.5em;
-			}
-			#nav ul {
-				margin: 0;
-			}
-				#nav > ul.links > li > a:not(.button) {
-					line-height:1em;
+				#nav.squeezed {
+					height:0
 				}
-			#nav > ul.links > li {
-				float: left;
-				color: white;
-				text-decoration: none;
-				font-size: min(1em,3vw);
-				width: 25%;
-				text-align: center;
+				#nav .close {
+					display:none;
+				}
+				#nav span {
+					padding-top:0.5em;
+					display: block;
+					vertical-align: middle;
+				}
+				#nav i {
+					padding: 0;
+					display: block;
+					vertical-align: middle;
+				}
+				#nav a {
+					padding-top: 1em;
+					padding-bottom: 1em;
+				}
+				#nav ul {
+					margin: 0;
+				}
+					#nav > ul.links > li > a:not(.button) {
+						line-height:1em;
+						color: inherit;
+					}
+				#nav > ul.links > li {
+					float: left;
+					color: white;
+					text-decoration: none;
+					font-size: min(1em,3vw);
+					width: 25%;
+					text-align: center;
+				}
+				#nav a:hover {
+					background-color: #000;
+				}
+				#nav a.current {
+					background-color: #FE5C00;
+				}
 			}
-			#nav a:hover {
-				background-color: #000;
-			}
-			#nav a:active {
-				background-color: #FE5C00;
-			}
-		}
 /* Banner */
 
 	#banner {
