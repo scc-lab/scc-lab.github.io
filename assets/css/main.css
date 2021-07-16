@@ -3746,7 +3746,6 @@ html {
 
 	#header {
 		background: rgba(0, 0, 0, 0.5); /*modified*/
-		color: rgba(255, 255, 255, 1); /*modified*/
 		cursor: default;
 		height: 3.25em;
 		left: 0;
@@ -3766,7 +3765,6 @@ html {
 	}
 
 		#header > h1 {
-			color: #fff;
 			display: inline-block;
 			height: inherit;
 			left: 1.25em;
@@ -3785,15 +3783,21 @@ html {
 			-webkit-transition: color 0.2s ease-in-out;
 			-ms-transition: color 0.2s ease-in-out;
 			transition: color 0.2s ease-in-out;
-			color: #fff;
+			color: #a5a9ad;
+			text-shadow: 0 0 10px black;
 			display: inline-block;
 			margin-right: 1.25em;
 			text-decoration: none;
 			margin:0; /*modified*/
 		}
 
+			#header a:hover {
+				color: #fff;
+			}
+
 			#header a[href="#nav"] {
 				text-decoration: none;
+				text-transform: uppercase;
 				-webkit-tap-highlight-color: transparent;
 			}
 
@@ -3805,10 +3809,7 @@ html {
 					font-style: normal;
 					font-weight: normal;
 					text-transform: none !important;
-				}
-
-				#header a[href="#nav"]:before {
-					margin: 0 0.5em 0 0;
+					font-size: 1.5em;
 				}
 
 			#header a + a[href="#nav"]:last-child {
@@ -3963,15 +3964,12 @@ html {
 			color: #a5a9ad;
 			cursor: pointer;
 			display: block;
-			height: 3.25em;
 			line-height: 3.25em;
-			padding-right: 1.25em;
+			padding-right: 2em;
+			padding-top: 1em;
 			position: absolute;
 			right: 0;
-			text-align: right;
 			top: 0;
-			vertical-align: middle;
-			width: 7em;
 		}
 
 			#nav .close:before {
@@ -3985,7 +3983,7 @@ html {
 			}
 
 			#nav .close:before {
-				font-size: 1.25em;
+				font-size: 1.5em;
 			}
 
 			#nav .close:hover {
@@ -4001,7 +3999,15 @@ html {
 			        box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.2);
 			visibility: visible;
 		}
-		
+
+		@media screen and (max-width: 980px) {
+			#nav .close {
+				line-height: 44px;
+				padding-right: 2em;
+				padding-top: 0.5em;
+			}
+		}
+
 		@media screen and (max-width: 736px) {
 /* 		#nav {
 			padding: 2.5em 1.75em;
@@ -4089,7 +4095,7 @@ html {
 			height: 100%;
 			top:0;
 			right:0;
-			transition: height 1s;
+			transition: 1s;
 		}
 			#banner.imagesLoaded::before {
 				background-image: url("../images/overlay.png"), url("../images/hiring.png");
