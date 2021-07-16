@@ -26,6 +26,10 @@ banner: simple
 <script src="assets/js/sccBibliographyGenerator.js"></script>
 <script type="text/javascript">
   window.addEventListener('load', (event) => {
-    document.getElementById("banner").style.backgroundImage = "url('assets/images/overlay.png'), url('assets/images/projects/{{ pid }}.png')";
+    <!-- document.getElementById("banner").style.backgroundImage = "url('assets/images/overlay.png'), url('assets/images/projects/{{ pid }}.png')"; -->
+    var bannerImg = document.createElement('style')
+    var content = document.createTextNode("#banner::before { background-image: url('assets/images/overlay.png'), url('assets/images/projects/{{ pid }}.png'); }");
+    bannerImg.appendChild(content);
+    document.getElementsByTagName('head')[0].appendChild(bannerImg);
   }, false);
 </script>
