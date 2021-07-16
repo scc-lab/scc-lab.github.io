@@ -10,14 +10,14 @@
 
 /* Reset */
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline;
-	}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 
 html {
 		scroll-behavior: smooth;
@@ -4022,11 +4022,11 @@ html {
 				-webkit-transition: 1s;
 				-moz-transition: 1s;
 				-ms-transition: 1s;
-				transition: 1s;
-				height: min(4.5em,13.5vw);
+				transition: max-height 1s;
+				max-height: 6em;
 			}
 				#nav.squeezed {
-					height:0
+					max-height: 0;
 				}
 				#nav .close {
 					display:none;
@@ -4035,11 +4035,13 @@ html {
 					padding-top:0.5em;
 					display: block;
 					vertical-align: middle;
+					font-size: 0.8em;
 				}
 				#nav i {
 					padding: 0;
 					display: block;
 					vertical-align: middle;
+					font-size: 1.5em;
 				}
 				#nav a {
 					padding-top: 1em;
@@ -4049,22 +4051,18 @@ html {
 					margin: 0;
 				}
 					#nav > ul.links > li > a:not(.button) {
-						line-height:1em;
-						color: inherit;
+						line-height:normal;
 					}
 				#nav > ul.links > li {
 					float: left;
 					color: white;
 					text-decoration: none;
-					font-size: min(1em,3vw);
+					font-size: 1em;
 					width: 25%;
 					text-align: center;
 				}
 				#nav a:hover {
 					background-color: #000;
-				}
-				#nav a.current {
-					background-color: #FE5C00;
 				}
 			}
 /* Banner */
@@ -4091,6 +4089,7 @@ html {
 			height: 100%;
 			top:0;
 			right:0;
+			transition: height 1s;
 		}
 			#banner.imagesLoaded::before {
 				background-image: url("../images/overlay.png"), url("../images/hiring.png");
