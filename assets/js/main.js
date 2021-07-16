@@ -20,13 +20,6 @@
 		var	$window = $(window),
 			$body = $('body');
 
-		// Disable animations/transitions until the page has loaded.
-			// $body.addClass('is-loading');
-
-			$(window).load(function() {
-				$body.removeClass('is-loading');
-			});
-
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
 
@@ -85,6 +78,8 @@ function scrollFunction() {
 
 window.onload = function() {
 	lastScrollTop = window.pageYOffset;
+	// Enable animations/transitions after the page has loaded.
+	document.getElementsByTagName("BODY")[0].classList.remove("is-loading");
 }// global variable lastScrollTop
 var initiallyAlt = 0;
 window.addEventListener("scroll", function(){
