@@ -3747,7 +3747,7 @@ html {
 		}
 
 	#header {
-		background: rgba(0, 0, 0, 0.5); /*modified*/
+		background: rgba(0, 0, 0, 0.85); /*modified*/
 		cursor: default;
 		height: 3.25em;
 		left: 0;
@@ -4044,11 +4044,11 @@ html {
 					padding: 0;
 					display: block;
 					vertical-align: middle;
-					font-size: 1.5em;
+					font-size: 1.25em;
 				}
 				#nav a {
-					padding-top: 0.75em;
-					padding-bottom: 0.75em;
+					padding-top: 0.6em;
+					padding-bottom: 0.7em;
 				}
 				#nav ul {
 					margin: 0;
