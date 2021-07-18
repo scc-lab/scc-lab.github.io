@@ -2879,6 +2879,7 @@ html {
 		.image-grid .image {
 			margin: 0;
 			width: 20%;
+			box-shadow: 0em 0.3em 1em 0em #00000020;
 		}
 
 			.image-grid .image img {
@@ -2963,7 +2964,8 @@ html {
 			}
 
 			.wrapper.style1 .feature {
-				background-color: #fff;
+				background-color: #fafafa;
+				box-shadow: 0em 0.3em 1em 0em #00000020;
 			}
 
 			.wrapper.style1 label {
@@ -4018,7 +4020,7 @@ html {
 				width: 100%;
 				position: fixed;
 				bottom: 0;
-				background-color: rgba(0, 0, 0, 0.8);
+				background-color: #fff;
 				overflow: hidden;
 				font:inherit;
 				text-transform: none;
@@ -4027,6 +4029,7 @@ html {
 				-ms-transition: 1s;
 				transition: max-height 1s;
 				max-height: 5.5em;
+				box-shadow: 0em 0em 1em 0em #00000030;
 			}
 				#nav.squeezed {
 					max-height: 0;
@@ -4058,7 +4061,7 @@ html {
 					}
 				#nav > ul.links > li {
 					float: left;
-					color: white;
+					color: #777777;
 					text-decoration: none;
 					font-size: 1em;
 					width: 25%;
