@@ -3,14 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style type="text/css">
-      .hidden {display:none;}
-    </style>
     <script type="text/javascript">
-      document.getElementsbyTagName("html")[0].classList.add("hidden");
-      document.addEventListener("DOMContentLoaded", function(event) {
-        document.getElementsbyTagName("html")[0].classList.remove("hidden");
-      });
       function upgradeImage(element) {
         parentDiv = element.parentElement;
         lowResImageElement = parentDiv.querySelector("img:not([hidden])");
@@ -40,5 +33,6 @@
     {{ content }}
     {% include footer.html %}
     {% include scripts.html %}
+    <link rel="stylesheet" href="assets/css/visible.css">
   </body>
 </html>
