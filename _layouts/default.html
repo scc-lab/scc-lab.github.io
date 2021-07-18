@@ -3,15 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ page.title }}</title>
-    {% if layout.base %}
-      <base href="{{ layout.base }}">
-    {% endif %}
-    {% include favicon.html %}
-    {% include stylesheets.html %}
-    <link rel="stylesheet" href="assets/css/flickity.css">
-    <link rel="stylesheet" href="assets/css/sccFlickity.css">
+    <style type="text/css">
+      .hidden {display:none;}
+    </style>
     <script type="text/javascript">
+      document.getElementsbyTagName("html")[0].classList.add("hidden");
+      document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementsbyTagName("html")[0].classList.remove("hidden");
+      });
       function upgradeImage(element) {
         parentDiv = element.parentElement;
         lowResImageElement = parentDiv.querySelector("img:not([hidden])");
@@ -23,6 +22,14 @@
         element.parentElement.classList.add("imagesLoaded");
       }
     </script>
+    <title>{{ page.title }}</title>
+    {% if layout.base %}
+      <base href="{{ layout.base }}">
+    {% endif %}
+    {% include favicon.html %}
+    {% include stylesheets.html %}
+    <link rel="stylesheet" href="assets/css/flickity.css">
+    <link rel="stylesheet" href="assets/css/sccFlickity.css">
   </head>
   <body class="landing is-loading">
     {% include header.html %}
