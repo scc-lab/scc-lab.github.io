@@ -4021,7 +4021,7 @@ html {
 				background-color: rgba(0, 0, 0, 0.8);
 				overflow: hidden;
 				font:inherit;
-				text-transform: uppercase;
+				text-transform: none;
 				-webkit-transition: 1s;
 				-moz-transition: 1s;
 				-ms-transition: 1s;
