@@ -3834,10 +3834,6 @@ html {
 				float: left;
 			}
 
-			#header.alt a[href="#nav"] {
-				text-shadow: 0 0 10px black;
-			}
-
 	@media screen and (max-width: 980px) {
 
 		#header {
