@@ -13,7 +13,7 @@
 	background-color: #EEEEEE;
 }
 #includedContent {
-	margin: 0 1em 0 1em;
+	margin: auto;
 	padding-top: 2em;
 }
 	@media (max-width: 736px) {
@@ -205,7 +205,7 @@ ol {
 		transition:height 0.3s cubic-bezier(0.85,0,1,1);
 	}
 li.entry {
-	margin: 0.25em 1em 1em 1em;
+	margin: 0em 0em 1em 0em;
 	-webkit-box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
 			box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
 	padding: 0.5em;
