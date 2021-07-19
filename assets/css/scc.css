@@ -13,12 +13,10 @@
 	background-color: #EEEEEE;
 }
 #includedContent {
-	margin: auto;
 	padding-top: 2em;
 }
 	@media (max-width: 736px) {
 		#includedContent {
-			margin: 0 0.25em 0 0.25em;
 			padding-top: 1em;
 		}
 	}
@@ -188,7 +186,6 @@ a {
 		text-decoration: inherit;
 	}
 ol {
-	overflow:hidden;
 	list-style-position: inside;
 	-webkit-padding-start: 0em;
 			padding-inline-start: 0em;
