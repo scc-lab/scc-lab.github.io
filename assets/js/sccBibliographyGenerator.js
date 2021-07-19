@@ -392,7 +392,7 @@ function collapseSection(element) {
 		element.style.paddingTop = 0 + "px";
 		element.style.paddingBottom = 0 + "px";
 		element.style.transition = elementTransition;
-		
+		element.style.overflow = "hidden";
 		// on the next frame (as soon as the previous style change has taken effect),
 		// have the element transition to height: 0
 		requestAnimationFrame(function() {
@@ -420,6 +420,7 @@ function expandSection(element) {
 		// remove "height" from the element's inline styles, so it can return to its initial value
 		element.style.height = null;
 		element.style.paddingBottom = null;
+		element.style.overflow = "visible";
 	});
 };
 
