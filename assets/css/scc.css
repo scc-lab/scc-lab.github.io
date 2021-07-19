@@ -12,6 +12,11 @@
 .contentWrapper {
 	background-color: #EEEEEE;
 }
+	@media screen and (max-width: 736px) {
+		.contentWrapper {
+			padding-bottom: 1em;
+		}
+	}
 #includedContent {
 	padding-top: 2em;
 }

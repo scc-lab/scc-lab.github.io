@@ -1831,7 +1831,7 @@ html {
 	}
 
 		header.major h2 {
-			font-size: 2.5em;
+			font-size: 2em;
 		}
 
 	header.narrow {
@@ -1846,6 +1846,10 @@ html {
 			max-width: 75%;
 		}
 
+			header.major h2 {
+				font-size: 1.75em;
+			}
+
 	}
 
 	@media screen and (max-width: 980px) {
@@ -1859,7 +1863,7 @@ html {
 		}
 
 			header.major h2 {
-				font-size: 2em;
+				font-size: 1.65em;
 			}
 
 	}
@@ -1874,6 +1878,13 @@ html {
 			font-size: 1em;
 		}
 
+	}
+
+	@media screen and (max-width: 480px) {
+
+		header.major h2 {
+			font-size: 1.25em;
+		}
 	}
 
 	header p {
@@ -2222,6 +2233,9 @@ html {
 			.image.left.peopleImg{
 				width: min(200px,40%);
 			}
+				.image.left.peopleImg img{
+					box-shadow: 0em 0.3em 1em 0em #00000020;
+				}
 
 		.image.right {
 			float: right;
@@ -2754,7 +2768,7 @@ html {
 		}
 
 		.feature .image {
-			width: 55%; /* modified */
+			width: 40%; /* modified */
 		}
 
 			.feature .image img {
@@ -2763,7 +2777,7 @@ html {
 
 		.feature .content {
 			padding: 2em 3em 0.1em 3em;
-			width: 45%;
+			width: 60%;
 			/* modified */
 			display: -webkit-box;
 			display: -ms-flexbox;
@@ -2816,17 +2830,14 @@ html {
 				-webkit-flex-direction: column;
 				-ms-flex-direction: column;
 				flex-direction: column;
+				max-width: 500px;
+				margin-left: auto;
+				margin-right: auto;
 			}
 
 			.feature .image {
 				width: 100%;
 			}
-				/* modified */
-				.feature .image img {
-					max-width: min(500px, 100%);
-					margin-left: auto;
-					margin-right: auto;
-				}
 
 			.feature .content {
 				padding: 1em 0.5em 0.1em 0.5em; /* modified */
@@ -3929,6 +3940,15 @@ html {
 
 				#nav > ul.links > li {
 					padding: 0;
+					color: #a5a9ad;
+					-moz-transition: color 0.2s ease-in-out;
+					-webkit-transition: color 0.2s ease-in-out;
+					-ms-transition: color 0.2s ease-in-out;
+					transition: color 0.2s ease-in-out;
+				}
+
+				#nav > ul.links > li:hover {
+					color: #fff;
 				}
 
 					#nav > ul.links > li > a:not(.button) {
@@ -4064,9 +4084,9 @@ html {
 					width: 25%;
 					text-align: center;
 				}
-				#nav a:hover {
-					background-color: #000;
-				}
+					#nav > ul.links > li:hover {
+						color: #FE5C00CC;
+					}
 			}
 /* Banner */
 
