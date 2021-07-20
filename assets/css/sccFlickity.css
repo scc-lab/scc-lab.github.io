@@ -3,10 +3,9 @@
 	height: calc(30vw*(3/4)*(40/100));
 	margin-right: 10px;
 	margin-left:10px;
-	border-radius: 5px;
 	counter-increment: gallery-cell;
-	-webkit-box-shadow: 0 0.15em 0.5em 0 rgba(1,1,1,0.2);
-			box-shadow: 0 0.15em 0.5em 0 rgba(200,200,200,0.5);
+	-webkit-box-shadow: 0 0 0.5em 0 rgb(0 0 0 / 75%);
+			box-shadow: 0 0 0.5em 0 rgb(0 0 0 / 75%);
 	background-color: #303030;
 	opacity: 0.4;
 	overflow: hidden;
