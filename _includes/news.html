@@ -2,7 +2,7 @@
 {% assign items = site.news | sort: 'date' %}
 <!-- news -->
 <section id="news">
-  <div class="carousel" data-flickity='{"wrapAround": false, "pageDots": false, "autoPlay": 5000, "imagesLoaded": true}'>
+  <div class="carousel hidden"> <!-- data-flickity='{"wrapAround": false, "pageDots": false, "autoPlay": 5000, "imagesLoaded": true}'> -->
   {% for item in items reversed %}
   {% assign nid = item.id | split:"/" | last %}
     {% unless item.status %}
