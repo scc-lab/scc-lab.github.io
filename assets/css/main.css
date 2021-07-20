@@ -3798,7 +3798,7 @@ html {
 			-webkit-transition: color 0.2s ease-in-out;
 			-ms-transition: color 0.2s ease-in-out;
 			transition: color 0.2s ease-in-out;
-			color: #a5a9ad;
+			color: #FFFFFFBB;
 			display: inline-block;
 			margin-right: 1.25em;
 			text-decoration: none;
@@ -3940,7 +3940,7 @@ html {
 
 				#nav > ul.links > li {
 					padding: 0;
-					color: #a5a9ad;
+					color: #FFFFFFBB;
 					-moz-transition: color 0.2s ease-in-out;
 					-webkit-transition: color 0.2s ease-in-out;
 					-ms-transition: color 0.2s ease-in-out;
@@ -3977,7 +3977,7 @@ html {
 			transition: color 0.2s ease-in-out;
 			-webkit-tap-highlight-color: transparent;
 			border: 0;
-			color: #a5a9ad;
+			color: #FFFFFFBB;
 			cursor: pointer;
 			display: block;
 			line-height: 3.25em;
