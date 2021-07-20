@@ -222,5 +222,6 @@ li.entry {
 	margin:0;
 }
 #publications {
-	background-color: #EEEEEE
+	background-color: #EEEEEE;
+	padding-bottom: 1em;
 }
