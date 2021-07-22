@@ -3900,9 +3900,9 @@ html {
 
 	#nav {
 		-moz-transform: translateX(20em);
-		-webkit-transform: translateX(17em);
-		-ms-transform: translateX(17em);
-		transform: translateX(17em);
+		-webkit-transform: translateX(14em);
+		-ms-transform: translateX(14em);
+		transform: translateX(14em);
 		-moz-transition: -moz-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		-webkit-transition: -webkit-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		-webkit-transition: visibility 0.5s, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
@@ -3918,13 +3918,13 @@ html {
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
-		padding: 3em 2em;
+		padding: 4em 2em;
 		position: fixed;
 		right: 0;
 		text-transform: uppercase;
 		top: 0;
 		visibility: hidden;
-		width: 17em; /*modified*/
+		width: 14em; /*modified*/
 		z-index: 10002;
 	}
 
