@@ -19,7 +19,8 @@
   margin: 0;
   overflow: visible; }
   .hamburger:hover .hamburger-box .hamburger-inner {
-    background-color: #FFFFFFFF; }
+    background-color: #FFFFFFFF;
+    transition: background-color 0.2s ease-in-out; }
 .hamburger-box {
   width: 25px;
   height: 20px;
@@ -29,15 +30,16 @@
 .hamburger-inner {
   display: block;
   background-color: #FFFFFFAA;
-  top: 50%; }
+  top: 50%;
+  transition: transform 0.15s ease, background-color 0.2s ease-in-out;}
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 25px;
     height: 3px;
     border-radius: 3px;
     position: absolute;
-    transition: transform 0.15s ease, background-color 0.2s ease-in-out;
 	box-shadow: 1px 1px 1px black;}
   .hamburger-inner::before, .hamburger-inner::after {
+    transition: transform 0.15s ease, background-color 0.2s ease-in-out;
     content: "";
     display: block;
     background-color: inherit; }
