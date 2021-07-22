@@ -19,7 +19,7 @@
   margin: 0;
   overflow: visible; }
   .hamburger:hover .hamburger-box .hamburger-inner {
-    background-color #FFFFFFFF; }
+    background-color: #FFFFFFFF; }
 .hamburger-box {
   width: 25px;
   height: 20px;
