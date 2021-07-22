@@ -33,8 +33,8 @@
 
 		// Nav.
 			$('#nav')
-				.append('<a href="#nav" class="close"></a>')
-				.appendTo($body)
+				/* .append('<a href="#nav" class="close"></a>') */
+				.appendTo($body) 
 				.panel({
 					delay: 500,
 					hideOnClick: true,
@@ -60,6 +60,7 @@
 	});
 
 })(jQuery);
+
 // Header Transition modified
 var initiallyAlt = 0;
 window.onscroll = function() {scrollFunction()};
@@ -75,11 +76,21 @@ function scrollFunction() {
 		}
 	}
 }
-
 window.onload = function() {
 	lastScrollTop = window.pageYOffset;
 	// Enable animations/transitions after the page has loaded.
 	document.getElementsByTagName("BODY")[0].classList.remove("is-loading");
+	
+	document.querySelector(".hamburger").addEventListener("click", function () {
+	// if (event.target.classList.contains("hamburger") || event.target.classList.contains("hamburger-box") || event.target.classList.contains("hamburger-inner")) {
+		var burger = document.querySelector(".hamburger");
+		if (burger.classList.contains("is-active")) {
+			burger.classList.remove("is-active");
+		} else {
+			burger.classList.add("is-active");
+		}
+		// }
+	}, false);
 }// global variable lastScrollTop
 var initiallyAlt = 0;
 window.addEventListener("scroll", function(){
@@ -96,3 +107,4 @@ window.addEventListener("scroll", function(){
 	}
 	lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 }, false);
+	

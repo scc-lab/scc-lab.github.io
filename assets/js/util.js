@@ -117,6 +117,9 @@
 
 					// Hide.
 						config.target.removeClass(config.visibleClass);
+						if (config.target[0].id == "nav") {
+							document.querySelector(".hamburger").classList.remove("is-active");
+						}
 
 					// Post-hide stuff.
 						window.setTimeout(function() {
@@ -261,6 +264,9 @@
 					event.stopPropagation();
 
 					config.target.removeClass(config.visibleClass);
+					if (config.target[0].id == "nav") {
+						document.querySelector(".hamburger").classList.remove("is-active");
+					}
 
 				});
 

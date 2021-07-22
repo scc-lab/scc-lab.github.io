@@ -2666,7 +2666,7 @@ html {
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
-		button:hover,
+		button:not(.hamburger):hover,
 		.button:hover {
 			background-color: #2f474b;
 		}
@@ -2674,7 +2674,7 @@ html {
 		input[type="submit"]:active,
 		input[type="reset"]:active,
 		input[type="button"]:active,
-		button:active,
+		button:not(.hamburger):active,
 		.button:active {
 			background-color: #1b292b;
 		}
@@ -3769,7 +3769,7 @@ html {
 		text-align: right;
 		top: 0;
 		width: 100%;
-		z-index: 10001;
+		z-index: 10005;
 		/*modified*/
 		-webkit-transition: 1s;
 		-moz-transition: 1s;
@@ -3798,6 +3798,7 @@ html {
 			-webkit-transition: color 0.2s ease-in-out;
 			-ms-transition: color 0.2s ease-in-out;
 			transition: color 0.2s ease-in-out;
+			transition: padding 1s;
 			color: #FFFFFFBB;
 			display: inline-block;
 			margin-right: 1.25em;
@@ -3814,8 +3815,9 @@ html {
 				text-decoration: none;
 				text-transform: uppercase;
 				-webkit-tap-highlight-color: transparent;
+				padding-top: 0.2em; /* modified hamburger */
 			}
-
+/* modified hamburger
 				#header a[href="#nav"]:before {
 					content: "";
 					-moz-osx-font-smoothing: grayscale;
@@ -3831,7 +3833,7 @@ html {
 				border-left: solid 1px transparent;
 				padding-left: 1.25em;
 				margin-left: 0.5em;
-			}
+			} */
 
 		#header.alt {
 			background-color: transparent;
@@ -3844,6 +3846,10 @@ html {
 				color: inherit;
 				position: static;
 				float: left;
+			}
+			
+			#header.alt a[href="#nav"] {
+				padding-top: 0.5em;
 			}
 
 	@media screen and (max-width: 980px) {
@@ -3862,7 +3868,9 @@ html {
 				font-size: 1em;
 				padding: 0.5em 2em;
 			}
-
+				#header.alt a[href="#nav"] {
+					padding-top: 0.5em;
+				}
 	}
 	@media screen and (max-width: 736px) {
 		#header {
