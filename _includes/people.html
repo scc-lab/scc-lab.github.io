@@ -20,7 +20,7 @@
   <div class="image-grid">
   {% for item in items reversed %}
     {% if item.status == 'alumnus' %}
-      <a href="{{ item.id }}.html" class="image"><img src="{{ imagepath }}{{ item.id }}.jpg"/></a>
+      <a href="{{ item.id }}.html" class="image"><img src="{{ imagepath }}{{ item.id }}.jpg"/><div class="content"><p><strong>{{ item.title }}</strong><br>({{ item.role }})</p></div></a>
     {% endif %}
   {% endfor %}
   </div>

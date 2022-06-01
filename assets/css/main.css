@@ -2908,6 +2908,7 @@ html {
 				transform: translate(-50%, 0%);
 				background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
 			}
+
 				.image-grid .image .content p {
 					width: 100%;
 					position: absolute;
@@ -2921,6 +2922,11 @@ html {
 					color: white;
 					line-height: 1.25em;
 				}
+				
+				.image-grid .image .content strong {
+					color: white;
+				}
+
 		@media screen and (max-width: 980px) {
 
 			.image-grid {
