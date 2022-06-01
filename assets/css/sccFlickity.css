@@ -90,7 +90,7 @@
 		#banner .carousel-cell p {
 			width:100%;
 			position: absolute;
-			bottom: 1em;
+			bottom: 0em;
 			left: 50%;
 			transform: translate(-50%, 0%);
 			padding: 0em 0.5em 0em 0.5em;
