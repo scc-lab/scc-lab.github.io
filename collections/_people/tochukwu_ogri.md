@@ -1,7 +1,7 @@
 ---
 id: tochukwu_ogri
 title: Tochukwu Elijah Ogri
-filtername: T. Ogri
+filtername: T. E. Ogri
 role: Ph. D. Student
 status: current
 year: 2026
