@@ -35,8 +35,8 @@ request.send(); */
 
 var entryTypes = ["Book","Article","InCollection","InProceedings","Conference","PhdThesis","MastersThesis","TechReport"];
 var entryTypeNames = ["Books","Journal papers","Book chapters","Conference papers","Abstract-reviewed papers and posters","Ph.D. dissertations","M.S. thesis","Technical reports"];
-var keywordTopics = ["occker","mbrl","mbirl","sysid","delay","fes","nonsmooth","games","sheet-stamping"];
-var keywordTopicNames = ["Occupation kernels and Liouville operators","Model-based reinforcement learning","Model-based inverse reinforcement learning","Data-driven modeling","Feedback control of systems with state and input delays","Functional electrical stimulation","Stability of nonsmooth systems","Differential games","Sheetmetal stamping"];
+var keywordTopics = ["occker","mbrl","mbirl","sysid","delay","fes","nonsmooth","games","sheet-stamping","hvac"];
+var keywordTopicNames = ["Occupation kernels and Liouville operators","Model-based reinforcement learning","Model-based inverse reinforcement learning","Data-driven modeling","Feedback control of systems with state and input delays","Functional electrical stimulation","Stability of nonsmooth systems","Differential games","Sheetmetal stamping","Heating, Ventilation, and Air Conditioning"];
 
 if (document.getElementById("quicksearch") != null) {
 	initSearch();
