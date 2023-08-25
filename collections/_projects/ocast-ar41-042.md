@@ -1,6 +1,6 @@
 ---
 id: ocast-ar41-042
-title: Scale Separation for Wind-aware Guidance and Control
+title: Development of Reduced-order System Models for Next Generation Comfort Cooling Equipment
 status: ongoing
 sponsor: OCAST
 award: AR41-042
