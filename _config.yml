@@ -16,7 +16,8 @@ collections_dir: collections
 collections:
   projects:
     output: true
-    sort_by: year
+    sort_by: status
+    sort_order: reverse
 
   topics:
     output: true
