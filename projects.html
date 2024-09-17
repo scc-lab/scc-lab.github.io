@@ -9,7 +9,7 @@ headerlink: home
 ---
 {% assign imagepath = "assets/images/projects" %}
 {% assign linkpath = "projects" %}
-{% assign items = site.projects | sort: 'year' %}
+{% assign items = site.projects | sort: 'status' %}
 <section id="one" class="wrapper style1">
   <div class="inner">
   {% for item in items reversed%}
