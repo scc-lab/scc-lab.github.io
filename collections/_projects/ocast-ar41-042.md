@@ -1,7 +1,7 @@
 ---
 id: ocast-ar41-042
 title: Development of Reduced-order System Models for Next Generation Comfort Cooling Equipment
-status: ongoing
+status: completed
 sponsor: OCAST
 award: AR41-042
 description: This project will focus on reduced-order modeling of HVAC units using both experimental research and first-principle model-based analysis. 
