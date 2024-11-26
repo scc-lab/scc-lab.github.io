@@ -3957,10 +3957,14 @@ html {
 		z-index: 10002;
 	}
 
-		#nav a.current {
-			font-weight: 900;
+		#nav a {
 			color: #FA4616;
 		}
+
+			#nav a.current {
+				font-weight: 900;
+				color: #FA4616;
+			}
 
 		#nav i {
 			padding-right: 1em;
