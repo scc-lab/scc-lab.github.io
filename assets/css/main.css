@@ -1770,7 +1770,7 @@ html {
 	}
 
 	a {
-		color: #FE5C00; /* modified */
+		color: #0021A5; /* modified */
 	}
 
 	strong, b {
@@ -2092,13 +2092,13 @@ html {
 		select:focus,
 		textarea:focus {
 			 /* modified */
-			border-color: #FE5C00;
-			-webkit-box-shadow: 0 0 0 1px #FE5C00;
-			        box-shadow: 0 0 0 1px #FE5C00;
+			border-color: #0021A5;
+			-webkit-box-shadow: 0 0 0 1px #0021A5;
+			        box-shadow: 0 0 0 1px #0021A5;
 		}
 
 	.select-wrapper:before {
-		color: #FE5C00; /*rgba(144, 144, 144, 0.25);modified*/
+		color: #0021A5; /*rgba(144, 144, 144, 0.25);modified*/
 	}
 
 	input[type="checkbox"] + label,
@@ -2115,16 +2115,16 @@ html {
 	input[type="checkbox"]:checked + label:before,
 	input[type="radio"]:checked + label:before {
 		background-color: rgba(144, 144, 144, 0.075);
-		border-color: #FE5C00;  /* modified */
+		border-color: #0021A5;  /* modified */
 		color: #25383B;
 	}
 
 	input[type="checkbox"]:focus + label:before,
 	input[type="radio"]:focus + label:before {
 		 /* modified */
-		border-color: #FE5C00;
-		-webkit-box-shadow: 0 0 0 1px #FE5C00;
-		        box-shadow: 0 0 0 1px #FE5C00;
+		border-color: #0021A5;
+		-webkit-box-shadow: 0 0 0 1px #0021A5;
+		        box-shadow: 0 0 0 1px #0021A5;
 	}
 
 	::-webkit-input-placeholder {
@@ -2684,7 +2684,7 @@ html {
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #FE5C00;  /* modified */
+			background-color: #0021A5;  /* modified */
 			-webkit-box-shadow: none;
 			        box-shadow: none;
 			color: #fff !important;
@@ -2713,9 +2713,9 @@ html {
 		.button.alt {
 			background-color: transparent;
 			 /* modified */
-			-webkit-box-shadow: inset 0 0 0 2px #FE5C00;
-			        box-shadow: inset 0 0 0 2px #FE5C00;
-			color: #FE5C00 !important;
+			-webkit-box-shadow: inset 0 0 0 2px #0021A5;
+			        box-shadow: inset 0 0 0 2px #0021A5;
+			color: #0021A5 !important;
 		}
 
 			input[type="submit"].alt:hover,
@@ -2976,7 +2976,7 @@ html {
 			}
 
 			.wrapper.style1 a {
-				color: #FE5C00; /*modified*/
+				color: #0021A5; /*modified*/
 			}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -3029,9 +3029,9 @@ html {
 				.wrapper.style1 select:focus,
 				.wrapper.style1 textarea:focus {
 					/*modified*/
-					border-color: #FE5C00;
-					-webkit-box-shadow: 0 0 0 1px #FE5C00;
-					        box-shadow: 0 0 0 1px #FE5C00;
+					border-color: #0021A5;
+					-webkit-box-shadow: 0 0 0 1px #0021A5;
+					        box-shadow: 0 0 0 1px #0021A5;
 				}
 
 			.wrapper.style1 .select-wrapper:before {
@@ -3052,16 +3052,16 @@ html {
 			.wrapper.style1 input[type="checkbox"]:checked + label:before,
 			.wrapper.style1 input[type="radio"]:checked + label:before {
 				background-color: #fff;
-				border-color: #FE5C00; /*modified*/
+				border-color: #0021A5; /*modified*/
 				color: #555;
 			}
 
 			.wrapper.style1 input[type="checkbox"]:focus + label:before,
 			.wrapper.style1 input[type="radio"]:focus + label:before {
 				/*modified*/
-				border-color: #FE5C00;
-				-webkit-box-shadow: 0 0 0 1px #FE5C00;
-				        box-shadow: 0 0 0 1px #FE5C00;
+				border-color: #0021A5;
+				-webkit-box-shadow: 0 0 0 1px #0021A5;
+				        box-shadow: 0 0 0 1px #0021A5;
 			}
 
 			.wrapper.style1 ::-webkit-input-placeholder {
@@ -3161,7 +3161,7 @@ html {
 				.wrapper.style1 button.special,
 				.wrapper.style1 .button.special {
 					/*modified*/
-					background-color: #FE5C00;
+					background-color: #0021A5;
 					-webkit-box-shadow: none;
 					        box-shadow: none;
 					color: #fff !important;
@@ -3190,9 +3190,9 @@ html {
 				.wrapper.style1 .button.alt {
 					background-color: transparent;
 					/*modified*/
-					-webkit-box-shadow: inset 0 0 0 2px #FE5C00;
-					        box-shadow: inset 0 0 0 2px #FE5C00;
-					color: #FE5C00 !important;
+					-webkit-box-shadow: inset 0 0 0 2px #0021A5;
+					        box-shadow: inset 0 0 0 2px #0021A5;
+					color: #0021A5 !important;
 				}
 
 					.wrapper.style1 input[type="submit"].alt:hover,
@@ -3221,7 +3221,7 @@ html {
 			}
 
 			.wrapper.style2 a {
-				color: #FE5C00; /*modified*/
+				color: #FA4616; /*modified*/
 			}
 
 			.wrapper.style2 strong, .wrapper.style2 b {
@@ -3273,9 +3273,9 @@ html {
 				.wrapper.style2 select:focus,
 				.wrapper.style2 textarea:focus {
 					/*modified*/
-					border-color: #FE5C00;
-					-webkit-box-shadow: 0 0 0 1px #FE5C00;
-					        box-shadow: 0 0 0 1px #FE5C00;
+					border-color: #0021A5;
+					-webkit-box-shadow: 0 0 0 1px #0021A5;
+					        box-shadow: 0 0 0 1px #0021A5;
 				}
 
 			.wrapper.style2 .select-wrapper:before {
@@ -3296,16 +3296,16 @@ html {
 			.wrapper.style2 input[type="checkbox"]:checked + label:before,
 			.wrapper.style2 input[type="radio"]:checked + label:before {
 				background-color: rgba(255, 255, 255, 0.05);
-				border-color: #FE5C00; /*modified*/
+				border-color: #0021A5; /*modified*/
 				color: #fff;
 			}
 
 			.wrapper.style2 input[type="checkbox"]:focus + label:before,
 			.wrapper.style2 input[type="radio"]:focus + label:before {
 				/*modified*/
-				border-color: #FE5C00;
-				-webkit-box-shadow: 0 0 0 1px #FE5C00;
-				        box-shadow: 0 0 0 1px #FE5C00;
+				border-color: #0021A5;
+				-webkit-box-shadow: 0 0 0 1px #0021A5;
+				        box-shadow: 0 0 0 1px #0021A5;
 			}
 
 			.wrapper.style2 ::-webkit-input-placeholder {
@@ -3404,7 +3404,7 @@ html {
 				.wrapper.style2 input[type="button"].special,
 				.wrapper.style2 button.special,
 				.wrapper.style2 .button.special {
-					background-color: #FE5C00; /*modified*/
+					background-color: #0021A5; /*modified*/
 					-webkit-box-shadow: none;
 					        box-shadow: none;
 					color: #fff !important;
@@ -3492,7 +3492,7 @@ html {
 			}
 
 			.wrapper.style3 a {
-				color: #FE5C00; /*modified*/
+				color: #0021A5; /*modified*/
 			}
 
 			.wrapper.style3 strong, .wrapper.style3 b {
@@ -3544,9 +3544,9 @@ html {
 				.wrapper.style3 select:focus,
 				.wrapper.style3 textarea:focus {
 					/*modified*/
-					border-color: #FE5C00;
-					-webkit-box-shadow: 0 0 0 1px #FE5C00;
-					        box-shadow: 0 0 0 1px #FE5C00;
+					border-color: #0021A5;
+					-webkit-box-shadow: 0 0 0 1px #0021A5;
+					        box-shadow: 0 0 0 1px #0021A5;
 				}
 
 			.wrapper.style3 .select-wrapper:before {
@@ -3567,16 +3567,16 @@ html {
 			.wrapper.style3 input[type="checkbox"]:checked + label:before,
 			.wrapper.style3 input[type="radio"]:checked + label:before {
 				background-color: rgba(255, 255, 255, 0.05);
-				border-color: #FE5C00; /*modified*/
+				border-color: #0021A5; /*modified*/
 				color: #fff;
 			}
 
 			.wrapper.style3 input[type="checkbox"]:focus + label:before,
 			.wrapper.style3 input[type="radio"]:focus + label:before {
 				/*modified*/
-				border-color: #FE5C00;
-				-webkit-box-shadow: 0 0 0 1px #FE5C00;
-				        box-shadow: 0 0 0 1px #FE5C00;
+				border-color: #0021A5;
+				-webkit-box-shadow: 0 0 0 1px #0021A5;
+				        box-shadow: 0 0 0 1px #0021A5;
 			}
 
 			.wrapper.style3 ::-webkit-input-placeholder {
@@ -3675,7 +3675,7 @@ html {
 				.wrapper.style3 input[type="button"].special,
 				.wrapper.style3 button.special,
 				.wrapper.style3 .button.special {
-					background-color: #FE5C00; /*modified*/
+					background-color: #0021A5; /*modified*/
 					-webkit-box-shadow: none;
 					        box-shadow: none;
 					color: #fff !important;
@@ -3959,7 +3959,7 @@ html {
 
 		#nav a.current {
 			font-weight: 900;
-			color: #FE5C00;
+			color: #FA4616;
 		}
 
 		#nav i {
@@ -4122,7 +4122,7 @@ html {
 					text-align: center;
 				}
 					#nav > ul.links > li:hover {
-						color: #FE5C00CC;
+						color: #FA4616CC;
 					}
 			}
 /* Banner */
@@ -4245,7 +4245,7 @@ html {
 			#banner input[type="button"].special,
 			#banner button.special,
 			#banner .button.special {
-				background-color: #FE5C00; /*modified*/
+				background-color: #FA4616; /*modified*/
 				-webkit-box-shadow: none;
 				        box-shadow: none;
 				color: #fff !important;
@@ -4460,7 +4460,7 @@ html {
 		}
 
 		#footer a {
-			color: #FE5C00; /*modified*/
+			color: #0021A5; /*modified*/
 		}
 
 		#footer strong, #footer b {

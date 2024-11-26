@@ -137,7 +137,7 @@ span.journalTitle, span.bookTitle {
 	font-style: italic;
 }
 i.fas.fa-external-link-alt, i.fas.fa-external-link-square-alt, i.far, i.fab {
-	color: #FE5C00;
+	color: #0021A5;
 	margin-left: 0.75em;
 	height: 1.25em;
 	width: 1.25em;
@@ -145,7 +145,7 @@ i.fas.fa-external-link-alt, i.fas.fa-external-link-square-alt, i.far, i.fab {
 	overflow:hidden;
 }
 i.ai {
-	color: #FE5C00;
+	color: #0021A5;
 	height: 1.25em;
 	width: 1.25em;
 }
