@@ -10,7 +10,7 @@
 	height:100%;
 }
 .contentWrapper {
-	background-color: #EEEEEE;
+	background-color: #f3efeb;
 }
 	@media screen and (max-width: 736px) {
 		.contentWrapper {
@@ -107,6 +107,7 @@ button.Button {
 	margin-left: 0.75em;
 	-webkit-box-shadow: none;
 	        box-shadow: none;
+	transition: color 0.2s ease-in-out;
 }
 button.toggleType {
 	min-width: 1em;
@@ -160,7 +161,7 @@ div.BiBTeX {
 	font-family: monospace;
 	font-size: small;
 	line-height: normal;
-	background-color: #272727;
+	background-color: #002657;
 	border-radius: 1em;
 	padding-left:1em;
 	padding-right:1em;
@@ -220,7 +221,22 @@ li.entry {
 	display: block;
 	margin:0;
 }
+	.itemPublications a {
+		transition: color 0.2s ease-in-out;
+	}
 #publications {
 	background-color: #EEEEEE;
 	padding-bottom: 1em;
+}
+.workURL:hover {
+	color: #0021A5;
+}
+.workPreprint:hover {
+	color: #0021A5;
+}
+.simulationCode:hover {
+	color: #0021A5;
+}
+#contact.wrapper.style2 a:hover {
+	color: #fff; /*modified*/
 }

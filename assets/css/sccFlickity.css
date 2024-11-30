@@ -28,6 +28,9 @@
 #banner .flickity-button {
 	background-color: transparent;
 }
+	#banner .flickity-button:hover {
+		background-color: rgba(255,255,255,0.2);
+	}
 #banner .carousel-cell .feature{
 	margin:0;
 	align-items: center;
