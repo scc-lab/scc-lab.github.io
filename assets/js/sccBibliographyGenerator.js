@@ -122,7 +122,11 @@ function groupBy(groupChoice,targetDiv,filterChoice,filterName) {
 	var groupIDs = new Array();
 	for (let i = 0; i < allRows.length; i++) {
 		var currentRow = allRows[i];
-		if (typeof filterChoice != 'undefined') { 
+		if (typeof filterChoice != 'undefined') {
+			var filterElement = currentRow.querySelector("[class*=\"" + filterChoice + "\"]");
+			if (filterElement == null) {
+				continue;
+			}
 			var filterString = currentRow.querySelector("[class*=\"" + filterChoice + "\"]").textContent;
 			if (!filterString.includes(filterName)) {
 				continue;
@@ -136,7 +140,7 @@ function groupBy(groupChoice,targetDiv,filterChoice,filterName) {
 			currentGroupList = currentGroupText.split(" ");
 			for( let k = currentGroupList.length-1; k >=0; k--){ 
 				let cleanedID = currentGroupList[k].replace(",","");
-				if (cleanedID === "Keywords:" || cleanedID === "scc" || cleanedID === "inprint" || cleanedID === "1page" || cleanedID === "2page" || cleanedID === "peer-reviewed" || cleanedID === "abstract-reviewed" || cleanedID === "afrl-fa8651-19-2-0009" || cleanedID === "nsf-1925147" || cleanedID === "afosr-fa9550-20-1-0127" || cleanedID === "onr-n00014-16-1-2091" || cleanedID === "nsf-2027999" || cleanedID === "knee-brace" || cleanedID === "onr-n00014-21-1-2481" || cleanedID === "ocast-ar41-042" || cleanedID === "afrl-fa8651-23-1-0006" || cleanedID === "afrl-fa8651-24-1-0019") {
+				if (cleanedID === "Keywords:" || cleanedID === "scc" || cleanedID === "inprint" || cleanedID === "1page" || cleanedID === "2page" || cleanedID === "peer-reviewed" || cleanedID === "abstract-reviewed") {
 					currentGroupList.splice(k, 1); 
 				}
 			}
