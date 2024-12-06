@@ -1926,16 +1926,13 @@ html {
 	}
 
 		.select-wrapper:before {
-			content: "";
+			content: "";
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
 			font-family: FontAwesome;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
-		}
-
-		.select-wrapper:before {
 			display: block;
 			height: 2.5em;
 			line-height: 2.5em;
@@ -1945,10 +1942,27 @@ html {
 			text-align: center;
 			top: 0;
 			width: 2.5em; /* modified */
+			color: #FA4616; /*rgba(199, 201, 200, 0.25);modified*/
 		}
+
+			.select-wrapper.active:before {
+				content: "";
+			}
 
 		.select-wrapper select::-ms-expand {
 			display: none;
+		}
+
+		@media (max-width: 736px) {
+
+			.select-wrapper:before {
+				content: "";
+			}
+
+				.select-wrapper.active:before {
+					content: "";
+				}
+
 		}
 
 	input[type="text"],
@@ -2064,17 +2078,13 @@ html {
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
-		select:focus,
+		select:hover,
 		textarea:focus {
 			 /* modified */
 			border-color: #FA4616;
 			-webkit-box-shadow: 0 0 0 1px #FA4616;
 			        box-shadow: 0 0 0 1px #FA4616;
 		}
-
-	.select-wrapper:before {
-		color: #FA4616; /*rgba(199, 201, 200, 0.25);modified*/
-	}
 
 	input[type="checkbox"] + label,
 	input[type="radio"] + label {

@@ -187,7 +187,7 @@ a {
 	text-decoration: inherit;
 }
 	a:hover {
-		color: inherit;
+		color: #0021A5;
 		text-decoration: inherit;
 	}
 ol {
@@ -227,15 +227,6 @@ li.entry {
 #publications {
 	background-color: #EEEEEE;
 	padding-bottom: 1em;
-}
-.workURL:hover {
-	color: #0021A5;
-}
-.workPreprint:hover {
-	color: #0021A5;
-}
-.simulationCode:hover {
-	color: #0021A5;
 }
 #contact.wrapper.style2 a:hover {
 	color: #fff; /*modified*/
