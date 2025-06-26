@@ -1592,7 +1592,7 @@ html {
 	}
 
 	body, input, select, textarea {
-		font-family: "Gentona",Helvetica,Arial,sans-serif,sans-serif;
+		font-family: "IBM plex sans",Helvetica,Arial,sans-serif;
 		text-rendering: geometricPrecision;
 		font-size: 13pt;
 		font-weight: 400;
