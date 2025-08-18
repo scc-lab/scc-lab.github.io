@@ -108,6 +108,7 @@ function groupBy(groupChoice,targetDiv,filterChoice,filterName) {
 	if (groupChoice == "Group By") {return;}
 	if (typeof targetDiv === 'undefined') { targetDiv = content };
 	if (typeof filterName === 'undefined') { filterName = "" };
+	if (filterChoice === "workAuthor") {filterName = filterName + ','};
 	oldData=document.getElementById("my-refs");
 	if (oldData != null) {
 		oldData.remove();
