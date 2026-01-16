@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,6 +7,10 @@
       function upgradeImage(element) {
         parentDiv = element.parentElement;
         lowResImageElement = parentDiv.querySelector("img:not([hidden])");
+        // Copy alt text from low-res to high-res image for accessibility
+        if (lowResImageElement && lowResImageElement.alt) {
+          element.alt = lowResImageElement.alt;
+        }
         element.classList.remove("hidden");
         lowResImageElement.classList.add("hidden");
       }
@@ -25,12 +29,15 @@
     <link rel="stylesheet" href="assets/css/sccFlickity.css">
   </head>
   <body class="landing is-loading">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     {% include header.html %}
     {% include navigation.html %}
     {% unless page.banner == 'absent' or layout.banner == 'absent' %}
       {% include banner.html %}
     {% endunless %}
-    {{ content }}
+    <main id="main-content" role="main">
+      {{ content }}
+    </main>
     {% include footer.html %}
     {% include scripts.html %}
   </body>

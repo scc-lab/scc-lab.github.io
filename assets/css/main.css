@@ -52,6 +52,45 @@ html {
 		-webkit-text-size-adjust: none;
 	}
 
+/* Accessibility */
+
+	/* Skip navigation link for screen readers and keyboard users */
+	.skip-link {
+		position: absolute;
+		top: -40px;
+		left: 0;
+		background: #000;
+		color: #fff;
+		padding: 8px 16px;
+		text-decoration: none;
+		z-index: 100;
+		font-weight: bold;
+	}
+
+	.skip-link:focus {
+		top: 0;
+	}
+
+	/* Enhanced focus indicators for keyboard navigation */
+	a:focus,
+	button:focus,
+	input:focus,
+	textarea:focus,
+	select:focus {
+		outline: 3px solid #4A90E2;
+		outline-offset: 2px;
+	}
+
+	/* Focus visible for modern browsers */
+	a:focus-visible,
+	button:focus-visible,
+	input:focus-visible,
+	textarea:focus-visible,
+	select:focus-visible {
+		outline: 3px solid #4A90E2;
+		outline-offset: 2px;
+	}
+
 /* Box Model */
 
 	*, *:before, *:after {
@@ -2751,6 +2790,28 @@ html {
 			flex-direction: row-reverse;
 		}
 
+		/* Hover and focus styles for feature links */
+		#research a .feature {
+			-webkit-box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
+			box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.2);
+			transition: box-shadow 0.3s ease-in-out;
+			border-radius: 4px;
+			overflow: hidden;
+		}
+
+		#research a:hover .feature {
+			-webkit-box-shadow: 0 0.25em 1em 0 rgba(0,0,0,0.3);
+			box-shadow: 0 0.25em 1em 0 rgba(0,0,0,0.3);
+		}
+
+		#research a:focus .feature {
+			border: 3px solid #4A90E2;
+		}
+
+		#research a:focus {
+			outline: none;
+		}
+
 		.feature .image {
 			width: 40%; /* modified */
 		}
@@ -2784,9 +2845,14 @@ html {
 			}
 			.feature .content a {
 				font-size: max(0.75em,min(1em,1.5vw));
+				-moz-transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+				-webkit-transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+				-ms-transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+				transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
 			}
 				.feature .content a:hover {
-					color: 0021a5;
+					color: #0021A5;
+					font-weight: bold;
 				}
 			.feature .content .button {
 				-ms-flex-item-align: start;
@@ -2906,22 +2972,21 @@ html {
 					margin: 0em;
 					font-size: min(1em,2.5vw);
 					text-shadow: 0 0 10px black;
-					color: white;
-					line-height: 1.25em;
-				}
-				
-				.image-grid .image .content strong {
-					color: white;
-				}
-
-		@media screen and (max-width: 980px) {
-
-			.image-grid {
-				margin-bottom: 3em;
+				color: #D8D4D7;
+				line-height: 1.25em;
+				-moz-transition: color 0.2s ease-in-out;
+				-webkit-transition: color 0.2s ease-in-out;
+				-ms-transition: color 0.2s ease-in-out;
+				transition: color 0.2s ease-in-out;
 			}
-
-				.image-grid .image {
-					width: 25%; /* modified */
+			
+			.image-grid .image:hover .content p,
+			.image-grid .image:focus .content p {
+				color: #fff;
+			}
+			
+			.image-grid .image .content strong {
+				color: inherit;
 				}
 
 		}

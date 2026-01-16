@@ -10,8 +10,8 @@
         {% if item.exturl %}<a href="{{ item.exturl }}">{% endif %}
         <article class="feature left">
           <span class="image">
-            <img src="{{ imagepath }}/small_{{ nid }}.png"/>
-            <img class="hidden" src="{{ imagepath }}/{{ nid }}.png" onload="upgradeImage(this)"/>
+            <img src="{{ imagepath }}/small_{{ nid }}.png" alt="{% if item.imagealt %}{{ item.imagealt }}{% else %}News: {{ item.excerpt | strip_html | truncate: 50 }}{% endif %}"/>
+            <img class="hidden" src="{{ imagepath }}/{{ nid }}.png" alt="" onload="upgradeImage(this)"/>
           </span>
           <div class="content">
             <p>{{ item.excerpt }}</br>{{ item.date | date: '%B, %Y' }}</p>

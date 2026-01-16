@@ -3,16 +3,18 @@ layout: default
 title: Systems, Cognition, and Control Laboratory
 motto: विद्या ददाति विनयं विनयात् याति पात्रताम्। पात्रत्वाद्धनमाप्नोति धनाद्धर्मं ततः सुखम्॥
 translation: With great knowledge, comes humility; humility leads to worthiness; worthiness generates wealth; wealth begets good deeds; and good deeds lead to bliss.
-news: true
+news: false
+projects_imagealt: A collage of funding agency logos
+topics_imagealt: A collage of robotics and control systems experiments
 ---
 <!-- research -->
-<section id="research" class="wrapper style1">
+<section id="research" class="wrapper style1" aria-label="Research overview">
   <div class="inner">
     <a href="projects.html">
        <article class="feature left">
          <span class="image">
-           <img src=" assets/images/small_research-projects.png"/>
-           <img class="hidden" src=" assets/images/research-projects.png" onload="upgradeImage(this)"/>
+           <img src=" assets/images/small_research-projects.png" alt="{% if page.projects_imagealt %}{{ page.projects_imagealt }}{% else %}Research Projects overview{% endif %}"/>
+           <img class="hidden" src=" assets/images/research-projects.png" alt="" onload="upgradeImage(this)"/>
          </span>
          <div class="content">
            <h2>Research Projects</h2>
@@ -23,8 +25,8 @@ news: true
     <a href="topics.html">
       <article class="feature right">
         <span class="image">
-          <img src=" assets/images/small_research-topics.png"/>
-          <img class="hidden" src=" assets/images/research-topics.png" onload="upgradeImage(this)"/>
+          <img src=" assets/images/small_research-topics.png" alt="{% if page.topics_imagealt %}{{ page.topics_imagealt }}{% else %}Research Topics overview{% endif %}"/>
+          <img class="hidden" src=" assets/images/research-topics.png" alt="" onload="upgradeImage(this)"/>
         </span>
         <div class="content">
           <h2>Research Topics</h2>
@@ -36,8 +38,8 @@ news: true
 </section>
 
  <!-- hiring -->
- <section id="hiring" class="wrapper style3 special">
-  <img class="hidden" src=" assets/images/hiring.png" onload="upgradeBackgroundImage(this)"/>
+ <section id="hiring" class="wrapper style3 special" aria-label="Hiring information">
+  <img class="hidden" src=" assets/images/hiring.png" alt="" onload="upgradeBackgroundImage(this)"/>
   <div class="inner">
   <header class="major narrow ">
    <h2>We are hiring</h2>

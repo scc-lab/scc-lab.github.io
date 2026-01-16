@@ -81,16 +81,25 @@ window.onload = function() {
 	// Enable animations/transitions after the page has loaded.
 	document.getElementsByTagName("BODY")[0].classList.remove("is-loading");
 	
-	document.querySelector(".hamburger").addEventListener("click", function () {
-	// if (event.target.classList.contains("hamburger") || event.target.classList.contains("hamburger-box") || event.target.classList.contains("hamburger-inner")) {
-		var burger = document.querySelector(".hamburger");
+	var burger = document.querySelector(".hamburger");
+	var burgerLink = document.querySelector('a[href="#nav"]');
+	
+	function toggleHamburger() {
 		if (burger.classList.contains("is-active")) {
 			burger.classList.remove("is-active");
+			burger.setAttribute("aria-expanded", "false");
 		} else {
 			burger.classList.add("is-active");
+			burger.setAttribute("aria-expanded", "true");
 		}
-		// }
-	}, false);
+	}
+	
+	// Handle all interactions through the anchor tag (which receives both mouse and keyboard events)
+	if (burgerLink) {
+		burgerLink.addEventListener("click", function (event) {
+			toggleHamburger();
+		}, false);
+	}
 }// global variable lastScrollTop
 var initiallyAlt = 0;
 window.addEventListener("scroll", function(){

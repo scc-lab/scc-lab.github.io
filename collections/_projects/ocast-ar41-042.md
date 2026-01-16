@@ -5,6 +5,7 @@ status: completed
 sponsor: OCAST
 award: AR41-042
 description: This project will focus on reduced-order modeling of HVAC units using both experimental research and first-principle model-based analysis. 
+imagealt: A schematic of load-based testing and predictive control 
 year: 2022-01
 collaborators:
  - name: Dr. Craig Bradshaw
