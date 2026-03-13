@@ -3585,6 +3585,9 @@ html {
 				}
 			/* FIX FOR FIXED COVER SIZE BACKGROUND ON IOS */
 			@supports (-webkit-touch-callout: none) {
+				.wrapper.style3 {
+					overflow: visible;
+				}
 				.wrapper.style3::before {
 					position: absolute;
 					width: 100%;
@@ -4276,6 +4279,7 @@ html {
 				position: absolute;
 				width: 100%;
 				height: 100%;
+				background-position: center top, center top;
 			}
 		}
 		#banner.projectBanner {
