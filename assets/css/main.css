@@ -3586,10 +3586,10 @@ html {
 		
 		@media screen and (max-width: 1280px) and (orientation: portrait) {
 			.wrapper.style3::before {
-				background-size: auto 100%, auto 100%;
+				background-size: 100% auto, 100% auto;
 			}
 			.wrapper.style3.imagesLoaded::before {
-				background-size: auto 100%, auto 100%;
+				background-size: 100% auto, 100% auto;
 			}
 		}
 			/*FIX FOR FIXED COVER SIZE BACKGROUND ON IOS
@@ -4280,10 +4280,10 @@ html {
 		
 		@media screen and (max-width: 1280px) and (orientation: portrait) {
 			#banner::before {
-				background-size: auto 100%, auto 100%;
+				background-size: 100% auto, 100% auto;
 			}
 			#banner.imagesLoaded::before {
-				background-size: auto 100%, auto 100%;
+				background-size: 100% auto, 100% auto;
 			}
 		}
 		/* FIX FOR FIXED COVER SIZE BACKGROUND ON IOS
