@@ -82,7 +82,7 @@ window.onload = function() {
 	document.getElementsByTagName("BODY")[0].classList.remove("is-loading");
 	
 	var burger = document.querySelector(".hamburger");
-	var burgerLink = document.querySelector('a[href="#nav"]');
+	var nav = document.getElementById("nav");
 	
 	function toggleHamburger() {
 		if (burger.classList.contains("is-active")) {
@@ -92,11 +92,17 @@ window.onload = function() {
 			burger.classList.add("is-active");
 			burger.setAttribute("aria-expanded", "true");
 		}
+		// Toggle the nav panel visibility
+		if (nav) {
+			nav.classList.toggle("visible");
+		}
 	}
 	
-	// Handle all interactions through the anchor tag (which receives both mouse and keyboard events)
-	if (burgerLink) {
-		burgerLink.addEventListener("click", function (event) {
+	// Handle button click events (receives both mouse and keyboard events)
+	if (burger) {
+		burger.addEventListener("click", function (event) {
+			event.preventDefault();
+			event.stopPropagation();
 			toggleHamburger();
 		}, false);
 	}
