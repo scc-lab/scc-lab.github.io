@@ -12,11 +12,13 @@ headerlink: home
   <div id="includedContent" class="container">{% include scc.html %}</div>
   <div class="searchContainer">
     <form action="" id="quicksearch">
+      <label for="qs_field" class="visually-hidden">Search publications</label>
       <input type="text" id="qs_field" autocomplete="off" placeholder="Search..." />
       <button class="alt" type="button" id="toggleSettings" title="Settings">
         <i class="fas fa-cog" title="show settings"></i>
       </button>
       <div class="select-wrapper">
+        <label for="groupSelector" class="visually-hidden">Group publications by</label>
         <select id = "groupSelector" >
           <option selected="selected">Group By</option>
           <option value="workAuthor">Author</option>
@@ -28,15 +30,15 @@ headerlink: home
       <div id="settings" class="initiallyHidden">
         <input type="checkbox" id="opt_useRegExp" >
         <label for="opt_useRegExp" class="search_setting">
-          <font style="vertical-align: inherit;">
+          <span style="vertical-align: inherit;">
             RegExp
-          </font>
+          </span>
         </label>
         <input type="checkbox" checked="checked" class="hidden" id="opt_noAccents" >
         <label for="opt_noAccents" class="search_setting">
-          <font style="vertical-align: inherit;">
+          <span style="vertical-align: inherit;">
             Ignore Accents
-          </font>
+          </span>
         </label>
       </div>
     </form>
