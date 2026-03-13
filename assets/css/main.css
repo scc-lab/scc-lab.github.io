@@ -3583,6 +3583,15 @@ html {
 					background-position: center center, center center;
 					background-repeat: no-repeat, no-repeat;
 				}
+		
+		@media screen and (max-width: 1280px) and (orientation: portrait) {
+			.wrapper.style3::before {
+				background-size: auto 100%, auto 100%;
+			}
+			.wrapper.style3.imagesLoaded::before {
+				background-size: auto 100%, auto 100%;
+			}
+		}
 			/*FIX FOR FIXED COVER SIZE BACKGROUND ON IOS
 			@supports (-webkit-touch-callout: none) {
 				.wrapper.style3 {
@@ -4268,6 +4277,15 @@ html {
 				background-position: center center, center center;
 				background-repeat: no-repeat, no repeat;
 			}
+		
+		@media screen and (max-width: 1280px) and (orientation: portrait) {
+			#banner::before {
+				background-size: auto 100%, auto 100%;
+			}
+			#banner.imagesLoaded::before {
+				background-size: auto 100%, auto 100%;
+			}
+		}
 		/* FIX FOR FIXED COVER SIZE BACKGROUND ON IOS
 		@supports (-webkit-touch-callout: none) {
 			#banner {
