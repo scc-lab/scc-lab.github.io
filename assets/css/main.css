@@ -3562,13 +3562,13 @@ html {
 			overflow: hidden;
 			background-color: rgba(0,0,0,0);
 		}
-/* 			.wrapper.style3::before {
+			.wrapper.style3::before {
 				background-color: #1E2832;
-				/* background-attachment: fixed;
+				background-attachment: fixed;
 				background-image: url("../images/overlay.png"), url("../images/small_hiring.png");
 				background-position: center center, center center;
-				background-repeat: no-repeat, no repeat;
-				background-size: cover;
+				background-repeat: no-repeat, no-repeat;
+				background-size: cover, cover;
 				z-index: -3;
 				content: " ";
 				position: fixed;
@@ -3577,12 +3577,12 @@ html {
 				height: 100%;
 				top:0;
 				right:0;
-			} */
-/* 				.wrapper.style3.imagesLoaded::before {
+			}
+				.wrapper.style3.imagesLoaded::before {
 					background-image: url("../images/overlay.png"), url("../images/hiring.png");
 					background-position: center center, center center;
-					background-repeat: no-repeat, no repeat;
-				} */
+					background-repeat: no-repeat, no-repeat;
+				}
 			/*FIX FOR FIXED COVER SIZE BACKGROUND ON IOS
 			@supports (-webkit-touch-callout: none) {
 				.wrapper.style3 {
