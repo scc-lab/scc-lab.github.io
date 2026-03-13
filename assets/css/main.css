@@ -3585,12 +3585,17 @@ html {
 				}
 			/* FIX FOR FIXED COVER SIZE BACKGROUND ON IOS */
 			.is-ios .wrapper.style3 {
-				overflow: visible;
+				background-color: #1E2832;
+				background-image: url("../images/overlay.png"), url("../images/small_hiring.png");
+				background-position: center center, center center;
+				background-repeat: no-repeat, no-repeat;
+				background-size: cover, cover;
+			}
+			.is-ios .wrapper.style3.imagesLoaded {
+				background-image: url("../images/overlay.png"), url("../images/hiring.png");
 			}
 			.is-ios .wrapper.style3::before {
-				position: absolute;
-				width: 100%;
-				height: 100%;
+				display: none;
 			}
 
 			.wrapper.style3 input, .wrapper.style3 select, .wrapper.style3 textarea {
@@ -4272,7 +4277,8 @@ html {
 				background-repeat: no-repeat, no repeat;
 			}
 		/* FIX FOR FIXED COVER SIZE BACKGROUND ON IOS */
-		.is-ios #banner::before {
+		.is-ios #banner::before,
+		.is-ios #banner.imagesLoaded::before {
 			position: absolute;
 			width: 100%;
 			height: 100%;
