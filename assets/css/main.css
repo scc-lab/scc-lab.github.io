@@ -3033,8 +3033,6 @@ html {
 				color: inherit;
 				}
 
-		}
-
 		@media screen and (max-width: 480px) {
 
 			.image-grid {
@@ -3042,7 +3040,7 @@ html {
 			}
 
 				.image-grid .image {
-					width: 33%; /* modified */
+					width: 50%; /* modified */
 				}
 
 		}
