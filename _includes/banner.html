@@ -1,6 +1,6 @@
 <!-- Banner -->
 {% if layout.banner == 'simple' %}
-  <section id="banner" class="projectBanner">
+  <section id="banner" class="projectBanner" role="region" aria-label="Page header">
     <h1>{{ page.title }}</h1>
     {% if page.collaborators %}
     <p> In collaboration with </br>
@@ -11,7 +11,7 @@
     {% endif %}
   </section>
 {% else %}
-  <section id="banner">
+  <section id="banner" role="region" aria-label="Page header">
     <img class="hidden" src="assets/images/banner.png" alt="" onload="upgradeBackgroundImage(this)"/>
     <h1>{{ page.title }}</h1>
     <p class="tooltip">{{ page.motto }}<span class="tooltiptext">{{ page.translation }}</span></p>

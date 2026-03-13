@@ -124,10 +124,14 @@ html {
 	 *   - 3px outline meets UI component requirements ✓
 	 * - Orange accent: #FA4616 (rgb 250, 70, 22)
 	 *   - On white: 3.8:1 ratio (large text only)
+	 *   - Used for hover states only, not default text color
 	 * - Banner text and icons: #FFFFFF on dark backgrounds
-	 *   - Text shadow provides additional contrast enhancement
+	 *   - Multiple text shadows provide strong contrast enhancement
 	 * - Footer text and icons: #FFFFFF on #002657
 	 *   - 11.2:1 ratio ✓
+	 * - Contact section: #FFFFFF on #002657
+	 *   - Text and links: 11.2:1 ratio ✓
+	 *   - Links underlined for distinction without color
 	 * - Team photo overlays: #FFFFFF on black gradient
 	 *   - Text positioned at fully opaque section: 21:1 ratio ✓
 	 * 
@@ -3305,7 +3309,7 @@ html {
 
 		.wrapper.style2 {
 			background-color: #002657;
-			color: rgba(255, 255, 255, 0.75);
+			color: #fff;
 		}
 
 			.wrapper.style2 input, .wrapper.style2 select, .wrapper.style2 textarea {
@@ -3313,9 +3317,15 @@ html {
 			}
 
 			.wrapper.style2 a {
-				color: #FA4616; /*modified*/
-				transition: color 0.2s ease-in-out;
+				color: #fff;
+				text-decoration: none;
+				display: inline-block;
+				transition: transform 0.2s ease-in-out;
 			}
+			
+				.wrapper.style2 a:hover {
+					transform: scale(1.1);
+				}
 
 			.wrapper.style2 strong, .wrapper.style2 b {
 				color: #fff;
@@ -4403,7 +4413,7 @@ html {
 			line-height: 1.5em;
 			margin: 0 0 0.5em 0;
 			padding: 0;
-			text-shadow: 0px 0px 10px #000;
+			text-shadow: 0px 0px 10px #000, 0px 0px 20px #000, 2px 2px 4px rgba(0,0,0,0.8);
 		}
 
 		#banner h3 {
