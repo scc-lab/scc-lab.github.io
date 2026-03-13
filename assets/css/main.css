@@ -3584,15 +3584,13 @@ html {
 					background-repeat: no-repeat, no-repeat;
 				}
 			/* FIX FOR FIXED COVER SIZE BACKGROUND ON IOS */
-			@supports (-webkit-touch-callout: none) {
-				.wrapper.style3 {
-					overflow: visible;
-				}
-				.wrapper.style3::before {
-					position: absolute;
-					width: 100%;
-					height: 100%;
-				}
+			.is-ios .wrapper.style3 {
+				overflow: visible;
+			}
+			.is-ios .wrapper.style3::before {
+				position: absolute;
+				width: 100%;
+				height: 100%;
 			}
 
 			.wrapper.style3 input, .wrapper.style3 select, .wrapper.style3 textarea {
@@ -4274,13 +4272,11 @@ html {
 				background-repeat: no-repeat, no repeat;
 			}
 		/* FIX FOR FIXED COVER SIZE BACKGROUND ON IOS */
-		@supports (-webkit-touch-callout: none) {
-			#banner::before {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				background-position: center top, center top;
-			}
+		.is-ios #banner::before {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-position: center top, center top;
 		}
 		#banner.projectBanner {
 			background-image:none;
