@@ -3560,7 +3560,7 @@ html {
 			color: rgba(255, 255, 255, 0.75);
 			position: relative;
 			overflow: hidden;
-			background-color: rgba(0,0,0,0);
+			background-color: rgba(30, 40, 50, 0.3);
 		}
 			.wrapper.style3::before {
 				background-color: #1E2832;
@@ -4241,6 +4241,7 @@ html {
 	#banner {
 		padding: 5em 0 3em 0; /*modified*/
 		color: #fff;
+		background-color: rgba(0, 0, 0, 0.3);
 		text-align: center;
 		overflow: hidden;
 		position: relative;
