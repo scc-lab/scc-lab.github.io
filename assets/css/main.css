@@ -74,6 +74,16 @@ html {
 		opacity: 1;
 	}
 
+	#contact .contact-link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 44px;
+		padding: 0.35rem 0;
+		text-decoration-thickness: 0.08em;
+		text-underline-offset: 0.14em;
+	}
+
 	/* Visually hidden class for screen reader only content */
 	.visually-hidden {
 		position: absolute;
@@ -1738,7 +1748,7 @@ html {
 
 	a {
 		text-decoration: none;
-		color: #FA4616; /* modified */
+		color: #6A2A60; /* modified */
 	}
 
 	strong, b {
@@ -2019,8 +2029,8 @@ html {
 			font-weight: normal;
 			text-transform: none !important;
 			display: block;
-			height: 2.5em;
-			line-height: 2.5em;
+			height: max(2.5em, 44px);
+			line-height: max(2.5em, 44px);
 			pointer-events: none;
 			position: absolute;
 			right: 0;
@@ -2783,9 +2793,9 @@ html {
 		.button.alt {
 			background-color: transparent;
 			 /* modified */
-			-webkit-box-shadow: inset 0 0 0 2px #FA4616;
-			        box-shadow: inset 0 0 0 2px #FA4616;
-			color: #FA4616 !important;
+			-webkit-box-shadow: inset 0 0 0 2px #6A2A60;
+			        box-shadow: inset 0 0 0 2px #6A2A60;
+			color: #6A2A60 !important;
 		}
 
 			input[type="submit"].alt:hover,
@@ -2893,6 +2903,7 @@ html {
 			}
 			.feature .content a {
 				font-size: max(0.75em,min(1em,1.5vw));
+				color: #C2410C;
 				-moz-transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
 				-webkit-transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
 				-ms-transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
@@ -3020,7 +3031,7 @@ html {
 					margin: 0em;
 					font-size: min(1em,2.5vw);
 					color: #fff;
-					line-height: 1.25em;
+					line-height: 1.5em;
 					transition: transform 0.2s ease-in-out;
 			}
 			
@@ -3070,7 +3081,8 @@ html {
 			}
 
 			.wrapper.style1 a {
-				color: #FA4616; /*modified*/
+				color: #6A2A60; /*modified*/
+				text-decoration: underline;
 			}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -3555,10 +3567,11 @@ html {
 					}
 
 		.wrapper.style3 {
-			color: rgba(255, 255, 255, 0.75);
+			color: #fff;
 			position: relative;
 			overflow: hidden;
 			background-color: rgba(30, 40, 50, 0.3);
+			text-shadow: 0px 0px 10px #000, 0px 0px 20px #000, 2px 2px 4px rgba(0,0,0,0.8);
 		}
 			.wrapper.style3::before {
 				background-color: #1E2832;
@@ -3664,7 +3677,7 @@ html {
 
 			.wrapper.style3 input[type="checkbox"] + label,
 			.wrapper.style3 input[type="radio"] + label {
-				color: rgba(255, 255, 255, 0.75);
+				color: #fff;
 			}
 
 				.wrapper.style3 input[type="checkbox"] + label:before,
@@ -3812,8 +3825,8 @@ html {
 				.wrapper.style3 button.alt,
 				.wrapper.style3 .button.alt {
 					background-color: transparent;
-					-webkit-box-shadow: inset 0 0 0 2px #fff;
-					        box-shadow: inset 0 0 0 2px #fff;
+					-webkit-box-shadow: inset 0 0 0 2px #fff, 0px 0px 10px #000;
+					        box-shadow: inset 0 0 0 2px #fff, 0px 0px 10px #000;
 					color: #fff !important;
 				}
 

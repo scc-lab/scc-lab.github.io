@@ -233,7 +233,7 @@ function groupBy(groupChoice,targetDiv,filterChoice,filterName) {
 			var groupDiv = document.createElement("div");
 			groupDiv.classList.add(group.ID);
 			groupDiv.classList.add("notHidden");
-			var groupHeading = document.createElement("h4");
+			var groupHeading = document.createElement("h3");
 			groupHeading.classList.add(group.ID);
 			groupHeading.classList.add("notHidden");
 			var groupHeadingText = document.createElement("span");

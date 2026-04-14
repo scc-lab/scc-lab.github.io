@@ -75,6 +75,7 @@ div.select-wrapper {
 	padding-right:2.5em;
 	display: inline;
 	height: 2.5em;
+	min-height: 44px;
 }
 #settings {
 	overflow:hidden;
