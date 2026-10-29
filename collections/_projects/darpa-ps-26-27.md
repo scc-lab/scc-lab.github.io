@@ -1,0 +1,11 @@
+---
+id: darpa-ps-26-27
+title: Network DISCORD Interface and Mitigation Systems (NDIMS)
+status: ongoing
+sponsor: DARPA
+award: DARPA-PS-26-27
+description: The unifying conceptual thread of NDIMS is the use of spectral analysis of operators to distill complex, high-dimensional swarm behavior into low-rank, actionable approximations. By identifying the dominant eigenvalues and eigenvectors of the operators governing adversary dynamics, communication, and intent, we can isolate the critical vulnerabilities of a swarm.
+imagealt: A block diagram of the proposed NDIMS framework
+year: 2026-10
+---
+Low-cost unmanned systems (UxS) have inverted the economics of modern defense. Coordinated swarms of cheap platforms saturate defenses built around interceptors that cost far more than their targets, and the adversaries fielding them adapt tactics faster than deliberate planning cycles can respond. Today's planning tools deepen the problem: they deliver a single "optimized" course of action (COA), built on models that must be retrained whenever the adversary changes behavior, with no principled account of which elements of the adversary's coordination drive their quadratic Lanchester Law scaling of strength. DISCORD Technical Area 1 aims to build an AI engine that models an adversary's UxS mission architecture from live sensor data and simulation outputs, and generates a portfolio of diverse, dominant COAs that exploit the adversary's coordination structure. Network Discord Inference and Mitigation Systems (NDIMS) meets these challenges by fusing two mature strands of systems theory (coordination sheaves, and Koopman operator theory) into a single engineered pipeline. *The unifying conceptual thread of NDIMS is the use of spectral analysis of operators to distill complex, high-dimensional swarm behavior into low-rank, actionable approximations.* By identifying the dominant eigenvalues and eigenvectors of the operators governing adversary dynamics, communication, and intent, we can isolate the critical vulnerabilities of a swarm, the "spectral bottlenecks", that drive its collective strength.
