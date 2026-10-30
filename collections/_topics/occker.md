@@ -1,5 +1,6 @@
 ---
 id: occker
+imagealt: A 3D surface plot of an occupation kernel with a central peak
 title: Occupation kernels and Liouville operators
 weight: 8
 description: Operator theoretic methods for data-driven identification, verification, and control synthesis.

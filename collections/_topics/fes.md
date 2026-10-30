@@ -1,5 +1,6 @@
 ---
 id: fes
+imagealt: A photograph of stimulation electrodes placed on a participant's leg
 title: Functional electrical stimulation
 weight: 3
 description: Potential uses of neuromuscular electrical stimulation for gait modifications leading to management of Osteoarthritis related pain.

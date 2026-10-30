@@ -1,5 +1,6 @@
 ---
 id: sysid
+imagealt: A 3D surface plot of a kernel function with a central peak
 title: Data-driven modeling
 weight: 6
 description: Motivated by the need to adapt to changing models and reduce modeling errors in model-based control, we developed data-driven adaptive system identification methods to identify unknown parameters in the system model.

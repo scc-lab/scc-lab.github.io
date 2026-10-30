@@ -1,5 +1,6 @@
 ---
 id: mbirl
+imagealt: A block diagram of inverse reinforcement learning with a cognitive agent, critic, and estimated cost function
 title: Inverse reinforcement learning
 weight: 5
 description: Based on the premise that a cost (or reward) function fully characterizes the intent of the demonstrator, we developed methods to learn the cost function from observations for linear and nonlinear uncertain systems.

@@ -1,5 +1,6 @@
 ---
 id: mbrl
+imagealt: A photograph of an underwater vehicle in the water
 title: Model-based reinforcement learning
 weight: 7
 description: Capitalizing on recent developments in reinforcement learning in continuous time and space, we develop novel model-based reinforcement learning methods that vastly improve data efficiency and usefulness for online optimal feedback control.

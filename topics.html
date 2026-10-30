@@ -17,7 +17,7 @@ headerlink: home
     {% capture thecycle %}{% cycle 'left', 'right' %}{% endcapture %}
     <article class="feature {{ pid }} {{ thecycle }} itemDetailsContainer">
       <span class="image {{ pid }}">
-        <img class="{{ pid }}" src="{{ imagepath }}/small_{{ pid }}.png" alt="{% if item.imagealt %}{{ item.imagealt }}{% else %}{{ item.title }} - {{ item.description | truncate: 50 }}{% endif %}" />
+        <img class="{{ pid }}" src="{{ imagepath }}/small_{{ pid }}.png" alt="{% if item.imagealt %}{{ item.imagealt }}{% else %}{{ item.title }}{% endif %}" />
         <img class="hidden {{ pid }}" src="{{ imagepath }}/{{ pid }}.png" alt="" onload="upgradeImage(this)" />
       </span>
       <div class="content {{ pid }}">

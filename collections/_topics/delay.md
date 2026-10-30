@@ -1,5 +1,6 @@
 ---
 id: delay
+imagealt: A photograph of a leg testbed with labeled torque, force, and leg angle measurements
 title: Systems with state and input delays
 weight: 1
 description: Control methods for systems with known and unknown state and input delays.

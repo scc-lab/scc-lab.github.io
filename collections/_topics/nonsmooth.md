@@ -1,5 +1,6 @@
 ---
 id: nonsmooth
+imagealt: A 3D surface plot of a nonsmooth Lyapunov function
 title: Stability of nonsmooth systems
 weight: 4
 description: Extensions of the LaSalle-Yoshizawa Theorem to nonsmooth nonautonomous systems and switched systems utilizing Filippov solutions of nonsmooth differential equations and nonstrict Lyapunov functions.

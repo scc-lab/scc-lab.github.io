@@ -1,5 +1,6 @@
 ---
 id: games
+imagealt: A plot of multiple agent state trajectories converging over time
 title: Online solutions of differential games
 weight: 2
 description: Data-driven model-based architectures to find feedback equilibrium solutions to differential games under relaxed excitation conditions.
